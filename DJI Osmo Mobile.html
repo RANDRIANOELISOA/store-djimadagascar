@@ -1,0 +1,1166 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
+
+        <style>
+            /* ——— STYLES GÉNÉRAUX ——— */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                background-color: #fafafa;
+                color: #333;
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h4 {
+                margin-left: 50px;
+                text-align: left;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h5 {
+                font-size: 1em;
+
+                color: goldenrod;
+            }
+
+            /* ——— SECTION 2 COLONNES ——— */
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 40px;
+                min-height: 600px;
+                margin: 20px auto;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .deux-colonnesA1 {
+                background: url(https://www-cdn.djiits.com/dps/a7708af25a1dc35111970080310f53f8.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesA2 {
+                background: url(http://videocaption.djicdn.com/poster/20250123/a6fe444962dc254468475c47e46aafc4.jpg)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesB1 {
+                background: url(https://www-cdn.djiits.com/dps/c65249bef6d834bf07f61b592f218aaa.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesB2 {
+                background: url(https://www-cdn.djiits.com/dps/ae9be558eb8932dc1fd3863301b33d43.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesC1 {
+                background: url(https://www-cdn.djiits.com/dps/b2b63e7b9619b0c39b3a32d2aa359893.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesC2 {
+                background: url(https://www-cdn.djiits.com/dps/e4db87c00c6a9868c20fc5cadbcf8eed.jpg) center/cover
+                    no-repeat;
+            }
+
+            .colonne1,
+            .colonne2,
+            .colonne3,
+            .colonne4 {
+                flex: 1 1 45%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .colonne1 h2 {
+                font-family: "Cormorant Garamond", serif;
+                margin-top: 0;
+                text-align: right;
+                font-size: clamp(2rem, 4vw, 4em);
+                color: #bc964f;
+            }
+
+            .colonne1 p {
+                font-family: "Cinzel", serif;
+                text-align: right;
+                font-size: clamp(1.2rem, 2vw, 2em);
+                margin-top: 0;
+                color: #bc964f;
+            }
+
+            .colonne2 {
+                border-left: 2px solid #bc964f;
+            }
+
+            .colonne2 p {
+                font-size: clamp(1rem, 2vw, 1.5rem);
+                text-align: justify;
+            }
+
+            /* ——— SECTION 3 ET 4 COLONNES ——— */
+            .trois-colonnes,
+            .quatre-colonnes {
+                display: grid;
+                gap: 20px;
+                background: white;
+                padding: 20px;
+            }
+
+            .trois-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .quatre-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .colonneA {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .colonneA:hover {
+                transform: scale(1.02);
+            }
+
+            /* ——— IMAGE ET PRIX ——— */
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+
+            #prixContainerGGGG1,
+            #prixContainerGGGG2,
+            #prixContainerGGGG3,
+            #prixContainerHHHH1,
+            #prixContainerHHHH2,
+            #prixContainerIIII1 {
+                background-color: #333;
+                color: goldenrod;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0 0 10px 10px;
+            }
+
+            /* ——— BOUTON RÉSERVER ——— */
+            .btn-reserver {
+                display: inline-block;
+                background-color: #fff;
+                color: #bc964f;
+                border: 2px solid #bc964f;
+                padding: 12px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-reserver:hover {
+                background-color: #bc964f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-reserver:active {
+                transform: scale(0.98);
+            }
+
+            /* ——— TIMELINE ——— */
+            .timeline {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                padding-left: 60px;
+            }
+            /* ——— LIGNE ENTRE LES PUCE ——— */
+            .timeline::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 76px;
+                width: 3px;
+                height: 100%;
+                background: #bc964f;
+            }
+
+            .step {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .step::before {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 36px;
+                height: 36px;
+                background: #bc964f;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .step-text {
+                margin-left: 60px;
+                font-size: 14px;
+                color: white;
+                text-align: justify;
+            }
+
+            /* ——— FOOTER ——— */
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: goldenrod;
+                border-color: goldenrod;
+                transform: scale(1.05);
+            }
+
+            /* ——— MEDIA QUERIES ——— */
+            @media (max-width: 1024px) {
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2 {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px;
+                }
+
+                .colonne1 h2,
+                .colonne1 p {
+                    text-align: center;
+                }
+
+                .colonne2 {
+                    border-left: none;
+                }
+
+                .timeline::before {
+                    left: 27px;
+                }
+
+                .step::before {
+                    left: -50px;
+                }
+
+                .step-text {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h3,
+                h4 {
+                    font-size: 1.3em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .btn-reserver {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                }
+
+                .timeline {
+                    padding-left: 0;
+                }
+                .timeline::before {
+                    left: -21px;
+                }
+
+                .step::before {
+                    left: -38px;
+                    border-radius: 50%;
+                    scale: 0.6;
+                }
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align: center; padding: 20px; background-color: #222; color: white">
+            <h1>Les drones DJI à Madagascar</h1>
+            <p>Proposés par EMC Sarl, spécialistes des drones à Madagascar.</p>
+        </header>
+
+        <!-- Section osmo 7-->
+        <!-- Section osmo 7-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesA1">
+            <div class="colonne1">
+                <h2>La série DJI Osmo Mobile 7 :</h2>
+                <p>Maîtrisez chaque mouvement. Sublimez chaque image de votre smartphone.</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    La DJI Osmo Mobile 7 Series repousse les limites de la stabilisation mobile. Conçue pour les
+                    créateurs exigeants, elle intègre la stabilisation sur trois axes de septième génération DJI,
+                    offrant une fluidité remarquable même lors de mouvements rapides, de transitions dynamiques ou de
+                    prises de vue en marche. Son design pliable et léger permet un transport facile et une mise en route
+                    instantanée, idéale pour le vlogging, les voyages ou la création de contenu professionnel avec un
+                    smartphone.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesA2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Grâce à la technologie ActiveTrack 7.0, le stabilisateur suit automatiquement le sujet et
+                            recadre en temps réel pour des plans toujours centrés et stables. Le modèle Osmo Mobile 7P
+                            se distingue par son module multifonction intégré, combinant lumière LED, suivi natif, et
+                            compatibilité audio complète avec les DJI Mic 2 et Mic Mini. Ce module rend la captation
+                            plus flexible, tout en optimisant la qualité du son et de l’éclairage, sans accessoires
+                            supplémentaires.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            La poignée ergonomique et la barre d’extension de 21 cm offrent une prise en main
+                            confortable et une meilleure amplitude de cadrage. Le trépied intégré assure une stabilité
+                            parfaite lors des plans fixes ou des timelapses. Les moteurs de précision réagissent
+                            rapidement aux mouvements pour éliminer les secousses, tandis que les commandes intuitives
+                            permettent de basculer facilement entre les modes de suivi, de verrouillage ou de rotation
+                            rapide.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            L’autonomie du stabilisateur atteint jusqu’à 10 heures, avec une recharge complète en 2,5
+                            heures via USB-C. La connexion Bluetooth 5.3 garantit une communication stable et rapide
+                            avec le smartphone, permettant un contrôle fluide via l’application DJI Mimo. Celle-ci offre
+                            un large éventail de réglages automatiques, de préréglages vidéo et d’effets professionnels.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Compatible avec la plupart des smartphones (largeur 67 à 84 mm, épaisseur 6,9 à 10 mm, poids
+                            170 à 300 g), l’Osmo Mobile 7 peut également alimenter le téléphone pendant l’utilisation.
+                            Le modèle 7P, légèrement plus robuste (368 g), offre un équilibre optimal entre puissance,
+                            autonomie et portabilité. Sa conception renforcée et ses matériaux haut de gamme
+                            garantissent une durabilité supérieure dans toutes les conditions.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Côté créativité, la série intègre plusieurs modes de prise de vue avancés : Timelapse,
+                            Hyperlapse, MotionLapse, DynamicZoom, Panorama 240°, SpinShot, ainsi qu’un mode Parents &
+                            Kids pour capturer les moments spontanés. Combiné à l’intelligence de l’application DJI
+                            Mimo, l’Osmo Mobile 7 transforme votre smartphone en véritable caméra de production, capable
+                            de délivrer des vidéos fluides, lumineuses et parfaitement stabilisées.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 7 -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 7 -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 7 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Vlog Osmo Mobile 7P (Émetteur DJI Mic Mini)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/325f1af29a9516eec89678e9ba117eec@ultra.webp" />
+                    <div id="prixContainerGGGG1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo Mobile 7P"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/a6c20c167a578c06bebc1556aefc8666@ultra.webp" />
+                    <div id="prixContainerGGGG2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo Mobile 7"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/b94e47c83765973258e0f157c922abc0@ultra.webp" />
+                    <div id="prixContainerGGGG3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI OSMO MOBILE 7 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo7pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerGGGG1 = document.getElementById("prixContainerGGGG1");
+
+                function showError(message) {
+                    prixContainerGGGG1.textContent = message;
+                    prixContainerGGGG1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerGGGG1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI OSMO MOBILE 7 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo7pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerGGGG2 = document.getElementById("prixContainerGGGG2");
+
+                function showError(message) {
+                    prixContainerGGGG2.textContent = message;
+                    prixContainerGGGG2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerGGGG2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI OSMO MOBILE 7 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo7pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerGGGG3 = document.getElementById("prixContainerGGGG3");
+
+                function showError(message) {
+                    prixContainerGGGG3.textContent = message;
+                    prixContainerGGGG3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerGGGG3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- Section osmo 6-->
+        <!-- Section osmo 6-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesB1">
+            <div class="colonne1">
+                <h2>Osmo Mobile 6 :</h2>
+                <p>Votre studio de poche pour vidéos fluide sur smartphone</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Découvrez l’Osmo Mobile 6 : le stabilisateur 3 axes ultra-compact pensé pour les créateurs nomades.
+                    Grâce à son design rabattable, sa pince magnétique, et ses fonctions intelligentes comme ActiveTrack
+                    6.0, vous êtes prêt à capturer des vidéos fluides, des selfies dynamiques et des scènes vibrantes en
+                    toutes circonstances. Emportez-le partout : il se déplie rapidement, se fixe en un geste, et vous
+                    permet de donner vie à vos idées sans attendre. Avec DJI Mimo, éditez, partagez, vivez vos contenus
+                    immédiatement.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesB2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Design pliable & portabilité extrême</h5>
+                            L’Osmo Mobile 6 se plie facilement, se glisse dans votre sac ou votre poche, et se déploie
+                            en quelques secondes pour capturer l’instant. Léger tout en étant robuste, il est pensé pour
+                            vous suivre dans tous vos déplacements — vacances, randonnées, sorties urbaines.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Fixation magnétique pour smartphone</h5>
+                            La pince magnétique intégrée permet de fixer le téléphone rapidement, sans démontage du
+                            boîtier. Vous avez juste à approcher votre téléphone et il s’aimante automatiquement.
+                            Pratique pour passer des prises vidéos aux appels, sans perte de temps.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>ActiveTrack 6.0 : le sujet ne vous échappe plus</h5>
+                            Suivi intelligent des sujets — personnes, animaux, objets — pour garder le cadrage parfait
+                            même en mouvement. Parfait pour vlogs, sport, déplacements : votre sujet reste mis en
+                            lumière, sans tremblement, sans flou.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Tige d’extension intégrée</h5>
+                            Un petit bras extensible (tige) permet de varier les angles de vue, d’augmenter la portée
+                            pour des selfies plus larges ou des vues plongeantes. Un bonus pour les prises «
+                            horizontales » ou quand vous voulez inclure plus de décor dans vos vidéos sans avoir à
+                            chercher un support externe.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Applications & fonctions intelligentes</h5>
+                            L’application DJI Mimo intègre des tutoriels, des modes automatiques, des effets,
+                            transitions, ainsi que des outils de montage rapides. Commencez à filmer, puis montez et
+                            partagez directement depuis votre téléphone. Gagnez du temps, soyez créatif sans complexité
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Stabilisation 3 axes & expériences vidéo fluides</h5>
+                            Le gimbal à 3 axes compense efficacement les secousses, les mouvements brusques, pour
+                            produire des vidéos lisses, professionnelles. Que vous couriez, marchiez ou naviguiez dans
+                            des environnements agités, vos vidéos gardent une stabilité impressionnante.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 6 -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 6 -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE 6 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Vlog Osmo Mobile 6 (DJI Mic Mini)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/e8d974d44312db21c69dc4377ff88897@ultra.webp" />
+                    <div id="prixContainerHHHH1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo Mobile 6"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/ed456071cd2a38a6fe748a77dbae8f1c@ultra.jpg" />
+                    <div id="prixContainerHHHH2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI OSMO MOBILE 6 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo6pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerHHHH1 = document.getElementById("prixContainerHHHH1");
+
+                function showError(message) {
+                    prixContainerHHHH1.textContent = message;
+                    prixContainerHHHH1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerHHHH1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI OSMO MOBILE 6 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo6pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerHHHH2 = document.getElementById("prixContainerHHHH2");
+
+                function showError(message) {
+                    prixContainerHHHH2.textContent = message;
+                    prixContainerHHHH2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerHHHH2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- Section osmo SE-->
+        <!-- Section osmo SE-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesC1">
+            <div class="colonne1">
+                <h2>Osmo Mobile SE :</h2>
+                <p>Unfold, snap-in, and start rolling.</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le Osmo Mobile SE se distingue par son corps pliable et léger, ainsi que son mécanisme magnétique à
+                    insertion rapide, ce qui le rend facile à transporter et à utiliser sur l’instant. Il intègre
+                    également un panneau d’état pour basculer entre les modes de gimbal d’une simple pression. DJI met
+                    en avant une série de caractéristiques intelligentes (stabilisation 3 axes, design magnétique,
+                    portabilité, ActiveTrack 6.0, etc.) pour dynamiser vos vidéos et mettre en valeur les moments
+                    capturés.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesC2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Stabilisation sur 3 axes</h5>
+                            Le gimbal offre une stabilisation mécanique à trois axes, pour lisser les mouvements et
+                            éviter les secousses visibles lors des prises de vue.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Design magnétique & pliable</h5>
+                            Le mécanisme d’insertion magnétique rapide (“snap-in”) permet de fixer et retirer le
+                            smartphone facilement. Le design pliable rend l’appareil compact et facile à glisser dans un
+                            sac ou une poche.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>ActiveTrack 6.0</h5>
+                            Le gimbal embarque la version 6.0 de la technologie de suivi intelligent, capable de
+                            reconnaître et suivre le sujet de façon fluide et précise.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Panneau d’état & contrôle rapide</h5>
+                            Un panneau d’état intégré permet de voir les modes sélectionnés et de basculer entre les
+                            modes de gimbal directement, sans avoir besoin d’aller dans l’application.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Portabilité & compacité</h5>
+                            Grâce à son design léger et pliable, le Osmo Mobile SE est optimisé pour être transporté et
+                            utilisé facilement en situation de mobilité.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Fonctionnalités intelligentes / créatives</h5>
+                            DJI propose des outils et effets intégrés (tutoriels, montage rapide, etc.) pour faciliter
+                            la création vidéo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE SE -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE SE -->
+        <!-- Section en 3 colonnes DJI OSMO MOBILE SERIE SE -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo Mobile SE"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/cc63bd53af7522969d4d52d25fa5aea9@ultra.jpg" />
+                    <div id="prixContainerIIII1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI OSMO MOBILE SE -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmosepack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerIIII1 = document.getElementById("prixContainerIIII1");
+
+                function showError(message) {
+                    prixContainerIIII1.textContent = message;
+                    prixContainerIIII1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerIIII1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <footer>
+            <div class="footer-content">
+                <hr />
+                <div class="footer-nav">
+                    <h3>Découvrir</h3>
+                    <ul>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                        </li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
+                                >A propos</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                    <br />
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+
+        <div id="cookieConsent" style="display: none">
+            Ce site utilise des cookies pour améliorer votre expérience.
+            <button id="acceptCookies">Accepter</button>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+        </div>
+    </body>
+</html>
