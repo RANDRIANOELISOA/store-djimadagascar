@@ -1,0 +1,1475 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
+
+        <style>
+            /* ——— STYLES GÉNÉRAUX ——— */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                background-color: #fafafa;
+                color: #333;
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h4 {
+                margin-left: 50px;
+                text-align: left;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h5 {
+                font-size: 1em;
+
+                color: goldenrod;
+            }
+
+            /* ——— SECTION 2 COLONNES ——— */
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 40px;
+                min-height: 600px;
+                margin: 20px auto;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .deux-colonnesA1 {
+                background: url(https://i.postimg.cc/L6x7pc3V/DJI-Mini-5-Pro.jpg) center/cover no-repeat;
+            }
+            .deux-colonnesA2 {
+                background: url(https://i.postimg.cc/SQMNjGvG/DJI-Mini-5-Pro-Madagascar.jpg) center/cover no-repeat;
+            }
+            .deux-colonnesB1 {
+                background: url(https://www-cdn.djiits.com/dps/163012781d0744ae332a3cc8a8fadb14.jpg.webp?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+            .deux-colonnesB2 {
+                background: url(https://i.postimg.cc/FK6JcVXT/DJI-Mini-5-Pro-3.jpg) center/cover no-repeat;
+            }
+
+            .deux-colonnesC1 {
+                background: url(https://www-cdn.djiits.com/dps/bd67e6b034c730956305fc7b027efdca.jpg.webp?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesC2 {
+                background: url(https://www-cdn.djiits.com/dps/32e25b620322170e21dbefb6b2910c5d.jpg.webp?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+
+            .colonne1,
+            .colonne2,
+            .colonne3,
+            .colonne4 {
+                flex: 1 1 45%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .colonne1 h2 {
+                font-family: "Cormorant Garamond", serif;
+                margin-top: 0;
+                text-align: right;
+                font-size: clamp(2rem, 4vw, 4em);
+                color: #bc964f;
+            }
+
+            .colonne1 p {
+                font-family: "Cinzel", serif;
+                text-align: right;
+                font-size: clamp(1.2rem, 2vw, 2em);
+                margin-top: 0;
+                color: #bc964f;
+            }
+
+            .colonne2 {
+                border-left: 2px solid #bc964f;
+            }
+
+            .colonne2 p {
+                font-size: clamp(1rem, 2vw, 1.5rem);
+                text-align: justify;
+            }
+
+            /* ——— SECTION 3 ET 4 COLONNES ——— */
+            .trois-colonnes,
+            .quatre-colonnes {
+                display: grid;
+                gap: 20px;
+                background: white;
+                padding: 20px;
+            }
+
+            .trois-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .quatre-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .colonneA {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .colonneA:hover {
+                transform: scale(1.02);
+            }
+
+            /* ——— IMAGE ET PRIX ——— */
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+
+            #prixContainerZZZZ1,
+            #prixContainerZZZZ2,
+            #prixContainerXXXX1,
+            #prixContainerXXXX2,
+            #prixContainerXXXX3,
+            #prixContainerEEEE1,
+            #prixContainerEEEE2,
+            #prixContainerEEEE3,
+            #prixContainerEEEE4 {
+                background-color: #333;
+                color: goldenrod;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0 0 10px 10px;
+            }
+
+            /* ——— BOUTON RÉSERVER ——— */
+            .btn-reserver {
+                display: inline-block;
+                background-color: #fff;
+                color: #bc964f;
+                border: 2px solid #bc964f;
+                padding: 12px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-reserver:hover {
+                background-color: #bc964f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-reserver:active {
+                transform: scale(0.98);
+            }
+
+            /* ——— TIMELINE ——— */
+            .timeline {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                padding-left: 60px;
+            }
+            /* ——— LIGNE ENTRE LES PUCE ——— */
+            .timeline::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 76px;
+                width: 3px;
+                height: 100%;
+                background: #bc964f;
+            }
+
+            .step {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .step::before {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 36px;
+                height: 36px;
+                background: #bc964f;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .step-text {
+                margin-left: 60px;
+                font-size: 14px;
+                color: white;
+                text-align: justify;
+            }
+
+            /* ——— FOOTER ——— */
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: goldenrod;
+                border-color: goldenrod;
+                transform: scale(1.05);
+            }
+
+            /* ——— MEDIA QUERIES ——— */
+            @media (max-width: 1024px) {
+                .deux-colonnesA1,
+                .deux-colonnesA2,
+                .deux-colonnesB1,
+                .deux-colonnesB2,
+                .deux-colonnesC1,
+                .deux-colonnesC2 {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 0 0 0 30px;
+                }
+
+                .colonne1 h2,
+                .colonne1 p {
+                    text-align: center;
+                }
+
+                .colonne2 {
+                    border-left: none;
+                }
+
+                .timeline::before {
+                    left: 27px;
+                }
+
+                .step::before {
+                    left: -50px;
+                }
+
+                .step-text {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h3,
+                h4 {
+                    font-size: 1.3em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .btn-reserver {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                }
+
+                .timeline {
+                    padding-left: 0;
+                }
+                .timeline::before {
+                    left: -21px;
+                }
+
+                .step::before {
+                    left: -38px;
+                    border-radius: 50%;
+                    scale: 0.6;
+                }
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align: center; padding: 20px; background-color: #222; color: white">
+            <h1>Les drones DJI à Madagascar</h1>
+            <p>Proposés par EMC Sarl, spécialistes des drones à Madagascar.</p>
+        </header>
+        <!------------------------------------------------------------------ DJI MINI 5 PRO------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 5 PRO------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 5 PRO------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesA1">
+            <div class="colonne1">
+                <h2>DJI Mini 5 Pro</h2>
+                <p>La puissance dans la légèreté</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mini 5 Pro révolutionne la catégorie des drones compacts grâce à un concentré de technologies
+                    haut de gamme dans moins de 250 grammes. Il associe une caméra 1 pouce 50MP, des modes vidéo
+                    avancés, une sécurité omnidirectionnelle renforcée, et une autonomie accrue pour répondre aux
+                    exigences des créateurs et aventuriers modernes.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesA2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Capteur 1 pouce 50 MP :</h5>
+                            Le Mini 5 Pro est équipé d’un capteur CMOS de 1 pouce offrant 50 mégapixels effectifs, une
+                            ouverture f/1.8 et une plage dynamique étendue. Cela garantit des images nettes, riches en
+                            détails, même en basse lumière, avec une résolution allant jusqu’à 8192 x 6144 pixels pour
+                            les photos.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Vidéo 4K jusqu’à 120 fps et capture verticale :</h5>
+                            Il filme en 4K jusqu’à 60 images/seconde pour un rendu fluide, et jusqu’à 120 ips pour les
+                            ralentis. L’enregistrement H.265 10 bits et les profils D-Log M/HLG offrent un rendu
+                            professionnel. La prise de vue verticale native s’effectue grâce à une nacelle pivotant sur
+                            225°.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Poids plume et autonomie solide :</h5>
+                            Avec ses 249,9 g et son format plié de 157 x 95 x 68 mm, ce drone entre dans la classe C0 en
+                            Europe. La batterie permet jusqu’à 36 minutes d’autonomie, soit de longues sessions de vol.
+                            Le stockage interne atteint 42 Go, complété par un emplacement microSD
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Détection d’obstacles omnidirectionnelle et LiDAR :</h5>
+                            Le système de détection s’appuie sur des capteurs à 360° et un LiDAR placé à l’avant,
+                            rendant le vol sécurisé même en condition de faible luminosité. Un retour intelligent au
+                            point de départ (Smart RTH) permet de ramener le drone, même sans GPS, grâce à la
+                            mémorisation de la trajectoire.​
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Modes intelligents et transmission longue portée :</h5>
+                            Le Mini 5 Pro propose des fonctions avancées : ActiveTrack 360° pour le suivi dynamique,
+                            Quickshots, Timelapse, et Mode Téléobjectif 48 mm (zoom x2). La transmission vidéo O4+
+                            assure une portée jusqu’à 10 km, tandis que le pilotage reste simple via les radiocommandes
+                            DJI RC-N3 ou DJI RC 2.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Format créatif et maniabilité :</h5>
+                            En alliant prise en main intuitive, prise de vue verticale, gestion optimisée de la lumière
+                            et contrôles précis, le DJI Mini 5 Pro s’impose comme la référence chez les créateurs
+                            souhaitant un outil polyvalent, performant et toujours prêt à capturer l’instant.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MINI 5 PRO -->
+        <!-- Section en 3 colonnes DJI MINI 5 PRO -->
+        <!-- Section en 3 colonnes DJI MINI 5 PRO -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Fly More Combo DJI Mini 5 Pro (DJI RC 2) Batterie à longue autonomie / transmission amélorer"
+                        src="https://i.postimg.cc/Hx8XPys3/DJI-MINI-5-FMC-Batterie-longue-autonomie-transmission-am-liorer-renforc.jpg" />
+                    <div id="prixContainerXXXX1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Fly More DJI Mini 5 Pro (DJI RC 2)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/435c17946b3c054ab8e681ae330e92f6@ultra.webp" />
+                    <div id="prixContainerXXXX2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Fly More DJI Mini 5 Pro (DJI RC-N3)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/381b4d01a7a9eb0ef6bfc879dda68d77@ultra.webp" />
+                    <div id="prixContainerXXXX3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DDD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 5 Pro"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/a257aa9ca9e0bc78b42c96b9ba349fd6@ultra.webp" />
+                    <div id="prixContainerXXXX4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : MINI 5 PRO -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini5propack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerXXXX1 = document.getElementById("prixContainerXXXX1");
+
+                function showError(message) {
+                    prixContainerXXXX1.textContent = message;
+                    prixContainerXXXX1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerXXXX1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : MINI 5 PRO -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini5propack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerXXXX2 = document.getElementById("prixContainerXXXX2");
+
+                function showError(message) {
+                    prixContainerXXXX2.textContent = message;
+                    prixContainerXXXX2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerXXXX2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MINI 5 PRO -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini5propack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerXXXX3 = document.getElementById("prixContainerXXXX3");
+
+                function showError(message) {
+                    prixContainerXXXX3.textContent = message;
+                    prixContainerXXXX3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerXXXX3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : MINI 5 PRO -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini5propack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerXXXX4 = document.getElementById("prixContainerXXXX4");
+
+                function showError(message) {
+                    prixContainerXXXX4.textContent = message;
+                    prixContainerXXXX4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerXXXX4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!------------------------------------------------------------------ DJI MINI 4 PRO------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 4 PRO------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 4 PRO------------------------------------------------------------------>
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesB1">
+            <div class="colonne1">
+                <h2>DJI Mini 4 Pro</h2>
+                <p>Drone ultra-léger, performance maximale</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mini 4 Pro est un drone ultra-léger (moins de 249g), pensé pour offrir des performances
+                    avancées tout en restant facile à transporter et à utiliser. Il cible aussi bien les débutants que
+                    les créateurs de contenu plus exigeants grâce à une combinaison de compacité, de sécurité et de
+                    qualité d’image.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesB2">
+            <div class="colonne3">
+                <h4>Points forts du DJI Mini 4 Pro :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Caméra haute performance : Capteur CMOS 1/1,3 pouce, photos jusqu’à 48MP, vidéos en 4K
+                            jusqu’à 60 images/seconde en HDR, ralenti en 4K 100 i/s et mode nuit amélioré. Il propose
+                            aussi des profils couleurs avancés (D-Log M 10 bits et HLG) pour une retouche
+                            professionnelle et un rendu fidèle des couleurs, ainsi que la possibilité de prendre des
+                            images au format RAW. Le changement entre prise de vue paysage et portrait s’effectue en un
+                            clic.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Détection d’obstacles omnidirectionnelle : Grâce à plusieurs capteurs, le drone évite de
+                            manière autonome les obstacles venant de toutes les directions, rendant le vol beaucoup plus
+                            sûr, surtout pour les débutants.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Autonomie et transmission : Temps de vol d’environ 34 minutes et transmission vidéo Full HD
+                            fluide sur une distance allant jusqu’à 20km avec la technologie O4.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Fonctionnalités avancées : Modes de vol intelligents comme ActiveTrack 360° pour le suivi
+                            dynamique des sujets, Waypoint Flight pour des trajectoires précises, QuickShots,
+                            MasterShots, Photo panoramique, et régulateur de vitesse pour des missions longues plus
+                            confortables.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Design prêt-à-emporter : Drone pliable, compact et qui ne requiert généralement pas
+                            d’enregistrement dans la plupart des pays grâce à son faible poids.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <h4>À savoir :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Qualité d’image : Les photos et vidéos sont comparables à un bon smartphone, ce qui
+                            conviendra à la majorité des utilisateurs et aux réseaux sociaux, même si les professionnels
+                            préféreront un drone avec un capteur plus grand pour une qualité supérieure.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Idéal pour les débutants : Interface intuitive, tutoriels intégrés, et fonctionnalités
+                            d’aide au pilotage.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Polyvalence : Très bon allié pour capturer des souvenirs de voyages, réaliser des petites
+                            productions ou encore alimenter les réseaux sociaux avec des formats adaptés (prise
+                            verticale réelle HDR).
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MINI 4 PRO -->
+        <!-- Section en 3 colonnes DJI MINI 4 PRO -->
+        <!-- Section en 3 colonnes DJI MINI 4 PRO -->
+
+        <section class="quatre-colonnes">
+            <!-- COLONNE A -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 4 Pro Bundle Fly More (DJI RC 2) Batterie à longue autonomie"
+                        src="https://i.postimg.cc/wTdjDf4f/1-DJI-Mini-4-Pro-Fly-More-Combo-Plus-DJI-RC-2-UAV-MADA.jpg" />
+                    <div id="prixContainerEEEE1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE B -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 4 Pro Bundle Fly More (DJI RC 2)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/6f8ef1cb760b78a3a2226ff57b608c2d@ultra.jpg" />
+                    <div id="prixContainerEEEE2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE C -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 4 Pro (DJI RC 2)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/1107132dd8cffb53cc99f0fdcb45e0e9@ultra.jpg" />
+                    <div id="prixContainerEEEE3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+            <!-- COLONNE D -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 4 Pro (DJI RC-N2)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/55489d812cde7fc89da83e4c2bdcc4dc@ultra.jpg" />
+                    <div id="prixContainerEEEE4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4propack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerEEEE1 = document.getElementById("prixContainerEEEE1");
+
+                function showError(message) {
+                    prixContainerEEEE1.textContent = message;
+                    prixContainerEEEE1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerEEEE1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4propack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerEEEE2 = document.getElementById("prixContainerEEEE2");
+
+                function showError(message) {
+                    prixContainerEEEE2.textContent = message;
+                    prixContainerEEEE2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerEEEE2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4propack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerEEEE2 = document.getElementById("prixContainerEEEE3");
+
+                function showError(message) {
+                    prixContainerEEEE3.textContent = message;
+                    prixContainerEEEE3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerEEEE3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4propack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerEEEE4 = document.getElementById("prixContainerEEEE4");
+
+                function showError(message) {
+                    prixContainerEEEE4.textContent = message;
+                    prixContainerEEEE4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerEEEE4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!------------------------------------------------------------------ DJI MINI 4K------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 4K------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MINI 4K------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesC1">
+            <div class="colonne1">
+                <h2>DJI Mini 4K</h2>
+                <p>L’alliance parfaite entre portabilité et qualité vidéo 4K</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mini 4K est un drone ultra-léger (246 g) et compact, conçu pour capturer des images aériennes
+                    de haute qualité avec une caméra 4K stabilisée sur 3 axes. Son autonomie de 31 minutes et sa
+                    transmission vidéo fiable sur 10 km en font un excellent choix pour les débutants comme pour les
+                    passionnés recherchant un drone facile à transporter sans compromis sur la qualité d’image.​.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesC2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Caméra 4K et capteur 12 MP :</h5>
+                            Le drone est équipé d’un capteur CMOS 1/2,3 pouce de 12 mégapixels capable de filmer en 4K
+                            (3840 x 2160) à 24/25/30 images par seconde et propose également des modes vidéo en 2.7K et
+                            Full HD. Sa nacelle motorisée sur 3 axes assure une stabilisation optimale pour des vidéos
+                            fluides et nettes même en mouvement.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Dimensions et poids :</h5>
+                            Avec seulement 246 grammes et des dimensions plié de 138 x 81 x 58 mm, il appartient à la
+                            classe C0 en Europe, ce qui facilite son utilisation sans trop de contraintes
+                            réglementaires. Déplié, il mesure 245 x 289 x 56 mm, ce qui reste très compact pour tous
+                            types de sorties.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Autonomie et portée :</h5>
+                            Le Mini 4K offre jusqu’à 31 minutes d’autonomie en vol continu, idéal pour capturer de
+                            longues séquences. Sa transmission OcuSync 2.0 permet une portée de commande et vidéo
+                            jusqu’à 10 km en zone dégagée, pour garder un contrôle précis même à distance importante.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Systèmes de navigation :</h5>
+                            Il intègre les systèmes GPS, GLONASS et Galileo pour une meilleure précision du vol, avec un
+                            positionnement stationnaire précis grâce aux capteurs optiques situés sous le drone. Il
+                            résiste à des rafales de vent jusqu’à 10,7 m/s, pour garantir stabilité et sécurité des
+                            prises de vue.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Fonctions créatives et modes de vol :</h5>
+                            Le Mini 4K propose des modes de vol intelligents et cinématiques comme QuickShots (Dronie,
+                            Fusée, Cercle, Hélice, Boomerang) ainsi qu’un zoom numérique 4x permettant d’adapter la
+                            composition sans bouger le drone. Le drone ne dispose par contre pas de capteurs
+                            d’obstacles.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Stockage et connectivité :</h5>
+                            Le stockage s’appuie sur une carte microSD (non incluse) jusqu’à 256 Go. La liaison avec la
+                            radiocommande DJI RC-N1 assure une faible latence et haute qualité de transmission vidéo en
+                            direct à 720p. L’app DJI Fly permet un pilotage intuitif et la gestion complète des
+                            paramètres de vol et caméra.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MINI 4K -->
+        <!-- Section en 3 colonnes DJI MINI 4K -->
+        <!-- Section en 3 colonnes DJI MINI 4K -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Fly More DJI Mini 4K"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/c3de6073c07383d626d332e1a6c1b822@ultra.jpg" />
+                    <div id="prixContainerZZZZ1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mini 4K"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/589b361f740c387157a919dc4ef94296@ultra.jpg" />
+                    <div id="prixContainerZZZZ2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : MINI 4K -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4kpack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerZZZZ1 = document.getElementById("prixContainerZZZZ1");
+
+                function showError(message) {
+                    prixContainerZZZZ1.textContent = message;
+                    prixContainerZZZZ1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerZZZZ1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : MINI 4K  -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimini4kpack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerZZZZ2 = document.getElementById("prixContainerZZZZ2");
+
+                function showError(message) {
+                    prixContainerZZZZ2.textContent = message;
+                    prixContainerZZZZ2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerZZZZ2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <footer>
+            <div class="footer-content">
+                <hr />
+                <div class="footer-nav">
+                    <h3>Découvrir</h3>
+                    <ul>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                        </li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
+                                >A propos</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                    <br />
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+
+        <div id="cookieConsent" style="display: none">
+            Ce site utilise des cookies pour améliorer votre expérience.
+            <button id="acceptCookies">Accepter</button>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+        </div>
+    </body>
+</html>
