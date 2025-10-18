@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Prix DJI</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 50px;
+                background-color: #f5f5f5;
+                text-align: center;
+            }
+            .price-box {
+                background-color: #fff;
+                display: inline-block;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .price-box h1 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .price-box .price {
+                font-size: 32px;
+                color: #e53935;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="price-box">
+            <h1>Prix du DJI Mavic 3 Pro Cine</h1>
+            <div class="price" id="price">Chargement...</div>
+        </div>
+
+        <div id="prixContainerGGGG2">Chargement...</div>
+
+        <script>
+            (function () {
+                "use strict";
+
+                const prixContainerGGGG2 = document.getElementById("prixContainerGGGG2");
+                const djiUrl = "https://store.dji.com/cn/product/dji-mavic-3-pro-cine-combo";
+
+                function showError(message) {
+                    prixContainerGGGG2.textContent = message;
+                    prixContainerGGGG2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(djiUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const parser = new DOMParser();
+                        const doc = parser.parseFromString(text, "text/html");
+
+                        // Sélecteur approximatif du prix, à adapter selon la classe réelle
+                        const priceTag = doc.querySelector(".product-price .price, .price-current");
+
+                        if (priceTag) {
+                            // Formatage simple
+                            let prix = priceTag.textContent.trim();
+                            prixContainerGGGG2.textContent = prix + " ¥";
+                        } else {
+                            showError("Impossible de récupérer le prix");
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+    </body>
+</html>
