@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mon Nouveau Projet</title>
+
+        <style>
+            /* CSS CORPS PRINCIPALE */
+            /* CSS CORPS PRINCIPALE */
+            /* CSS CORPS PRINCIPALE */
+            /* CSS CORPS PRINCIPALE */
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                background: #f8f9fa;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 20px;
+            }
+
+            .header {
+                background: linear-gradient(135deg, grey, goldenrod);
+                color: white;
+                padding: 40px 20px;
+                text-align: center;
+                border-radius: 10px;
+                margin-bottom: 30px;
+            }
+
+            .header h1 {
+                font-size: 2.5em;
+                margin-bottom: 10px;
+            }
+
+            h4 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            .content {
+                background: white;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-bottom: 30px;
+            }
+
+            /* CSS FOOTER */
+            /* CSS FOOTER */
+            /* CSS FOOTER */
+            /* CSS FOOTER */
+
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                margin: 10px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+                text-align: center;
+            }
+
+            .custom-link:hover {
+                background-color: black;
+                color: white;
+            }
+
+            .custom-link:active {
+                border-color: gold;
+            }
+
+            h3 {
+                color: #0a6ebd;
+                font-weight: 700;
+                margin-bottom: 20px;
+                border-bottom: 3px solid #0a6ebd;
+                padding-bottom: 8px;
+            }
+
+            li {
+                background: #ffffff;
+                padding: 15px 20px;
+                border-radius: 6px;
+                border: 1px solid #c2d3e8;
+                margin-bottom: 20px;
+                margin-left: 20px;
+            }
+
+            .li2 {
+                background: white;
+                border: 0;
+            }
+
+            .footer-nav a:hover {
+                color: goldenrod;
+                font-size: 1.1em;
+            }
+
+            .footer-content {
+                display: inline-block;
+                text-align: left;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-direction: row; /* ✅ Par défaut : horizontal (PC) */
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+                list-style: none;
+                flex-wrap: wrap;
+            }
+
+            .contact-info p {
+                margin: 5px 0;
+                line-height: 1.2;
+                text-align: center;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            /* ✅ Mobile : vertical */
+            @media screen and (max-width: 600px) {
+                .footer-nav ul {
+                    flex-direction: column;
+                }
+
+                .custom-link {
+                    margin: 6px 0;
+                }
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <!-- En-tête -->
+            <div class="header">
+                <h1>
+                    CGV<br />
+                    Conditions Générales de Vente
+                </h1>
+            </div>
+
+            <!-- Contenu principal -->
+            <main class="content">
+                <h3>Article 1 – Objet</h3>
+                <p>
+                    Les présentes Conditions Générales de Vente (CGV) régissent l’ensemble des transactions effectuées
+                    en ligne auprès de la société EMC – Entreprise Malagasy de Construction SARL, agissant en tant que
+                    revendeur non-officiel des produits DJI à Madagascar. Toute commande passée en ligne implique l’acceptation intégrale des présentes CGV.
+                </p>
+                <br />
+                <h3>Article 2 – Commandes et modalités de paiement</h3>
+                <ul>
+                    <li>
+                        Caution d’achat : 25 % du montant total est exigé lors de la commande pour valider l’achat.
+                    </li>
+                    <li>
+                        Solde restant : le paiement du solde (75 %) doit être effectué dans un délai maximum de 30 jours à compter de la notification de disponibilité du produit.
+                    </li>
+                    <li>
+                        Non-paiement : en cas de non-règlement du solde dans le délai imparti, la caution d’achat et la marchandise seront définitivement confisquées, sans possibilité de remboursement.
+                    </li>
+                </ul>
+
+                <h3>Article 3 – Livraison et retrait</h3>
+                <ul>
+                    <li>
+                        Délais de livraison pour commande avec expédition aérienne : entre 10 et 21 jours ouvrables à compter de la validation de la commande.
+                        Délais de livraison pour commande avec expédition maritime : entre 60 et 90 jours ouvrables à compter de la validation de la commande.
+                    </li>
+                    <li>
+                      Livraison gratuite : valable uniquement pour toute commande d’un montant supérieur à 1 000 000 Ariary, limitée au centre-ville d’Antananarivo
+                    </li>
+                    <li>
+       Livraison en province ou région périphérique : les frais d’expédition via sociétés de transport tierces sont à la charge du client.
+                    </li>
+                    <li>
+       Retrait ou livraison : la remise du produit n’aura lieu qu’après règlement intégral du solde dû.
+                    </li>
+                </ul>
+                <h3>Article 4 – Réception, test et conformité</h3>
+                <ul>
+                    <li>
+                       Lors de la réception, chaque produit fait l’objet d’un test complet et d’une inspection visuelle en présence du client (ou par vidéo avant expédition pour les livraisons à distance).       </li>
+                  <li>
+                       Une fois le test validé, la commande est considérée comme conforme et définitivement acceptée par le client.       </li>
+
+                               <li>
+                     Aucune réclamation ultérieure liée à un dommage, une défectuosité ou une non-conformité ne pourra être acceptée après validation du test.       </li>
+
+
+                </ul>
+                <h3>Article 5 – Garantie et service après-vente</h3>
+                <ul>
+                    <li>
+                    La société EMC SARL assure uniquement une garantie de conformité au moment de la livraison.
+                    </li>
+                                        <li>
+                    Au-delà de cette phase, toute prise en charge ou réclamation s’effectue directement auprès du fabricant DJI, selon les conditions du support officiel.
+                    </li>
+   <li>
+                   EMC SARL propose un service d’assistance pour l’achat d’accessoires, de batteries ou pour faciliter la communication avec DJI en cas de problème technique ou de garantie constructeur. Nous soulignons que l'assistance pour acquérir le garantie constructeur est limité à certains modèles de la gamme DJI Enterprise seulement.
+                    </li>
+                </ul>
+                                                <h3>Article 6 – Responsabilité</h3>
+                <ul>
+                    <li>
+                    EMC SARL garantit que les produits DJI livrés sont neufs, originaux et conformes aux spécifications du fabricant.   <li>
+                     Le client est responsable de vérifier la légalité de l’usage, de l’enregistrement et de l’exploitation du drone conformément à la réglementation en vigueur à Madagascar.    </li>
+                </ul>
+                                <h3>Article 7 – Données personnelles</h3>
+                <ul>
+                    <li>
+                     Les données collectées lors des commandes sont confidentielles et utilisées uniquement pour la gestion commerciale et le suivi des clients.     </li>
+                    <li>
+                     EMC SARL s’engage à ne jamais partager ou revendre ces informations à des tiers sans consentement préalable.    </li>
+                </ul>
+
+                                                <h3>Article 8 – Litiges</h3>
+                <ul>
+                    <li>
+                En cas de litige, les parties conviennent de rechercher une solution amiable avant toute action judiciaire.
+À défaut d’accord, le Tribunal d’Antananarivo sera seul compétent.     </li>
+
+                </ul>
+
+            </main>
+
+            <footer>
+                <div class="footer-content">
+                    <hr />
+                    <div class="footer-nav">
+                        <h4>Découvrir</h4>
+                        <ul>
+                            <li class="li2">
+                                <a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a>
+                            </li>
+                            <li class="li2">
+                                <a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a>
+                            </li>
+                            <li class="li2">
+                                <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html"
+                                    >Bureau</a
+                                >
+                            </li>
+                            <li class="li2">
+                                <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
+                                    >A propos</a
+                                >
+                            </li>
+                        </ul>
+                    </div>
+                    <hr />
+                    <div class="contact-info">
+                        <br />
+                        <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                        <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                        <br />
+                    </div>
+                </div>
+            </footer>
+
+            <!-- COOKIE -->
+            <!-- COOKIE -->
+            <!-- COOKIE -->
+
+            <div id="cookieConsent" style="display: none">
+                Ce site utilise des cookies pour améliorer votre expérience.
+                <button id="acceptCookies">Accepter</button>
+            </div>
+
+            <!-- Pied de page -->
+            <div class="footer">
+                <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+            </div>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+    </body>
+</html>
