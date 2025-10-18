@@ -1,0 +1,1864 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
+
+        <style>
+            /* ——— STYLES GÉNÉRAUX ——— */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                background-color: #fafafa;
+                color: #333;
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h4 {
+                margin-left: 50px;
+                text-align: left;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h5 {
+                font-size: 1em;
+
+                color: goldenrod;
+            }
+
+            /* ——— SECTION 2 COLONNES ——— */
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2,
+            .deux-colonnesD1,
+            .deux-colonnesD2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 40px;
+                min-height: 600px;
+                margin: 20px auto;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .deux-colonnesA1 {
+                background: url(https://www-cdn.djiits.com/dps/e71290108be63c437fee1abc38c4b9f6.jpg?w=2368&h=1600)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesA2 {
+                background: url(https://www-cdn.djiits.com/dps/ca273b0570b1efb02c88e6267383547b.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesB1 {
+                background: url(https://www-cdn.djiits.com/dps/78c1068309bffc472957134da6aa53c8.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesB2 {
+                background: url(https://www-cdn.djiits.com/dps/c69c6a09bffb7967b14dbe2c027348e4.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesC1 {
+                background: url(https://www-cdn.djiits.com/dps/bd67e6b034c730956305fc7b027efdca.jpg.webp?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesC2 {
+                background: url(https://www-cdn.djiits.com/dps/32e25b620322170e21dbefb6b2910c5d.jpg.webp?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesD1 {
+                background: url(https://www-cdn.djiits.com/dps/3ec0a9bb443cfe1b031bd86490f8f7dd.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesD2 {
+                background: url(https://www-cdn.djiits.com/dps/cee4972e05daf4a04f4a155ef54ce1ca.jpg) center/cover
+                    no-repeat;
+            }
+
+            .colonne1,
+            .colonne2,
+            .colonne3,
+            .colonne4 {
+                flex: 1 1 45%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .colonne1 h2 {
+                font-family: "Cormorant Garamond", serif;
+                margin-top: 0;
+                text-align: right;
+                font-size: clamp(2rem, 4vw, 4em);
+                color: #bc964f;
+            }
+
+            .colonne1 p {
+                font-family: "Cinzel", serif;
+                text-align: right;
+                font-size: clamp(1.2rem, 2vw, 2em);
+                margin-top: 0;
+                color: #bc964f;
+            }
+
+            .colonne2 {
+                border-left: 2px solid #bc964f;
+            }
+
+            .colonne2 p {
+                font-size: clamp(1rem, 2vw, 1.5rem);
+                text-align: justify;
+            }
+
+            /* ——— SECTION 3 ET 4 COLONNES ——— */
+            .trois-colonnes,
+            .quatre-colonnes {
+                display: grid;
+                gap: 20px;
+                background: white;
+                padding: 20px;
+            }
+
+            .trois-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .quatre-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .colonneA {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .colonneA:hover {
+                transform: scale(1.02);
+            }
+
+            /* ——— IMAGE ET PRIX ——— */
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+
+            #prixContainerOOOO1,
+            #prixContainerOOOO2,
+            #prixContainerOOOO3,
+            #prixContainerOOOO4,
+            #prixContainerOOOO5,
+            #prixContainerOOOO6,
+            #prixContainerQQQQ1,
+            #prixContainerQQQQ2,
+            #prixContainerQQQQ3,
+            #prixContainerQQQQ4,
+            #prixContainerRRRR1,
+            #prixContainerRRRR2,
+            #prixContainerRRRR3,
+            #prixContainerRRRR4,
+            #prixContainerSSSS1,
+            #prixContainerSSSS2,
+            #prixContainerSSSS3,
+            #prixContainerSSSS4,
+            #prixContainerTTTT1,
+            #prixContainerTTTT2 {
+                background-color: #333;
+                color: goldenrod;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0 0 10px 10px;
+            }
+
+            /* ——— BOUTON RÉSERVER ——— */
+            .btn-reserver {
+                display: inline-block;
+                background-color: #fff;
+                color: #bc964f;
+                border: 2px solid #bc964f;
+                padding: 12px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-reserver:hover {
+                background-color: #bc964f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-reserver:active {
+                transform: scale(0.98);
+            }
+
+            /* ——— TIMELINE ——— */
+            .timeline {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                padding-left: 60px;
+            }
+
+            /* ——— LIGNE ENTRE LES PUCE ——— */
+            .timeline::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 76px;
+                width: 3px;
+                height: 100%;
+                background: #bc964f;
+            }
+
+            .step {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .step::before {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 36px;
+                height: 36px;
+                background: #bc964f;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .step-text {
+                margin-left: 60px;
+                font-size: 14px;
+                color: white;
+                text-align: justify;
+            }
+
+            /* ——— CHOIX STOCKAGE ——— */
+            /* ———  CHOIX STOCKAGE ——— */
+
+            .menu-version {
+                text-align: center;
+                margin: 30px 0;
+                font-family: Arial, sans-serif;
+            }
+
+            .choix-container {
+                display: flex;
+                justify-content: left;
+                gap: 40px;
+            }
+
+            .choix {
+                padding: 14px 30px;
+                border: 2px solid #ccc;
+                border-radius: 12px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                background-color: #f8f8f8;
+                user-select: none;
+            }
+
+            .choix:hover {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+                border-color: gold;
+                background-color: #fffbea;
+            }
+
+            .choix.active {
+                background-color: goldenrod;
+                /* bleu lumineux */
+                color: black;
+                box-shadow:
+                    0 0 15px goldenrod,
+                    0 0 30px #66b3ff;
+                transform: scale(1.05);
+            }
+
+            /* ——— FOOTER ——— */
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: goldenrod;
+                border-color: goldenrod;
+                transform: scale(1.05);
+            }
+
+            /* ——— MEDIA QUERIES ——— */
+            @media (max-width: 1024px) {
+                .deux-colonnesA1,
+                .deux-colonnesA2,
+                .deux-colonnesB1,
+                .deux-colonnesB2,
+                .deux-colonnesC1,
+                .deux-colonnesC2 {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px;
+                }
+
+                .colonne1 h2,
+                .colonne1 p {
+                    text-align: center;
+                }
+
+                .colonne2 {
+                    border-left: none;
+                }
+
+                .timeline::before {
+                    left: 27px;
+                }
+
+                .step::before {
+                    left: -50px;
+                }
+
+                .step-text {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h3,
+                h4 {
+                    font-size: 1.3em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .btn-reserver {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                }
+
+                .timeline {
+                    padding-left: 0;
+                }
+
+                .timeline::before {
+                    left: -21px;
+                }
+
+                .step::before {
+                    left: -38px;
+                    border-radius: 50%;
+                    scale: 0.6;
+                }
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align: center; padding: 20px; background-color: #222; color: white">
+            <h1>Les drones DJI à Madagascar</h1>
+            <p>Proposés par EMC Sarl, spécialistes des drones à Madagascar.</p>
+        </header>
+        <!------------------------------------------------------------------ DJI MIC 3------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC 3------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC 3------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesA1">
+            <div class="colonne1">
+                <h2>DJI Mic 3 :</h2>
+                <p>le micro sans fil compact qui transforme vos vidéos à Antananarivo</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Capturez un son ultra-clair, synchronisé et prêt pour le montage — idéal pour les créateurs
+                    malgaches exigeants. Au cœur d’Antananarivo, où les projets vidéo fleurissent — témoignages, vlogs,
+                    reportages ou contenus d’entreprise — le DJI Mic 3 s’impose comme l’outil audio qu’il vous faut.
+                    Léger, puissant et fiable, il offre une solution professionnelle pour ceux qui souhaitent associer
+                    mobilité et qualité sonore sans compromis. Que vous soyez vidéaste, journaliste ou créateur de
+                    contenu local, ce micro sans fil vous accompagne dans toutes vos prises de vue.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesA2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>compacité & facilité d’usage</h5>
+                            Avec ses émetteurs de seulement 16 g (avec aimant inclus) et un récepteur de 25,1 g, le DJI
+                            Mic 3 se fait oublier une fois fixé.Son format compact permet une intégration discrète à vos
+                            appareils (caméra, smartphone, gimbal). Le boîtier de charge, lui, compense en puissance :
+                            il prolonge l’autonomie cumulée jusqu’à 28 heures.En cinq minutes de charge, vous gagnez
+                            près de deux heures d’enregistrement — idéal pour les tournages improvisés ou de terrain.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Qualité sonore & fonctionnalités avancées</h5>
+                            La capture audio est assurée en 24-bit / 32-bit float, avec un enregistrement simultané
+                            double fichier pour éviter toute perte de signal. Le système ajuste automatiquement le gain
+                            (Adaptive Gain Control) pour éviter la saturation lorsque les niveaux varient fortement.
+                            Trois profils de tonalité (Regular, Rich, Bright) et deux paliers de réduction de bruit (Low
+                            / High) vous laissent le contrôle, même en milieu urbain bruyant.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Connectivité, portée & synchronisation</h5>
+                            Équipé d’une transmission sans fil à double bande (2,4 GHz et 5,8 GHz), le DJI Mic 3 assure
+                            une portée jusqu’à 400 m dans un environnement dégagé. Pour les environnements plus
+                            contraints, une portée stable de 80 m sans perte est observée. Le système intègre également
+                            la synchronisation par timecode, avec une dérive inférieure à une image en 24 h — un atout
+                            précieux pour les montages multicaméra.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Usage pratique à Madagascar & avantages pour le marché local</h5>
+                            Dans le contexte malgache, où les contraintes logistiques et les imprévus sont fréquents, le
+                            DJI Mic 3 se distingue par sa robustesse, sa simplicité et ses fonctionnalités
+                            “automatisées” qui diminuent les réglages à faire sur le terrain. Sa faible consommation,
+                            ses modes de réduction du bruit, ainsi que sa compatibilité avec de nombreux appareils
+                            (caméras, smartphones, gimbals) en font un choix judicieux pour les créateurs à Antananarivo
+                            et dans les hautes terres. Grâce à ses options modulaires (packs 1 TX + 1 RX, 2 TX + 1 RX,
+                            etc.), chacun peut l’adapter à son besoin et budget.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MIC 3 -->
+        <!-- Section en 3 colonnes DJI MIC 3 -->
+        <!-- Section en 3 colonnesDJI MIC 3 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 3 (4 TX + 1 RX + Boîtier de recharge)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/ee7402bcbc6b561cda76aad846c898cd@ultra.webp" />
+                    <div id="prixContainerOOOO1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 3 (2 TX + 1 RX + Boîtier de recharge) + Adaptateur caméra"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/f9dfddf870bbc17e8c6088b5302d7819@ultra.webp" />
+                    <div id="prixContainerOOOO2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 3 (2 TX + 1 RX + Boîtier de recharge) + Adaptateur smartphone (Lightning)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/e93cebda750d884abe4ace6af270877c@ultra.webp" />
+                    <div id="prixContainerOOOO3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 3 (2 TX + 1 RX + Boîtier de recharge)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/49a44d726a9e4e0dfff75e2f7d94c22c@ultra.webp" />
+                    <div id="prixContainerOOOO4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE EE -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 3 (1 TX + 1 RX)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/e2289c55757ea4b19128f83b1fe4f097@ultra.webp" />
+                    <div id="prixContainerOOOO5">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE FF -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Émetteur DJI Mic 3"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/1221f52318bb52ebbed44ba5271e37d0@ultra.webp" />
+                    <div id="prixContainerOOOO6">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI MIC 3-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO1 = document.getElementById("prixContainerOOOO1");
+
+                function showError(message) {
+                    prixContainerOOOO1.textContent = message;
+                    prixContainerOOOO1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI MIC 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO2 = document.getElementById("prixContainerOOOO2");
+
+                function showError(message) {
+                    prixContainerOOOO2.textContent = message;
+                    prixContainerOOOO2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI MIC 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO3 = document.getElementById("prixContainerOOOO3");
+
+                function showError(message) {
+                    prixContainerOOOO3.textContent = message;
+                    prixContainerOOOO3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : DJI MIC 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO4 = document.getElementById("prixContainerOOOO4");
+
+                function showError(message) {
+                    prixContainerOOOO4.textContent = message;
+                    prixContainerOOOO4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT E : DJI MIC 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack5";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO5 = document.getElementById("prixContainerOOOO5");
+
+                function showError(message) {
+                    prixContainerOOOO5.textContent = message;
+                    prixContainerOOOO5.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO5.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT F : DJI MIC 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic3pack6";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerOOOO6 = document.getElementById("prixContainerOOOO6");
+
+                function showError(message) {
+                    prixContainerOOOO6.textContent = message;
+                    prixContainerOOOO6.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerOOOO6.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!------------------------------------------------------------------ DJI MIC MINI------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC MINI------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC MINI------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesB1">
+            <div class="colonne1">
+                <h2>DJI Mic Mini</h2>
+                <p>Microphone sans fil ultra-compact pour créateurs mobiles</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mic Mini est un microphone sans fil ultraléger et discret, conçu pour offrir un son de haute
+                    qualité dans un format minimaliste. Idéal pour les créateurs de contenu, vloggers, journalistes et
+                    streamers, il assure une transmission audio stable jusqu'à 400 mètres, une autonomie prolongée et
+                    une compatibilité directe avec les produits DJI OsmoAudio™. Grâce à sa conception compacte, il se
+                    glisse facilement dans votre poche ou votre sac, prêt à capturer des enregistrements audio détaillés
+                    où que vous soyez.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesB2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>1. Ultra-léger et discret</h5>
+                            Chaque émetteur pèse seulement 10 g, offrant un confort optimal lors du port et permettant
+                            une fixation magnétique ou par clip, sans alourdir vos vêtements.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>2. Autonomie prolongée avec boîtier de chargement</h5>
+                            Chaque émetteur offre jusqu'à 11,5 heures d'autonomie, et le récepteur jusqu'à 10,5 heures.
+                            Le boîtier de chargement permet environ 3,6 cycles de charge complets, offrant jusqu'à 48
+                            heures d'utilisation totale.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>3. Enregistrement audio omnidirectionnel de haute qualité</h5>
+                            Le système prend en charge l'enregistrement audio omnidirectionnel avec une réponse en
+                            fréquence de 20 Hz à 20 kHz, garantissant une capture sonore riche et détaillée.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>4. Réduction active du bruit à deux niveaux</h5>
+                            Offrant deux niveaux de réduction du bruit, le mode "de base" est adapté aux environnements
+                            calmes, tandis que le mode "fort" réduit efficacement les bruits ambiants dans des
+                            environnements bruyants.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>5. Limitation automatique pour éviter la saturation audio</h5>
+                            La fonction de limitation automatique ajuste le volume en cas d'entrée audio trop élevée,
+                            prévenant ainsi la saturation et assurant une qualité sonore constante.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>6. Compatibilité directe avec les produits DJI OsmoAudio™</h5>
+                            Le microphone peut se connecter directement via Bluetooth aux caméras DJI Osmo Action 5 Pro,
+                            Osmo Action 4 ou Osmo Pocket 3, sans nécessiter de récepteur, simplifiant ainsi votre
+                            configuration.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI Mic Mini -->
+        <!-- Section en 3 colonnes DJI Mic Mini -->
+        <!-- Section en 3 colonnes DJI Mic Mini -->
+
+        <!-- MENU DE CHOIX -->
+        <div class="menu-version">
+            <h3 style="text-align: left; margin: 20px">Sélection d’option :</h3>
+            <div class="choix-container" style="margin-left: 20px">
+                <div class="choix" data-version="64">Type-C</div>
+                <div class="choix" data-version="128">Lightning (Iphone)</div>
+            </div>
+        </div>
+
+        <!-- CONTENEUR DYNAMIQUE -->
+        <div id="contenuProduit"></div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const contenu = document.getElementById("contenuProduit");
+                const choixElements = document.querySelectorAll(".choix");
+
+                // Fonction principale d’affichage
+                function afficherVersion(version) {
+                    // Jeux d’images selon la version
+                    const images64 = [
+                        "fa476c02350fe31b42f9c9c30fc74bdd", // Image 1 version 64
+                        "a611cb3cbf7fa2818bc1abbe9d65d9ff", // Image 2 version 64
+                        "d7f9f76fb9fa479cb6935511f8d7bacd", // Image 3 version 64
+                        "96096d311249e0a90f5904da5077bcc3" // Image 4 version 64
+                    ];
+
+                    const images128 = [
+                        "87eae01d7f15d8040e8fc982221d5fc7", // Image 1 version 128
+                        "78a55fdda53c7ce3ec9350f8380b884f", // Image 2 version 128
+                        "d7f9f76fb9fa479cb6935511f8d7bacd", // Image 3 version 128
+                        "96096d311249e0a90f5904da5077bcc3" // Image 4 version 128
+                    ];
+
+                    // Identifiants Google Sheet
+                    const ids =
+                        version === "64"
+                            ? ["djimicminipack1", "djimicminipack2", "djimicminipack5", "djimicminipack6"]
+                            : ["djimicminipack3", "djimicminipack4", "djimicminipack5", "djimicminipack6"];
+
+                    const prefix = version === "64" ? "QQQQ" : "RRRR";
+                    const images = version === "64" ? images64 : images128;
+
+                    // Construction du HTML
+                    contenu.innerHTML = `
+        <section class="trois-colonnes">
+            ${images
+                .map(
+                    (img, i) => `
+                <div class="colonneA">
+                    <div class="image-container">
+                        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${img}@ultra.webp" />
+                        <div id="prixContainer${prefix}${i + 1}">Chargement du prix...</div>
+                    </div>
+                    <h4 style="text-align:center">
+                        <a class="btn-reserver" href="https://forms.gle/tJjXHkeXc4FHoWgJ7" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
+                    </h4>
+                </div>
+            `
+                )
+                .join("")}
+        </section>
+        `;
+
+                    chargerPrix(ids, prefix);
+                }
+
+                // Fonction de chargement des prix
+                async function chargerPrix(ids, prefix) {
+                    const sheetUrl =
+                        "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                    try {
+                        const response = await fetch(sheetUrl);
+                        const text = await response.text();
+                        const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+                        if (!match) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(match[1]);
+                        const rows = data.table.rows;
+
+                        ids.forEach((id, index) => {
+                            const ligne = rows.find((r) => r.c[0]?.v === id);
+                            const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
+                            if (!container) return;
+
+                            if (ligne && ligne.c[1]) {
+                                const prix = ligne.c[1].v;
+                                const prixFormate = Number(prix).toLocaleString("fr-FR", {
+                                    minimumFractionDigits: 2
+                                });
+                                container.textContent = `${prixFormate} Ariary`;
+                            } else {
+                                container.textContent = "Produit non trouvé";
+                                container.style.color = "red";
+                            }
+                        });
+                    } catch (e) {
+                        console.error("Erreur :", e);
+                        ids.forEach((_, i) => {
+                            const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
+                            if (c) c.textContent = "Erreur réseau";
+                        });
+                    }
+                }
+
+                // Gestion de la sélection et de l’effet brillant
+                choixElements.forEach((choix) => {
+                    choix.addEventListener("click", () => {
+                        choixElements.forEach((c) => c.classList.remove("active"));
+                        choix.classList.add("active");
+                        afficherVersion(choix.dataset.version);
+                    });
+                });
+
+                // Par défaut : activer la version 64
+                choixElements[0].classList.add("active");
+                afficherVersion("64");
+            });
+        </script>
+
+        <!------------------------------------------------------------------ DJI MIC 2------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC 2------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC 2------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesC1">
+            <div class="colonne1">
+                <h2>DJI Mic 2</h2>
+                <p>Microphone sans fil haute performance, prêt à l’emploi</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mic 2 est un microphone sans fil compact et professionnel, conçu pour capturer un son
+                    authentique avec une clarté exceptionnelle. Grâce à ses fonctionnalités avancées telles que
+                    l'enregistrement audio haute qualité, la réduction intelligente du bruit et l'enregistrement interne
+                    en 32 bits flottant, ce microphone est idéal pour les vlogs, interviews, livestreams et autres
+                    productions audio-visuelles.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesC2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>1. Enregistrement haute qualité avec réduction du bruit</h5>
+                            Profitez d'un son cristallin grâce à la réduction intelligente du bruit, assurant des voix
+                            claires même dans des environnements bruyants.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>2. Autonomie prolongée avec boîtier de chargement</h5>
+                            Chaque émetteur et récepteur offre jusqu'à 6 heures d'autonomie, pouvant être étendues à 18
+                            heures grâce au boîtier de chargement.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>3. Enregistrement interne de 14 heures en 32 bits flottant</h5>
+                            Chaque émetteur dispose de 8 Go de stockage interne, permettant un enregistrement non
+                            compressé de 14 heures en audio 48 kHz 24 bits et en 32 bits flottant.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>4. Portée sans fil de 250 m (820 ft)</h5>
+                            Bénéficiez d'une transmission audio sans fil jusqu'à 250 mètres, répondant aux besoins de la
+                            plupart des scénarios.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>5. Compatibilité étendue avec divers appareils</h5>
+                            Le DJI Mic 2 prend en charge les sorties USB-C, Lightning et analogiques 3,5 mm TRS,
+                            assurant une compatibilité avec la plupart des caméras, smartphones et ordinateurs.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>6. Connexion directe avec certains appareils DJI</h5>
+                            L'émetteur peut se connecter directement aux caméras Osmo Action 5 Pro, Osmo Action 4 ou
+                            Osmo Pocket 3 sans récepteur, offrant un audio de qualité supérieure et simplifiant votre
+                            équipement.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MIC 2 -->
+        <!-- Section en 3 colonnes DJI MIC 2 -->
+        <!-- Section en 3 colonnes DJI MIC 2 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 2 (2 TX + 1 RX + Boîtier de recharge)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/23fd6439b7587c7ac13537ced4f5f5b7@ultra.jpg" />
+                    <div id="prixContainerSSSS1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic 2 (1 TX + 1 RX)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/f6310bc5cc532f15e930d8bbd81b82cd@ultra.jpg" />
+                    <div id="prixContainerSSSS2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Émetteur DJI Mic 2 (Shadow Black)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/b0612ccbf91cb16fedeca5f722890893@ultra.jpg" />
+                    <div id="prixContainerSSSS3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DDD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Émetteur DJI Mic 2 (Blanc nacré)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/15b3f85e154a21864fb470e60cb62201@ultra.jpg" />
+                    <div id="prixContainerSSSS4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI MIC 2 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic2pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerSSSS1 = document.getElementById("prixContainerSSSS1");
+
+                function showError(message) {
+                    prixContainerSSSS1.textContent = message;
+                    prixContainerSSSS1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerSSSS1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI MIC 2 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic2pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerSSSS2 = document.getElementById("prixContainerSSSS2");
+
+                function showError(message) {
+                    prixContainerSSSS2.textContent = message;
+                    prixContainerSSSS2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerSSSS2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI MIC 2 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic2pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerSSSS3 = document.getElementById("prixContainerSSSS3");
+
+                function showError(message) {
+                    prixContainerSSSS3.textContent = message;
+                    prixContainerSSSS3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerSSSS3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : DJI MIC 2 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic2pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerSSSS4 = document.getElementById("prixContainerSSSS4");
+
+                function showError(message) {
+                    prixContainerSSSS4.textContent = message;
+                    prixContainerSSSS4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerSSSS4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!------------------------------------------------------------------ DJI MIC------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC------------------------------------------------------------------>
+        <!------------------------------------------------------------------ DJI MIC------------------------------------------------------------------>
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesD1">
+            <div class="colonne1">
+                <h2>DJI Mic</h2>
+                <p>Capturez un son pro en toute simplicité, partout et tout le temps.</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mic est un système sans fil ultra-compact conçu pour les vidéastes, vloggers, journalistes et
+                    créateurs de contenu qui exigent une qualité audio digne des pros — mais sans complexité. Avec une
+                    portée jusqu’à 250 m, testé en environnement dégagé et sans interférences., des émetteurs dotés d’un
+                    enregistrement interne, un récepteur doté d’un écran OLED et un boîtier de charge pour emporter
+                    l’ensemble facilement, il est prêt à l’emploi dès la sortie de la boîte. Clip magnétique, connexion
+                    directe aux smartphones, caméras ou ordinateurs : tout est pensé pour que vous puissiez vous
+                    concentrer sur votre sujet, pas sur le matériel. Le DJI Mic permet un son limpide et fiable, même
+                    sur le terrain.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesD2">
+            <div class="colonne3">
+                <h4>Caractéristiques techniques principales</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>1. Portée sans fil jusqu’à 250 m</h5>
+                            En condition ouverte et sans obstacles, le DJI Mic assure une transmission audio stable sur
+                            jusqu’à 250 m (≈ 820 ft) entre l’émetteur et le récepteur.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>2. Autonomie prolongée grâce au boîtier de charge</h5>
+                            Les émetteurs offrent environ 5,5 h d’utilisation individuelle, et avec le boîtier de
+                            charge, jusqu’à 15 h d’autonomie totale, chargé et prêt à emporter.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>3. Enregistrement interne 8 Go, 48 kHz/24-bit</h5>
+                            Chaque émetteur dispose d’une mémoire interne de 8 Go (≈ 14 h d’enregistrement) en 48
+                            kHz/24-bit sans compression, pour une capture de secours ou en solo sans récepteur.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>4. Clip magnétique et design ultra-portable</h5>
+                            Les émetteurs sont dotés d’un clip arrière et d’un design magnétique pratique pour fixation
+                            rapide sur vêtement ou surface métallique — idéal pour vlogging et interviews mobiles.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>5. Récepteur avec écran OLED et connectivité multiple</h5>
+                            Le récepteur intègre un écran OLED (≈ 0,95″) pour visualiser l’état, le niveau audio, et se
+                            connecte via câble 3,5 mm ou adaptateurs Lightning/USB-C à smartphone, caméra ou ordinateur
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>6. Compatible multi-appareils & usage varié</h5>
+                            Le système se raccorde facilement à un smartphone (Lightning/USB-C), caméra, ou PC. Idéal
+                            pour vlogging solo, livestream ou interview à deux.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI MIC -->
+        <!-- Section en 3 colonnes DJI MIC -->
+        <!-- Section en 3 colonnes DJI MIC -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic (2 TX + 1 RX + Boîtier de recharge))"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/75688d7dbf43af180869af1c9cfa1d65@ultra.jpg" />
+                    <div id="prixContainerTTTT1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mic (1 TX + 1 RX)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/20357a6ad1cfe37bfda7b8caa50d0c2d@ultra.jpg" />
+                    <div id="prixContainerTTTT2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI MIC 1-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic1pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerTTTT1 = document.getElementById("prixContainerTTTT1");
+
+                function showError(message) {
+                    prixContainerTTTT1.textContent = message;
+                    prixContainerTTTT1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerTTTT1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI MIC 1 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimic1pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerTTTT2 = document.getElementById("prixContainerTTTT2");
+
+                function showError(message) {
+                    prixContainerTTTT2.textContent = message;
+                    prixContainerTTTT2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerTTTT2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <footer>
+            <div class="footer-content">
+                <hr />
+                <div class="footer-nav">
+                    <h3>Découvrir</h3>
+                    <ul>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                        </li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
+                                >A propos</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                    <br />
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+
+        <div id="cookieConsent" style="display: none">
+            Ce site utilise des cookies pour améliorer votre expérience.
+            <button id="acceptCookies">Accepter</button>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+        </div>
+    </body>
+</html>
