@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Test Prix DJI</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                padding: 50px;
+                background-color: #f5f5f5;
+                text-align: center;
+            }
+            .price-box {
+                background-color: #fff;
+                display: inline-block;
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            }
+            .price-box h1 {
+                margin-bottom: 20px;
+                color: #333;
+            }
+            .price-box .price {
+                font-size: 32px;
+                color: #e53935;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="price-box">
+            <h1>Prix du DJI Mavic 3 Pro Cine</h1>
+            <div class="price" id="price">Chargement...</div>
+        </div>
+
+        <script>
+            // Script pour récupérer le prix
+            fetch("https://store.dji.com/cn/product/dji-mavic-3-pro-cine-combo")
+                .then((response) => response.text())
+                .then((html) => {
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(html, "text/html");
+                    const price = doc.querySelector(".price"); // À adapter selon le sélecteur exact
+                    if (price) {
+                        document.getElementById("price").textContent = price.textContent;
+                    } else {
+                        document.getElementById("price").textContent = "Impossible de récupérer le prix";
+                    }
+                })
+                .catch((err) => {
+                    console.error(err);
+                    document.getElementById("price").textContent = "Erreur lors du chargement du prix";
+                });
+        </script>
+    </body>
+</html>
