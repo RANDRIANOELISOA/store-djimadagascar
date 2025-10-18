@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
+
+        <style>
+            /* ——— STYLES GÉNÉRAUX ——— */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                background-color: #fafafa;
+                color: #333;
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h4 {
+                margin-left: 50px;
+                text-align: left;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h5 {
+                font-size: 1em;
+
+                color: goldenrod;
+            }
+
+            /* ——— SECTION 2 COLONNES ——— */
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 40px;
+                min-height: 600px;
+                margin: 20px auto;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .deux-colonnesA1 {
+                background: url(https://www-cdn.djiits.com/dps/90c082b0c4fad405168bcb090e8f7cd1.jpg) center/cover
+                    no-repeat;
+            }
+            .deux-colonnesA2 {
+                background: url(https://www-cdn.djiits.com/dps/a23252d1262e256be274ee3441e5b208@origin.jpg?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+            .deux-colonnesB1 {
+                background: url(https://i.postimg.cc/fL4nnj5c/pexels-star-914682.png) center/cover no-repeat;
+            }
+
+
+
+            .deux-colonnesB2 {
+                background: url(https://www-cdn.djiits.com/dps/9d36cb401ccf67dfc93beac3efb876b3.jpg) center/cover
+                    no-repeat;
+            }
+
+            .colonne1,
+            .colonne2,
+            .colonne3,
+            .colonne4 {
+                flex: 1 1 45%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .colonne1 h2 {
+                font-family: "Cormorant Garamond", serif;
+                margin-top: 0;
+                text-align: right;
+                font-size: clamp(2rem, 4vw, 4em);
+                color: #bc964f;
+            }
+
+            .colonne1 p {
+                font-family: "Cinzel", serif;
+                text-align: right;
+                font-size: clamp(1.2rem, 2vw, 2em);
+                margin-top: 0;
+                color: #bc964f;
+            }
+
+            .colonne2 {
+                border-left: 2px solid #bc964f;
+            }
+
+            .colonne2 p {
+                font-size: clamp(1rem, 2vw, 1.5rem);
+                text-align: justify;
+            }
+
+            /* ——— SECTION 3 ET 4 COLONNES ——— */
+            .trois-colonnes,
+            .quatre-colonnes {
+                display: grid;
+                gap: 20px;
+                background: white;
+                padding: 20px;
+            }
+
+            .trois-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .quatre-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .colonneA {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .colonneA:hover {
+                transform: scale(1.02);
+            }
+
+            /* ——— IMAGE ET PRIX ——— */
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+
+            #prixContainerBBBB1,
+            #prixContainerBBBB2,
+            #prixContainerBBBB3,
+            #prixContainerCCCC1,
+            #prixContainerCCCC2,
+            #prixContainerCCCC3,
+            #prixContainerCCCC4 {
+                background-color: #333;
+                color: goldenrod;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0 0 10px 10px;
+            }
+
+            /* ——— BOUTON RÉSERVER ——— */
+            .btn-reserver {
+                display: inline-block;
+                background-color: #fff;
+                color: #bc964f;
+                border: 2px solid #bc964f;
+                padding: 12px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-reserver:hover {
+                background-color: #bc964f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-reserver:active {
+                transform: scale(0.98);
+            }
+
+            /* ——— TIMELINE ——— */
+            .timeline {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                padding-left: 60px;
+            }
+            /* ——— LIGNE ENTRE LES PUCE ——— */
+            .timeline::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 76px;
+                width: 3px;
+                height: 100%;
+                background: #bc964f;
+            }
+
+            .step {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .step::before {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 36px;
+                height: 36px;
+                background: #bc964f;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .step-text {
+                margin-left: 60px;
+                font-size: 14px;
+                color: white;
+                text-align: justify;
+            }
+
+            /* ——— FOOTER ——— */
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: goldenrod;
+                border-color: goldenrod;
+                transform: scale(1.05);
+            }
+
+            /* ——— MEDIA QUERIES ——— */
+            @media (max-width: 1024px) {
+                .deux-colonnesA1,
+                .deux-colonnesA2,
+                .deux-colonnesB1,
+                .deux-colonnesB2{
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 0 0 0 30PX;
+                }
+
+
+                .colonne1 h2,
+                .colonne1 p {
+                    text-align: center;
+                }
+
+                .colonne2 {
+                    border-left: none;
+                }
+
+                .timeline::before {
+                    left: 27px;
+                }
+
+                .step::before {
+                    left: -50px;
+                }
+
+                .step-text {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h3,
+                h4 {
+                    font-size: 1.3em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .btn-reserver {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                }
+
+                .timeline {
+                    padding-left: 0;
+                }
+                .timeline::before {
+                    left: -21px;
+                }
+
+                .step::before {
+                    left: -38px;
+                    border-radius: 50%;
+                    scale: 0.6;
+                }
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align: center; padding: 20px; background-color: #222; color: white">
+            <h1>Les drones DJI à Madagascar</h1>
+            <p>Proposés par EMC Sarl, spécialistes des drones à Madagascar.</p>
+        </header>
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesA1">
+            <div class="colonne1">
+                <h2>DJI MAVIC 4 Pro</h2>
+                <p>L’excellence professionnelle pour la capture aérienne</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mavic 4 Pro représente le sommet de la gamme Mavic en intégrant les toutes dernières
+                    technologies destinées aux créateurs exigeants et aux professionnels de l’imagerie aérienne. Ce
+                    drone combine une qualité d’image supérieure, des systèmes de sécurité avancés et des performances
+                    de vol prolongées, pour offrir une expérience aussi fiable qu’évoluée.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesA2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Caméra professionnelle : Munie d’un capteur (souvent 4/3” CMOS selon les générations), la
+                            caméra capture des photos ultra-détaillées et des vidéos en 5.1K ou plus, avec des profils
+                            couleurs avancés (D-Log, HLG, Apple ProRes selon la version), des images au format RAW, et
+                            un contrôle manuel complet pour les experts.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Systèmes d’évitement d’obstacles omnidirectionnels : La détection intelligente sur 360°
+                            permet d’anticiper et d’éviter les obstacles même à grande vitesse, augmentant la sécurité
+                            en toutes circonstances.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Transmission longue distance : La technologie de transmission avancée (OcuSync) offre un
+                            flux vidéo en HD sur 15 à 20 km selon la réglementation, avec une connexion stable, même
+                            dans des environnements complexes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Autonomie : Doté de batteries haute capacité, le Mavic 4 Pro offre un temps de vol
+                            atteignant jusqu’à 45 minutes, permettant des sessions prolongées sans interruption
+                            fréquente.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Fonctionnalités créatives avancées : Modes de vol intelligents (ActiveTrack, Waypoint,
+                            MasterShots, FocusTrack), prises de vue panoramiques automatisées, hyperlapse, et contrôle
+                            précis du cadrage grâce à la nacelle 3 axes ultra-stable.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Design repliable et robuste : Malgré sa sophistication, le drone reste transportable et
+                            conçu pour une utilisation sur le terrain dans des conditions variées.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Le DJI Mavic 4 Pro s’adresse avant tout aux professionnels de la vidéo, aux créateurs et aux
+                            passionnés désireux d’accéder à des images aériennes spectaculaires, tout en misant sur la
+                            fiabilité, la sécurité et la polyvalence logicielle DJI.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 4 Pro 512GB (DJI RC Pro 2)"
+                        src="https://i.postimg.cc/N0dWPkTH/1-DJI-MAVIC-4-PRO-512-GB-CREATOR-COMBO.jpg" />
+                    <div id="prixContainerBBBB1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 4 Pro 512GB (DJI RC Pro 2)"
+                        src="https://i.postimg.cc/GpTkZcTF/2-DJI-MAVIC-4-PRO-FMC-Fly-More-Combo-RC-2.jpg" />
+                    <div id="prixContainerBBBB2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 4 Pro 512GB (DJI RC Pro 2)"
+                        src="https://i.postimg.cc/yNRZLv2W/3-DJI-MAVIC-PRO-DJI-RC-2.jpg" />
+                    <div id="prixContainerBBBB3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic4pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerBBBB1 = document.getElementById("prixContainerBBBB1");
+
+                function showError(message) {
+                    prixContainerBBBB1.textContent = message;
+                    prixContainerBBBB1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerBBBB1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic4pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerBBBB2 = document.getElementById("prixContainerBBBB2");
+
+                function showError(message) {
+                    prixContainerBBBB2.textContent = message;
+                    prixContainerBBBB2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerBBBB2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic4pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerBBBB2 = document.getElementById("prixContainerBBBB3");
+
+                function showError(message) {
+                    prixContainerBBBB3.textContent = message;
+                    prixContainerBBBB3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerBBBB3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!------------------------------------------------------------------ DJI MAVIC 3 ------------------------------------------------------------------>
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesB1">
+            <div class="colonne1">
+                <h2>DJI MAVIC 3 Pro</h2>
+                <p>Polyvalence professionnelle et innovation à trois caméras</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Mavic 3 Pro s’impose comme un drone haut de gamme, conçu pour les passionnés d’imagerie
+                    aérienne et les professionnels exigeants. Sa caractéristique principale : un système inédit à trois
+                    caméras intégrées, offrant une grande polyvalence en matière de prise de vues.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesB2">
+            <div class="colonne3">
+                <h4>Triple caméra intégrée :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Grand-angle Hasselblad (4/3 CMOS, 20 MP, équivalent 24 mm, ouverture f/2.8–f/11) pour des
+                            images détaillées, riches en couleurs naturelles, même en faible lumière..
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Téléobjectif moyen (1/1.3” CMOS, 48 MP, équivalent 70 mm, ouverture f/2.8), idéal pour les
+                            portraits ou sujets à mi-distance avec un zoom optique x3.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Super téléobjectif (1/2” CMOS, 12 MP, équivalent 166 mm, ouverture f/3.4), offrant un zoom
+                            optique x7 ou hybride jusqu’à x28 pour les scènes lointaines
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Vidéo et photographie avancées :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Vidéo jusqu’en 5.1K à 50 ips (caméra Hasselblad), 4K à 60 ips (téléobjectifs), profils
+                            couleurs professionnels (D-Log, HLG, Apple ProRes selon version Cine), prises de vues au
+                            format RAW.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Mode nuit dédié, hyperlapse, MasterShots, FocusTrack pour la créativité automatisée.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <h4>Vidéo et photographie avancées :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Vidéo jusqu’en 5.1K à 50 ips (caméra Hasselblad), 4K à 60 ips (téléobjectifs), profils
+                            couleurs professionnels (D-Log, HLG, Apple ProRes selon version Cine), prises de vues au
+                            format RAW.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Mode nuit dédié, hyperlapse, MasterShots, FocusTrack pour la créativité automatisée.
+                        </div>
+                    </div>
+                </div>
+
+                <h4>Autonomie et design :</h4>
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">Jusqu’à 43 minutes de vol sur une batterie unique.</div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Drone repliable et robuste, pensé pour un transport facile et une utilisation terrain.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            Le Mavic 3 Pro repousse les limites de la prise de vue aérienne grâce à ses trois focales
+                            embarquées, permettant de capturer tout, du paysage large au détail lointain, et ce, avec la
+                            légendaire colorimétrie Hasselblad
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+        <!-- Section en 3 colonnes DJI Mavic 4 -->
+
+        <section class="quatre-colonnes">
+            <!-- COLONNE A -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 3 PRO CINE PREMIUM COMBO (DJI RC Pro)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/d38e7185acf998d8d4cdb9ee90fa3415@ultra.jpg" />
+                    <div id="prixContainerCCCC1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE B -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 3 Pro FMC (Fly More Combo) (DJI RC Pro)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/94b1fdc908b2eb56cfdfef3a511d1097@ultra.jpg" />
+                    <div id="prixContainerCCCC2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE C -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 3 Pro FMC (DJI RC)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/2b8c2c4c06747bc3a282b4788a1f461f@ultra.jpg" />
+                    <div id="prixContainerCCCC3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+            <!-- COLONNE D -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="DJI Mavic 3 Pro (DJI RC)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/b7636661cef14ec6daec1810db720992@ultra.jpg" />
+                    <div id="prixContainerCCCC4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic3pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerCCCC1 = document.getElementById("prixContainerCCCC1");
+
+                function showError(message) {
+                    prixContainerCCCC1.textContent = message;
+                    prixContainerCCCC1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerCCCC1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic3pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerCCCC2 = document.getElementById("prixContainerCCCC2");
+
+                function showError(message) {
+                    prixContainerCCCC2.textContent = message;
+                    prixContainerCCCC2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerCCCC2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic3pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerCCCC2 = document.getElementById("prixContainerCCCC3");
+
+                function showError(message) {
+                    prixContainerCCCC3.textContent = message;
+                    prixContainerCCCC3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerCCCC3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : MAVIC 4 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djimavic3pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerCCCC4 = document.getElementById("prixContainerCCCC4");
+
+                function showError(message) {
+                    prixContainerCCCC4.textContent = message;
+                    prixContainerCCCC4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerCCCC4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <footer>
+            <div class="footer-content">
+                <hr />
+                <div class="footer-nav">
+                    <h3>Découvrir</h3>
+                    <ul>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
+                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                        </li>
+                        <li>
+                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
+                                >A propos</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                    <br />
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+
+        <div id="cookieConsent" style="display: none">
+            Ce site utilise des cookies pour améliorer votre expérience.
+            <button id="acceptCookies">Accepter</button>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+        </div>
+    </body>
+</html>
