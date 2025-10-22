@@ -1,0 +1,2007 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&display=swap"
+            rel="stylesheet" />
+        <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
+
+        <style>
+            /* ——— STYLES GÉNÉRAUX ——— */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                width: 100%;
+                padding: 0;
+                background-color: #fafafa;
+                color: #333;
+            }
+
+            h3 {
+                margin: 0;
+                text-align: center;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h4 {
+                margin-left: 50px;
+                text-align: left;
+                color: goldenrod;
+                font-size: 2em;
+            }
+
+            h5 {
+                font-size: 1em;
+
+                color: goldenrod;
+            }
+
+            /* ——— SECTION 2 COLONNES ——— */
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2,
+            .deux-colonnesD1,
+            .deux-colonnesD2 {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                padding: 40px;
+                min-height: 600px;
+                margin: 20px auto;
+                box-sizing: border-box;
+                color: white;
+            }
+
+            .deux-colonnesA1 {
+                background: url(https://www-cdn.djiits.com/dps/4a1805adac75cecddf633806784c18be.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesA2 {
+                background: url(https://www-cdn.djiits.com/dps/7eee4dbaf34f6d4b83b1fee8fe891681.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesB1 {
+                background: url(https://www-cdn.djiits.com/dps/77b992a7051f21d4ce200fb7813391ac.jpg?w=2400&h=1200)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesB2 {
+                background: url(https://www-cdn.djiits.com/dps/245951789f92c0f48b73e8da8ec7cc43.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesC1 {
+                background: url(https://www-cdn.djiits.com/dps/93cc3e992f3cf0fa307c2d288062b159.jpg?w=2400&h=1600)
+                    center/cover no-repeat;
+            }
+
+            .deux-colonnesC2 {
+                background: url(https://www-cdn.djiits.com/dps/2da7e38891f8e500832f020b265c6a4a.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesD1 {
+                background: url(https://www-cdn.djiits.com/dps/89ef67ecb333ac32b769094b825beeca.jpg) center/cover
+                    no-repeat;
+            }
+
+            .deux-colonnesD2 {
+                background: url(https://www-cdn.djiits.com/dps/d387fdc3f6eb732cd8469ac50e5c4fa5.jpg) center/cover
+                    no-repeat;
+            }
+
+            .colonne1,
+            .colonne2,
+            .colonne3,
+            .colonne4 {
+                flex: 1 1 45%;
+                padding: 20px;
+                box-sizing: border-box;
+            }
+
+            .colonne1 h2 {
+                font-family: "Cormorant Garamond", serif;
+                margin-top: 0;
+                text-align: right;
+                font-size: clamp(2rem, 4vw, 4em);
+                color: #bc964f;
+            }
+
+            .colonne1 p {
+                font-family: "Cinzel", serif;
+                text-align: right;
+                font-size: clamp(1.2rem, 2vw, 2em);
+                margin-top: 0;
+                color: #bc964f;
+            }
+
+            .colonne2 {
+                border-left: 2px solid #bc964f;
+            }
+
+            .colonne2 p {
+                font-size: clamp(1rem, 2vw, 1.5rem);
+                text-align: justify;
+            }
+
+            /* ——— SECTION 3 ET 4 COLONNES ——— */
+            .trois-colonnes,
+            .quatre-colonnes {
+                display: grid;
+                gap: 20px;
+                background: white;
+                padding: 20px;
+            }
+
+            .trois-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            }
+
+            .quatre-colonnes {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+
+            .colonneA {
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            .colonneA:hover {
+                transform: scale(1.02);
+            }
+
+            /* ——— IMAGE ET PRIX ——— */
+            .image-container {
+                width: 100%;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            .image-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 10px 10px 0 0;
+            }
+            [id^="prixContainer"],
+            #prixContainerJJJJ1,
+            #prixContainerJJJJ2,
+            #prixContainerJJJJ3,
+            #prixContainerJJJJ4,
+            #prixContainerJJJJ5,
+            #prixContainerKKKK1,
+            #prixContainerKKKK2,
+            #prixContainerKKKK3,
+            #prixContainerKKKK4 {
+                background-color: #333;
+                color: goldenrod;
+                text-align: center;
+                font-weight: bold;
+                padding: 10px;
+                margin: 0;
+                border-radius: 0 0 10px 10px;
+            }
+
+            /* ——— BOUTON RÉSERVER ——— */
+            .btn-reserver {
+                display: inline-block;
+                background-color: #fff;
+                color: #bc964f;
+                border: 2px solid #bc964f;
+                padding: 12px 28px;
+                border-radius: 8px;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            .btn-reserver:hover {
+                background-color: #bc964f;
+                color: white;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            }
+
+            .btn-reserver:active {
+                transform: scale(0.98);
+            }
+
+            /* ——— TIMELINE ——— */
+            .timeline {
+                position: relative;
+                width: 100%;
+                max-width: 450px;
+                padding-left: 60px;
+            }
+            /* ——— LIGNE ENTRE LES PUCE ——— */
+            .timeline::before {
+                content: "";
+                position: absolute;
+                top: 20px;
+                left: 76px;
+                width: 3px;
+                height: 100%;
+                background: #bc964f;
+            }
+
+            .step {
+                position: relative;
+                margin-bottom: 40px;
+            }
+
+            .step::before {
+                content: attr(data-text);
+                position: absolute;
+                left: 0;
+                top: -10px;
+                width: 36px;
+                height: 36px;
+                background: #bc964f;
+                border-radius: 50%;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                font-size: 12px;
+            }
+
+            .step-text {
+                margin-left: 60px;
+                font-size: 14px;
+                color: white;
+                text-align: justify;
+            }
+
+            /* ——— FOOTER ——— */
+            .footer {
+                background: #2c3e50;
+                color: white;
+                text-align: center;
+                padding: 5px;
+                margin: 20px;
+                border-radius: 10px;
+            }
+
+            footer {
+                text-align: center;
+                margin-top: 40px;
+            }
+
+            .footer-nav ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                list-style: none;
+                padding: 0;
+            }
+
+            .custom-link {
+                display: block;
+                padding: 10px 15px;
+                color: black;
+                background-color: white;
+                border: 2px solid black;
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+
+            .custom-link:hover {
+                color: goldenrod;
+                border-color: goldenrod;
+                transform: scale(1.05);
+            }
+
+            /* ——— MEDIA QUERIES ——— */
+            @media (max-width: 1024px) {
+            .deux-colonnesA1,
+            .deux-colonnesA2,
+            .deux-colonnesB1,
+            .deux-colonnesB2,
+            .deux-colonnesC1,
+            .deux-colonnesC2,
+            .deux-colonnesD1,
+            .deux-colonnesD2 {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px;
+                }
+
+                .colonne1 h2,
+                .colonne1 p {
+                    text-align: center;
+                }
+
+                .colonne2 {
+                    border-left: none;
+                }
+
+                .timeline::before {
+                    left: 27px;
+                }
+
+                .step::before {
+                    left: -50px;
+                }
+
+                .step-text {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+
+            @media (max-width: 480px) {
+                h3,
+                h4 {
+                    font-size: 1.3em;
+                    margin-left: 0;
+                    text-align: center;
+                }
+
+                .btn-reserver {
+                    font-size: 16px;
+                    padding: 10px 20px;
+                }
+
+                .timeline {
+                    padding-left: 0;
+                }
+                .timeline::before {
+                    left: -21px;
+                }
+
+                .step::before {
+                    left: -38px;
+                    border-radius: 50%;
+                    scale: 0.6;
+                }
+            }
+
+            /* ——— CHOIX STOCKAGE ——— */
+            /* ———  CHOIX STOCKAGE ——— */
+
+            .menu-version {
+                text-align: center;
+                margin: 30px 0;
+                font-family: Arial, sans-serif;
+            }
+            .menu-version h3 {
+                font-size: 1.2em;
+                font-weight: bold;
+                margin-bottom: 15px;
+                color: #222;
+            }
+
+            .choix-container {
+                display: flex;
+                justify-content: left;
+                gap: 40px;
+            }
+
+            .choix {
+                padding: 14px 30px;
+                border: 2px solid #ccc;
+                border-radius: 12px;
+                font-size: 1em;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                background-color: #f8f8f8;
+                user-select: none;
+            }
+
+            .choix:hover {
+                box-shadow: 0 0 15px rgba(255, 215, 0, 0.7);
+                border-color: gold;
+                background-color: #fffbea;
+            }
+
+            .choix.active {
+                background-color: goldenrod; /* bleu lumineux */
+                color: black;
+                box-shadow:
+                    0 0 15px goldenrod,
+                    0 0 30px #66b3ff;
+                transform: scale(1.05);
+            }
+
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+            /* ——— COOKIE ——— */
+
+            #cookieConsent {
+                position: fixed;
+                bottom: 10px;
+                left: 10px;
+                right: 10px;
+                background: #222;
+                color: white;
+                padding: 20px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px #000;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 1000;
+            }
+            #cookieConsent button {
+                background: #4caf50;
+                border: none;
+                padding: 8px 15px;
+                color: white;
+                font-weight: bold;
+                cursor: pointer;
+                border-radius: 4px;
+            }
+        </style>
+
+        <style>
+            /* --- Tous les styles confinés dans #osmo-selector --- */
+            #osmo-selector {
+                font-family: Arial, sans-serif;
+                color: #222;
+                max-width: 600px;
+                margin: auto;
+            }
+
+            #osmo-selector h2 {
+                margin-top: 40px;
+                font-size: 20px;
+            }
+
+            #osmo-selector .storage-options {
+                display: flex;
+                gap: 10px;
+                margin-bottom: 20px;
+            }
+
+            #osmo-selector .storage-btn {
+                flex: 1;
+                padding: 12px;
+                border: 2px solid #ccc;
+                border-radius: 8px;
+                cursor: pointer;
+                background: white;
+                text-align: center;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            #osmo-selector .storage-btn.active {
+                border-color: #0066ff;
+                background: #eaf2ff;
+                color: #0066ff;
+            }
+
+            #osmo-selector .bundle-list {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #osmo-selector .bundle {
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 12px;
+                transition: 0.3s;
+                background: #fff;
+            }
+
+            #osmo-selector .bundle:hover {
+                border-color: #0066ff;
+            }
+
+            #osmo-selector .bundle-title {
+                font-weight: bold;
+                margin-bottom: 4px;
+            }
+
+            #osmo-selector .bundle-price {
+                font-size: 18px;
+                color: #111;
+                font-weight: bold;
+            }
+
+            #osmo-selector .bundle-desc {
+                font-size: 14px;
+                color: #666;
+                margin-top: 6px;
+            }
+
+            #osmo-selector .best-offer {
+                background: #ff8500;
+                color: white;
+                font-size: 10px;
+                font-weight: bold;
+                padding: 2px 6px;
+                border-radius: 4px;
+                margin-left: 6px;
+            }
+        </style>
+        t
+    </head>
+
+    <body>
+        <header style="text-align: center; padding: 20px; background-color: #222; color: white">
+            <h1>Les caméras embarqués DJI à Madagascar</h1>
+            <p>Proposés par EMC Sarl, spécialistes des matériel DJI à Madagascar.</p>
+        </header>
+
+        <!-- Section osmo 7-->
+        <!-- Section osmo 7-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesA1">
+            <div class="colonne1">
+                <h2>DJI Osmo Pocket 3 :</h2>
+                <p>Le compagnon vidéo de poche ultime</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Le DJI Osmo Pocket 3 redéfinit la vidéo mobile. Compact, intelligent et puissant, il offre une
+                    qualité digne du cinéma, une stabilisation parfaite et des fonctions créatives inégalées — du
+                    vlogging spontané aux captations pro.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesA2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>1. Capteur CMOS 1 pouce – qualité d’image exceptionnelle</h5>
+                            Doté d’un capteur large de 1 pouce, l’Osmo Pocket 3 capture des vidéos riches en détails,
+                            même en conditions de faible luminosité. Résolution jusqu’à 4K à 120 ips, plage dynamique
+                            étendue, couleurs naturelles — vous obtenez des images qui impressionnent.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>2. Gimbal mécanique 3 axes – stabilité parfaite</h5>
+                            Grâce à sa stabilisation mécanique sur 3 axes, chaque plan reste fluide, même en mouvement
+                            ou en situation instable. Fini les tremblements — le rendu visuel est digne d’un tournage
+                            ciné.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <h5>3. Écran rotatif OLED tactile</h5>
+                        <div class="step-text">
+                            Un écran OLED de 2 pouces, pivotant, vous permet de passer facilement du mode selfie au mode
+                            paysage. Le cadrage devient intuitif, idéal pour les vlogs, les interviews ou les prises de
+                            vue complexes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>4. Audio haute-fidélité et transmission longue portée</h5>
+                            Profitez d’un son net et professionnel : l’Osmo Pocket 3 intègre des capacités audio
+                            robustes, avec transmission stable jusqu’à 400 m (selon conditions). Parfait pour capturer
+                            la voix, les ambiances, les interviews, même à distance.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>5. Suivi intelligent & modes créatifs</h5>
+                            Avec ActiveTrack 6.0, la caméra suit intelligemment les sujets, même en mouvement. Vous
+                            bénéficiez aussi de modes SpinShot, Motionlapse, Panorama, et d’effets créatifs intégrés
+                            pour enrichir vos vidéos sans logiciels externes.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>6. Autonomie et recharge rapide</h5>
+                            L’Osmo Pocket 3 offre une autonomie jusqu’à 166 minutes, et se recharge rapidement (0 à 80 %
+                            en ~16 minutes). Léger, performant et toujours prêt à capturer vos idées.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI POCKET 3 -->
+        <!-- Section en 3 colonnes DJI POCKET 3 -->
+        <!-- Section en 3 colonnes DJI POCKET 3 -->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Vlog Osmo Pocket 3 (DJI Mic 2)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/81ce45f00da7f352d39b306da9e79ab5@ultra.webp" />
+                    <div id="prixContainerJJJJ1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Vlog Osmo Pocket 3 - Émetteur DJI Mic Mini "
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/3c344d637c4d7349ea305b58052419b5@ultra.webp" />
+                    <div id="prixContainerJJJJ2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Vlog Osmo Pocket 3 (Émetteur DJI Mic 3)"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/7113dd658aa692ef377cff675362abe0@ultra.webp" />
+                    <div id="prixContainerJJJJ3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Créateur Osmo Pocket 3"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/0476c1db158291605a0bf26fe9addf54@ultra.jpg" />
+                    <div id="prixContainerJJJJ4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE EE -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo Pocket 3"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/6e088f86d33b4472b37fd6282436a22c@ultra.webp" />
+                    <div id="prixContainerJJJJ5">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI POCKET 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djipocket3pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerJJJJ1 = document.getElementById("prixContainerJJJJ1");
+
+                function showError(message) {
+                    prixContainerJJJJ1.textContent = message;
+                    prixContainerJJJJ1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerJJJJ1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI POCKET 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djipocket3pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerJJJJ2 = document.getElementById("prixContainerJJJJ2");
+
+                function showError(message) {
+                    prixContainerJJJJ2.textContent = message;
+                    prixContainerJJJJ2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerJJJJ2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI POCKET 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djipocket3pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerJJJJ3 = document.getElementById("prixContainerJJJJ3");
+
+                function showError(message) {
+                    prixContainerJJJJ3.textContent = message;
+                    prixContainerJJJJ3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerJJJJ3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : DJI POCKET 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djipocket3pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerJJJJ4 = document.getElementById("prixContainerJJJJ4");
+
+                function showError(message) {
+                    prixContainerJJJJ4.textContent = message;
+                    prixContainerJJJJ4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerJJJJ4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT E : DJI POCKET 3 -->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djipocket3pack5";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerJJJJ5 = document.getElementById("prixContainerJJJJ5");
+
+                function showError(message) {
+                    prixContainerJJJJ5.textContent = message;
+                    prixContainerJJJJ5.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerJJJJ5.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- Section osmo 360-->
+        <!-- Section osmo 360-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesB1">
+            <div class="colonne1">
+                <h2>Osmo 360 :</h2>
+                <p>Une caméra 360° tout-en-un qui repousse les limites de la créativité visuelle</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    Plongez au cœur de l’action. Avec Osmo 360, DJI inaugure une ère nouvelle pour les caméras 360°,
+                    combinant résolution native 8K, capteurs à haute sensibilité et système magnétique rapide pour
+                    dévoiler chaque détail, même dans les conditions les plus exigeantes. Que vous soyez vidéaste,
+                    voyageur ou créateur de contenu, cette caméra vous offre une liberté visuelle totale.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesB2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Une clarté à couper le souffle</h5>
+                            Deux capteurs 1/1,1″ et une ouverture f/1.9 offrent une résolution 8K ultra-détaillée, même
+                            en faible luminosité. Les couleurs restent riches, les contrastes naturels et la plage
+                            dynamique atteint 13,5 stops.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Performance vidéo extrême</h5>
+                            Filmez en 8K 30 fps jusqu’à 100 min, ou passez en 6K 24 fps pour 190 min d’endurance. En
+                            mode Boost, profitez d’un ultra-grand-angle 4K 120 fps pour vos scènes d’action les plus
+                            rapides.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Audio professionnel intégré</h5>
+                            Connectez directement deux micros DJI Mic sans récepteur. Un son clair, précis, et
+                            parfaitement synchronisé, idéal pour les vlogs et les interviews.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Design compact et robuste</h5>
+                            Seulement 183 g, étanche IP68 jusqu’à 10 m, et système magnétique Quick-Release pour un
+                            montage rapide sur tout support.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Autonomie et stockage renforcés</h5>
+                            Jusqu’à 128 Go intégrés (105 Go utilisables) + carte microSD 1 To. Batterie 1300 mAh
+                            rechargeable en 18 min (80 %) via USB-C PD.
+                        </div>
+                    </div>
+
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Écran et contrôle intuitif</h5>
+                            Écran tactile OLED 2,0″, 800 nits de luminosité, affichage fluide même en plein soleil.
+                            Interface simple, réactive et pensée pour les créateurs mobiles.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle multi-POV moto Osmo 360"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/4f2b04b67967b524b777a34c3408963a@ultra.webp" />
+                    <div id="prixContainerKKKK1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle POV guidon de moto Osmo 360
+"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/74c1aa93d4eabf02000017a39cf549d4@ultra.webp" />
+                    <div id="prixContainerKKKK2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Osmo 360 Popular Combo"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/7a020de2b0e81dd3609646a036c96733@ultra.webp" />
+                    <div id="prixContainerKKKK3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Standard Osmo 360"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/6060aa43939c57c22a1007f6bac91cc5@ultra.webp" />
+                    <div id="prixContainerKKKK4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI OSMO 360-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo360pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerKKKK1 = document.getElementById("prixContainerKKKK1");
+
+                function showError(message) {
+                    prixContainerKKKK1.textContent = message;
+                    prixContainerKKKK1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerKKKK1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI OSMO 360-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo360pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerKKKK2 = document.getElementById("prixContainerKKKK2");
+
+                function showError(message) {
+                    prixContainerKKKK2.textContent = message;
+                    prixContainerKKKK2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerKKKK2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI OSMO 360-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo360pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerKKKK3 = document.getElementById("prixContainerKKKK3");
+
+                function showError(message) {
+                    prixContainerKKKK3.textContent = message;
+                    prixContainerKKKK3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerKKKK3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : DJI OSMO 360-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiosmo360pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerKKKK4 = document.getElementById("prixContainerKKKK4");
+
+                function showError(message) {
+                    prixContainerKKKK4.textContent = message;
+                    prixContainerKKKK4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerKKKK4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- Section DJI NANO-->
+        <!-- Section DJI NANO-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesC1">
+            <div class="colonne1">
+                <h2>Osmo Nano</h2>
+                <p><strong>Votre compagnon de captation pour des vidéos 4K, en toute simplicité</strong></p>
+            </div>
+            <div class="colonne2">
+                <p
+                    style="
+                        text-shadow:
+                            0 0 10px #fff,
+                            0 0 20px blue,
+                            0 0 30px #ffd700;
+                    ">
+                    L’Osmo Nano est conçu pour être votre compagnon de tous les jours : suffisamment petit pour se
+                    glisser dans une poche, mais assez puissant pour capturer des images en 4K ultra nettes. Grâce à son
+                    design léger (≈ 52 g pour la caméra seule) et à sa forme compacte, il vous accompagne partout — des
+                    randonnées, des escapades urbaines aux projets créatifs improvisés.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesC2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Compact, puissant et toujours prêt</h5>
+                            L’Osmo Nano est conçu pour être votre compagnon du quotidien : suffisamment petit pour se
+                            glisser dans une poche, mais assez puissant pour capturer des images en 4K ultra nettes.
+                            Grâce à son design léger (≈ 52 g pour la caméra seule) et à sa forme compacte, il vous
+                            accompagne partout — des randonnées aux escapades urbaines, en passant par les projets
+                            créatifs improvisés.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Un capteur de nouvelle génération</h5>
+                            Sous son allure minimaliste, l’Osmo Nano cache un capteur 1/1,3″ offrant un champ de vision
+                            ultra grand-angle de 143°, une ouverture f/2,8, et une plage ISO étendue (100 à 25 600). Il
+                            capture avec finesse les détails de vos scènes, qu’il s’agisse d’un paysage lumineux ou
+                            d’une ambiance nocturne contrastée.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Des vidéos 4K fluides et stables</h5>
+                            L’Osmo Nano enregistre en 4K (3840×2160) jusqu’à 60 ips, avec la technologie de
+                            stabilisation RockSteady 3.0 et la fonction HorizonBalancing, qui maintient un horizon
+                            parfaitement droit même en cas de mouvement rapide. Il prend également en charge le 2.7K et
+                            le Full HD, avec des ralentis spectaculaires jusqu’à 240 ips, et des modes créatifs comme le
+                            time-lapse et le hyperlapse.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Autonomie prolongée, liberté étendue</h5>
+                            Sa batterie intégrée assure jusqu’à 90 minutes d’enregistrement (en 1080p avec stabilisation
+                            activée) et atteint 200 minutes lorsqu’il est associé au module Vision Dock. Pour un
+                            appareil aussi compact, c’est une autonomie remarquable, permettant de filmer longuement
+                            sans interruption.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Un écran intuitif et une captation audio claire</h5>
+                            L’Osmo Nano intègre un écran tactile de 1,96″ (4,9 cm) lumineux (≈ 800 cd/m²) offrant une
+                            excellente lisibilité même en plein soleil. Son double micro stéréo (16 bits / 48 kHz AAC)
+                            restitue un son clair et naturel, tandis que le stockage extensible via microSD jusqu’à 1 To
+                            complète une mémoire interne de 64 ou 128 Go, selon la version.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO NANO -->
+        <!-- Section en 3 colonnes DJI OSMO NANO -->
+        <!-- Section en 3 colonnes DJI OSMO NANO -->
+
+        <!-- MENU DE CHOIX -->
+        <div class="menu-version">
+            <h3 style="text-align: left; margin: 20px">Sélection d’option :</h3>
+            <div class="choix-container" style="margin: -11px">
+                <div class="choix" data-version="64">Version 64 Go</div>
+                <div class="choix" data-version="128">Version 128 Go</div>
+            </div>
+        </div>
+
+        <!-- CONTENEUR DYNAMIQUE -->
+        <div id="contenuProduit"></div>
+
+        <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const contenu = document.getElementById("contenuProduit");
+    const choixElements = document.querySelectorAll(".choix");
+
+    // Fonction principale d’affichage
+    function afficherVersion(version) {
+        let prefix = version === "64" ? "LLLL" : "MMMM";
+        let ids =
+            version === "64"
+                ? ["djiosmonano64pack1", "djiosmonano64pack2", "djiosmonano64pack3", "djiosmonano64pack4"]
+                : ["djiosmonano128pack1", "djiosmonano128pack2", "djiosmonano128pack3", "djiosmonano128pack4"];
+
+        // Images
+        const images = [
+            "fdc94588da9fe89241f05af056361988",
+            "b83eed7eba714a9f2413e8090c769bc1",
+            "33f0d43e5e676b9200c783daf182bd30",
+            "635e548072de4f138041004610f961a3"
+        ];
+
+        contenu.innerHTML = `
+      <section class="trois-colonnes">
+        ${ids
+            .map(
+                (_, i) => `
+          <div class="colonneA">
+            <div class="image-container">
+              <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${images[i]}@ultra.webp" />
+              <div id="prixContainer${prefix}${i + 1}">Chargement du prix...</div>
+            </div>
+            <h4 style="text-align:center">
+              <a class="btn-reserver" href="https://forms.gle/RKGeZQfkGg3v2dHR6" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
+            </h4>
+          </div>
+        `
+            )
+            .join("")}
+      </section>
+    `;
+
+        chargerPrix(ids, prefix);
+    }
+
+    // Fonction de chargement des prix
+    async function chargerPrix(ids, prefix) {
+        const sheetUrl =
+            "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+        try {
+            const response = await fetch(sheetUrl);
+            const text = await response.text();
+            const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+            if (!match) throw new Error("Réponse Google Sheet invalide");
+
+            const data = JSON.parse(match[1]);
+            const rows = data.table.rows;
+
+            ids.forEach((id, index) => {
+                const ligne = rows.find((r) => r.c[0]?.v === id);
+                const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
+                if (!container) return;
+
+                if (ligne && ligne.c[1]) {
+                    const prix = ligne.c[1].v;
+                    const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
+                    container.textContent = `${prixFormate} Ariary`;
+                } else {
+                    container.textContent = "Produit non trouvé";
+                    container.style.color = "red";
+                }
+            });
+        } catch (e) {
+            console.error("Erreur :", e);
+            ids.forEach((_, i) => {
+                const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
+                if (c) c.textContent = "Erreur réseau";
+            });
+        }
+    }
+
+    // Gestion de la sélection et de l’effet brillant
+    choixElements.forEach((choix) => {
+        choix.addEventListener("click", () => {
+            // Retirer l’effet de tous les choix
+            choixElements.forEach((c) => c.classList.remove("active"));
+            // Appliquer l’effet au choix sélectionné
+            choix.classList.add("active");
+            // Charger la version correspondante
+            afficherVersion(choix.dataset.version);
+        });
+    });
+
+    // Par défaut : activer la version 64
+    choixElements[0].classList.add("active");
+    afficherVersion("64");
+});
+</script>
+
+
+
+        <!-- Section dji action 5-->
+        <!-- Section dji action 5-->
+
+        <!-- Section en 2 colonnes -->
+        <section class="deux-colonnesD1">
+            <div class="colonne1">
+                <h2>DJI Osmo Action 5 Pro :</h2>
+                <p>la caméra d’action ultime pour les aventuriers de Madagascar</p>
+            </div>
+            <div class="colonne2">
+                <p>
+                    La DJI Osmo Action 5 Pro est la caméra idéale pour les passionnés de sports extrêmes, les vloggers
+                    et tous ceux qui souhaitent capturer des moments inoubliables avec une qualité d'image
+                    exceptionnelle. Sa robustesse, ses fonctionnalités avancées et sa facilité d'utilisation en font un
+                    choix incontournable pour les aventuriers malgaches.
+                </p>
+            </div>
+        </section>
+
+        <section class="deux-colonnesD2">
+            <div class="colonne3">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Capturez l’invisible avec une qualité d’image exceptionnelle</h5>
+                            La DJI Osmo Action 5 Pro se distingue par son capteur CMOS de 1/1,3" offrant une résolution
+                            photo de 40 MP et une plage dynamique de 13,5 stops. Cette technologie permet de capturer
+                            des images nettes et détaillées, même dans des conditions de faible luminosité. Avec une
+                            ouverture f/2.8 et un champ de vision ultra-large de 155°, elle offre une perspective
+                            immersive pour vos vidéos et photos.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Vidéo 4K/120fps : fluidité et détails à couper le souffle</h5>
+                            Grâce à sa capacité d'enregistrement vidéo en 4K à 120 images par seconde, la Osmo Action 5
+                            Pro permet de réaliser des vidéos d'une fluidité exceptionnelle. Elle offre également un
+                            enregistrement en 4:3 pour une flexibilité maximale lors de la composition de vos plans. Son
+                            processeur 4 nm assure une performance optimale, même lors de prises de vue en haute
+                            résolution.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Conçue pour l’aventure : étanchéité et robustesse</h5>
+                            Avec une étanchéité certifiée IP68, la DJI Osmo Action 5 Pro peut être immergée jusqu'à 20
+                            mètres de profondeur sans caisson supplémentaire. Elle résiste également à des températures
+                            extrêmes, de -20°C à +45°C, ce qui en fait l'outil idéal pour capturer vos exploits en
+                            milieu aquatique ou lors d'aventures en plein air.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="colonne4">
+                <div class="timeline">
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Suivi intelligent et stabilisation avancée</h5>
+                            Équipée de la technologie de suivi de sujet alimentée par un processeur 4 nm, la Osmo Action
+                            5 Pro ajuste dynamiquement la composition pour garder votre sujet centré, même en mouvement.
+                            Elle intègre également les systèmes de stabilisation RockSteady 3.0+, HorizonSteady 360° et
+                            HorizonBalancing, garantissant des images stables et fluides, quel que soit le terrain.
+                        </div>
+                    </div>
+                    <div class="step" data-text="+">
+                        <div class="step-text">
+                            <h5>Autonomie prolongée et stockage généreux</h5>
+                            Dotée d'une batterie de 1950 mAh, la DJI Osmo Action 5 Pro offre jusqu'à 240 minutes
+                            d'enregistrement continu en 1080p à 24 images par seconde. Elle dispose également de 47 Go
+                            de stockage interne, permettant de capturer de longues séquences sans se soucier de
+                            l'espace. De plus, elle est compatible avec la recharge rapide via USB-C.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+        <!-- Section en 3 colonnes DJI OSMO 360-->
+
+        <section class="trois-colonnes">
+            <!-- COLONNE AA -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Randonnée Osmo Action 5 Pro"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/3b73ad66059686022f740969a3e52f12@ultra.jpg" />
+                    <div id="prixContainerNNNN1">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE BB -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Motocyclisme/VTT Osmo Action 5 Pro"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/ba1f898f42cef4e7f749c0381782cbb5@ultra.jpg" />
+                    <div id="prixContainerNNNN2">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE CC -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Aventure Osmo Action 5 Pro"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/7a2b86b7543c131b46eaf8c118c07a19@ultra.jpg" />
+                    <div id="prixContainerNNNN3">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+
+            <!-- COLONNE DD -->
+
+            <div class="colonneA">
+                <div class="image-container">
+                    <img
+                        alt="Bundle Standard Osmo Action 5 Pro"
+                        src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/4876dcdd9ca7de6a955022fe92fb0b60@ultra.jpg" />
+                    <div id="prixContainerNNNN4">Chargement du prix...</div>
+                </div>
+
+                <h4 style="text-align: center">
+                    <a
+                        class="btn-reserver"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
+                        style="font-family: &quot;Cinzel Decorative&quot;, cursive">
+                        R&eacute;server
+                    </a>
+                </h4>
+            </div>
+        </section>
+
+        <!-- SCRIPT A : DJI ACTION 5-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiaction5pack1";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerNNNN1 = document.getElementById("prixContainerNNNN1");
+
+                function showError(message) {
+                    prixContainerNNNN1.textContent = message;
+                    prixContainerNNNN1.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerNNNN1.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT B : DJI ACTION 5-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiaction5pack2";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerNNNN2 = document.getElementById("prixContainerNNNN2");
+
+                function showError(message) {
+                    prixContainerNNNN2.textContent = message;
+                    prixContainerNNNN2.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerNNNN2.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT C : DJI ACTION 5-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiaction5pack3";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerNNNN3 = document.getElementById("prixContainerNNNN3");
+
+                function showError(message) {
+                    prixContainerNNNN3.textContent = message;
+                    prixContainerNNNN3.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerNNNN3.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <!-- SCRIPT D : DJI ACTION 5-->
+
+        <script>
+            (function () {
+                "use strict";
+
+                const produitCible = "djiaction5pack4";
+                const sheetUrl =
+                    "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                const prixContainerNNNN4 = document.getElementById("prixContainerNNNN4");
+
+                function showError(message) {
+                    prixContainerNNNN4.textContent = message;
+                    prixContainerNNNN4.classList.add("error");
+                }
+
+                async function loadData() {
+                    try {
+                        const response = await fetch(sheetUrl);
+                        if (!response.ok) throw new Error(`Erreur réseau : ${response.status}`);
+
+                        const text = await response.text();
+                        const jsonMatch = text.match(/google\.visualization\.Query\.setResponse\((.*)\);/s);
+                        if (!jsonMatch || jsonMatch.length < 2) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(jsonMatch[1]);
+                        const rows = data.table.rows;
+
+                        const ligne = rows.find((row) => row.c[0]?.v === produitCible);
+
+                        if (ligne) {
+                            const prix = ligne.c[1]?.v ?? 0;
+                            const prixFormaté = Number(prix).toLocaleString("fr-FR", {
+                                minimumFractionDigits: 2,
+                                maximumFractionDigits: 2
+                            });
+
+                            prixContainerNNNN4.textContent = `${prixFormaté} Ariary`;
+                        } else {
+                            showError(`Produit "${produitCible}" non trouvé dans la feuille.`);
+                        }
+                    } catch (error) {
+                        console.error(error);
+                        showError(`Erreur : ${error.message}`);
+                    }
+                }
+
+                loadData();
+            })();
+        </script>
+
+        <footer>
+            <div class="footer-content">
+                <hr />
+                <div class="footer-nav">
+                    <h3>Découvrir</h3>
+                    <ul>
+                        <li><a class="custom-link" href="djimadagsacar.html">A propos</a></li>
+                        <li><a class="custom-link" href="index.html">Acceuil</a></li>
+                        <li>
+                            <a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a>
+                        </li>
+                        <li>
+                            <a class="custom-link" href="Mentions%20l%C3%A9gales.html"
+                                >Mentions légales</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <hr />
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                        <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84 </p>
+                    <br />
+                </div>
+            </div>
+        </footer>
+
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+        <!-- COOKIE -->
+
+        <div id="cookieConsent" style="display: none">
+            Ce site utilise des cookies pour améliorer votre expérience.
+            <button id="acceptCookies">Accepter</button>
+        </div>
+
+        <script>
+            // Crée un cookie
+            function setCookie(name, value, days) {
+                let expires = "";
+                if (days) {
+                    const date = new Date();
+                    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // Lit un cookie
+            function getCookie(name) {
+                const nameEQ = name + "=";
+                const ca = document.cookie.split(";");
+                for (let i = 0; i < ca.length; i++) {
+                    let c = ca[i];
+                    while (c.charAt(0) === " ") c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            // Vérifie si consentement cookie déjà donné
+            function checkCookieConsent() {
+                const consent = getCookie("cookieConsent");
+                if (!consent) {
+                    document.getElementById("cookieConsent").style.display = "flex";
+                }
+            }
+
+            // Bouton accepter : crée cookie et cache le message
+            document.getElementById("acceptCookies").addEventListener("click", function () {
+                setCookie("cookieConsent", "accepted", 365);
+                document.getElementById("cookieConsent").style.display = "none";
+            });
+
+            // Vérifie au chargement de la page
+            window.onload = function () {
+                checkCookieConsent();
+            };
+        </script>
+
+        <!-- Pied de page -->
+        <div class="footer">
+            <p>&copy; 2025 EMC Sarl. Tous droits réservés</p>
+        </div>
+    </body>
+</html>
