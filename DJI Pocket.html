@@ -639,7 +639,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -659,7 +659,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -679,7 +679,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -699,7 +699,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -719,7 +719,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1076,7 +1076,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1097,7 +1097,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1117,7 +1117,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1137,7 +1137,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1450,35 +1450,38 @@
         <div id="contenuProduit"></div>
 
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const contenu = document.getElementById("contenuProduit");
-                const choixElements = document.querySelectorAll(".choix");
+document.addEventListener("DOMContentLoaded", function () {
+    const contenu = document.getElementById("contenuProduit");
+    const choixElements = document.querySelectorAll(".choix");
 
-                // Fonction principale d’affichage
-                function afficherVersion(version) {
-                    let prefix = version === "64" ? "LLLL" : "MMMM";
-                    let ids =
-                        version === "64"
-                            ? ["djiosmonano64pack1", "djiosmonano64pack2", "djiosmonano64pack3", "djiosmonano64pack4"]
-                            : [
-                                  "djiosmonano128pack1",
-                                  "djiosmonano128pack2",
-                                  "djiosmonano128pack3",
-                                  "djiosmonano128pack4"
-                              ];
+    // Fonction principale d’affichage
+    function afficherVersion(version) {
+        let prefix = version === "64" ? "LLLL" : "MMMM";
+        let ids =
+            version === "64"
+                ? ["djiosmonano64pack1", "djiosmonano64pack2", "djiosmonano64pack3", "djiosmonano64pack4"]
+                : ["djiosmonano128pack1", "djiosmonano128pack2", "djiosmonano128pack3", "djiosmonano128pack4"];
 
-                    contenu.innerHTML = `
+        // Images
+        const images = [
+            "fdc94588da9fe89241f05af056361988",
+            "b83eed7eba714a9f2413e8090c769bc1",
+            "33f0d43e5e676b9200c783daf182bd30",
+            "635e548072de4f138041004610f961a3"
+        ];
+
+        contenu.innerHTML = `
       <section class="trois-colonnes">
         ${ids
             .map(
                 (_, i) => `
           <div class="colonneA">
             <div class="image-container">
-              <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${["fdc94588da9fe89241f05af056361988", "b83eed7eba714a9f2413e8090c769bc1", "33f0d43e5e676b9200c783daf182bd30", "635e548072de4f138041004610f961a3"][i]}@ultra.webp" />
+              <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${images[i]}@ultra.webp" />
               <div id="prixContainer${prefix}${i + 1}">Chargement du prix...</div>
             </div>
             <h4 style="text-align:center">
-              <a class="btn-reserver" href="https://forms.gle/tJjXHkeXc4FHoWgJ7" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
+              <a class="btn-reserver" href="https://forms.gle/RKGeZQfkGg3v2dHR6" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
             </h4>
           </div>
         `
@@ -1487,62 +1490,64 @@
       </section>
     `;
 
-                    chargerPrix(ids, prefix);
+        chargerPrix(ids, prefix);
+    }
+
+    // Fonction de chargement des prix
+    async function chargerPrix(ids, prefix) {
+        const sheetUrl =
+            "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+        try {
+            const response = await fetch(sheetUrl);
+            const text = await response.text();
+            const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+            if (!match) throw new Error("Réponse Google Sheet invalide");
+
+            const data = JSON.parse(match[1]);
+            const rows = data.table.rows;
+
+            ids.forEach((id, index) => {
+                const ligne = rows.find((r) => r.c[0]?.v === id);
+                const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
+                if (!container) return;
+
+                if (ligne && ligne.c[1]) {
+                    const prix = ligne.c[1].v;
+                    const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
+                    container.textContent = `${prixFormate} Ariary`;
+                } else {
+                    container.textContent = "Produit non trouvé";
+                    container.style.color = "red";
                 }
-
-                // Fonction de chargement des prix
-                async function chargerPrix(ids, prefix) {
-                    const sheetUrl =
-                        "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
-                    try {
-                        const response = await fetch(sheetUrl);
-                        const text = await response.text();
-                        const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
-                        if (!match) throw new Error("Réponse Google Sheet invalide");
-
-                        const data = JSON.parse(match[1]);
-                        const rows = data.table.rows;
-
-                        ids.forEach((id, index) => {
-                            const ligne = rows.find((r) => r.c[0]?.v === id);
-                            const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
-                            if (!container) return;
-
-                            if (ligne && ligne.c[1]) {
-                                const prix = ligne.c[1].v;
-                                const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
-                                container.textContent = `${prixFormate} Ariary`;
-                            } else {
-                                container.textContent = "Produit non trouvé";
-                                container.style.color = "red";
-                            }
-                        });
-                    } catch (e) {
-                        console.error("Erreur :", e);
-                        ids.forEach((_, i) => {
-                            const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
-                            if (c) c.textContent = "Erreur réseau";
-                        });
-                    }
-                }
-
-                // Gestion de la sélection et de l’effet brillant
-                choixElements.forEach((choix) => {
-                    choix.addEventListener("click", () => {
-                        // Retirer l’effet de tous les choix
-                        choixElements.forEach((c) => c.classList.remove("active"));
-                        // Appliquer l’effet au choix sélectionné
-                        choix.classList.add("active");
-                        // Charger la version correspondante
-                        afficherVersion(choix.dataset.version);
-                    });
-                });
-
-                // Par défaut : activer la version 64
-                choixElements[0].classList.add("active");
-                afficherVersion("64");
             });
-        </script>
+        } catch (e) {
+            console.error("Erreur :", e);
+            ids.forEach((_, i) => {
+                const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
+                if (c) c.textContent = "Erreur réseau";
+            });
+        }
+    }
+
+    // Gestion de la sélection et de l’effet brillant
+    choixElements.forEach((choix) => {
+        choix.addEventListener("click", () => {
+            // Retirer l’effet de tous les choix
+            choixElements.forEach((c) => c.classList.remove("active"));
+            // Appliquer l’effet au choix sélectionné
+            choix.classList.add("active");
+            // Charger la version correspondante
+            afficherVersion(choix.dataset.version);
+        });
+    });
+
+    // Par défaut : activer la version 64
+    choixElements[0].classList.add("active");
+    afficherVersion("64");
+});
+</script>
+
+
 
         <!-- Section dji action 5-->
         <!-- Section dji action 5-->
@@ -1640,7 +1645,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1660,7 +1665,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1680,7 +1685,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1700,7 +1705,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1918,14 +1923,14 @@
                 <div class="footer-nav">
                     <h3>Découvrir</h3>
                     <ul>
-                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
-                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li><a class="custom-link" href="djimadagsacar.html">A propos</a></li>
+                        <li><a class="custom-link" href="index.html">Acceuil</a></li>
                         <li>
-                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                            <a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a>
                         </li>
                         <li>
-                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
-                                >A propos</a
+                            <a class="custom-link" href="Mentions%20l%C3%A9gales.html"
+                                >Mentions légales</a
                             >
                         </li>
                     </ul>
@@ -1935,6 +1940,7 @@
                     <br />
                     <p>DJI à Madagascar, propulsé par EMC Sarl</p>
                     <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                        <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84 </p>
                     <br />
                 </div>
             </div>

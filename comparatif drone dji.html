@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJI Madagascar - Comparatif Drones Grand Public</title>
+    <meta name="description" content="Comparatif ultra-détaillé des drones DJI grand public et professionnels à Madagascar. Comparez DJI Mavic 4 Pro, DJI Mavic 3 Pro, DJIAir 3S, DJI Mini 4 Pro, DJI Mini 3, DJI Mini 4K. Fiches techniques, prix, autonomie, capteurs, vidéo, etc.">
+    <meta name="keywords" content="DJI, drone, comparatif, Mavic, Mini, Air, Madagascar, fiche technique, prix, autonomie, caméra, obstacle, DJI Madagascar, boutique drone, test drone, drone professionnel, drone loisir, drone pas cher">
+    <meta name="author" content="RANDRIANOELISOA Todisoa Xavier">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="ajMmQAF6Bx0PbzPsfQPg127Cpi5EpIfE_7sSU8_sCbg" />
+  <style>
+        * { margin: 0; padding: 0; box-sizing: border-box}
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #391313; background: #F2F2F2}
+        /* Header */
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #96b5e9 100%); color: white; padding: 0rem 0; position: fixed; top: 0; width: 100%; z-index: 1000; box-shadow: 0 8px 32px rgba(0,0,0,0.3); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .header-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.8rem; font-weight: bold; letter-spacing: 2px; text-shadow: 0 0 20px rgba(255,255,255,0.5); position: relative; font-size: xx-large;white-space: nowrap; overflow: visible;min-height: 80px;align-content: center}
+        .logo::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent); animation: shimmer 2s infinite; }
+        @keyframes shimmer { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .nav-toggle { background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer; padding: 0.5rem; transition: transform 0.3s ease; z-index: 1001; }
+        .nav-toggle:hover { transform: scale(1.1); }
+        .nav-toggle.active { transform: rotate(90deg); }
+        .nav { position: fixed; height: 200px; top: 0; left: -300px; width: 300px; height: 100vh; transition: left 0.3s ease; z-index: 999; padding-top: 80px; backdrop-filter: blur(15px); border-right: 1px solid rgba(255,255,255,0.1); box-shadow: 10px 0 30px rgba(0,0,0,0.3); }
+        .nav.active { left: 0; }
+        .nav-list { list-style: none; padding: 0;min-height: 1000px; white-space: nowrap;overflow: visible}
+        .nav-item { margin: 0; }
+        .nav-link { display: block; color: white; text-decoration: none; padding: 1rem 2rem; transition: background-color 0.3s ease; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .nav-link:hover { background-color: rgba(255,255,255,0.1); box-shadow: inset 0 0 20px rgba(255,255,255,0.1); transform: translateX(10px); }
+        .nav-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 998; opacity: 0; visibility: hidden; transition: opacity 0.3s ease, visibility 0.3s ease; }
+        .nav-overlay.active { opacity: 1; visibility: visible; }
+        .main { margin-top: 80px; padding: 2rem 0; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        /* Comparatif Table */
+        .compare-table { margin: 3rem 0 2rem; border: 1.5px solid #e0e6ed; border-radius: 12px; overflow-x: auto; background: #fff; }
+        table { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 900px; }
+        th, td { padding: 18px 12px; text-align: center; border-bottom: 1px solid #f1f3f6; font-size: 1.05rem; }
+        th { background: #f7fafd; color: #222; font-weight: 700; border-top: 1.5px solid #e0e6ed; }
+        tr:last-child td { border-bottom: none; }
+        .carac-label { font-weight: 600; color: #555; background: #f7fafd; text-align: left; border-right: 1.5px solid #e0e6ed; min-width: 140px; }
+        td.carac-label { font-size: 1.08rem; }
+        th.carac-label { background: #f1f3f6; color: #222; font-size: 1.12rem; }
+        th, td { min-width: 260px; max-width: 260px; word-break: break-word; }
+        .select-drone { width: 220px; padding: 8px 10px; border-radius: 6px; border: 1px solid #d1d5db; font-size: 1rem; background: #f7fafd; margin-bottom: 8px; text-align-last: center; }
+        @media (max-width: 900px) { .container { padding: 0 1rem; } th, td { font-size: 0.98em; min-width: 180px; max-width: 180px; } .select-drone { width: 140px; } }
+        @media (max-width: 600px) { .container { padding: 0 0.5rem; } th, td { padding: 8px 2px; min-width: 120px; max-width: 120px; } .select-drone { width: 90px; font-size: 0.9em; } table { min-width: 600px; } }
+        /* Footer */
+        .footer { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 3rem 0 1rem; margin-top: 3rem; position: relative; overflow: hidden; }
+        .footer::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.05) 50%, transparent 70%); animation: footerShine 4s infinite; }
+        @keyframes footerShine { 0% { transform: translateX(-100%); } 100% { transform: translateX(100%); } }
+        .footer-content { max-width: 1200px; margin: 0 auto; padding: 0 2rem; text-align: center; position: relative; z-index: 2; }
+        .contact-info { margin-bottom: 2rem; }
+        .contact-item { margin: 0.5rem 0; font-size: 1rem; }
+        .contact-item strong { color: #ffd700; text-shadow: 0 0 10px rgba(255,215,0,0.5); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.2); padding-top: 1rem; font-size: 0.9rem; opacity: 0.8; }
+  </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">DJI MADAGASCAR</div>
+            <button class="nav-toggle" id="navToggle">☰</button>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="djimadagsacar.html" class="nav-link">Accueil</a></li>
+            <li class="nav-item"><a href="index.html" class="nav-link">Boutique</a></li>
+            <li class="nav-item"><a href="Conditions%20de%20ventes.html" class="nav-link">CGV</a></li>
+            <li class="nav-item"><a href="Mentions%20l%C3%A9gales.html" class="nav-link">Mention légale</a></li>
+           
+        </ul>
+    </nav>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <main class="main">
+        <!-- Section Comparatif Drones -->
+        <section class="container" id="comparatif">
+          <h2 style="text-align:center; color:#302a06; margin: 3rem 0rem 1.5rem; font-size:2rem; letter-spacing:1px;">Tableau comparatif des drones DJI</h2>
+          <div class="compare-table" id="compareTableContainer"></div>
+        </section>
+    </main>
+  <script>
+        // Navigation responsive
+        const navToggle = document.getElementById('navToggle');
+        const nav = document.getElementById('nav');
+        const navOverlay = document.getElementById('navOverlay');
+        navToggle.addEventListener('click', function() {
+            nav.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            navToggle.classList.toggle('active');
+            if (nav.classList.contains('active')) {
+                navToggle.textContent = '✕';
+            } else {
+                navToggle.textContent = '☰';
+            }
+        });
+        navOverlay.addEventListener('click', function() {
+            nav.classList.remove('active');
+            navOverlay.classList.remove('active');
+            navToggle.classList.remove('active');
+            navToggle.textContent = '☰';
+        });
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                nav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                navToggle.classList.remove('active');
+                navToggle.textContent = '☰';
+            });
+        });
+        // Comparatif dynamique
+        const drones = [
+          {
+            nom: "Mavic 4 Pro",
+            image: "https://www-cdn.djiits.com/cms/uploads/1ca18733efed500879f603bb3c8b747a@640*640.png",
+            achat: "https://djimadagascar-fr.weebly.com/drone-dji-mavic-4-pro.html",
+            poids: "1065g",
+            dimensions: "NC",
+            autonomie: "51min",
+            batterie: "6,654mAh",
+            capteurs: '4/3" CMOS Hasselblad 100MP + 48MP (1/1.3") + 50MP (1/1.5")',
+            resolution_photo: "100MP/48MP/50MP",
+            resolution_video: "6K/60fps HDR (Hasselblad), 4K/120fps",
+            ouverture: "f/2.0-f/11 (princ.), f/2.8, f/3.4 (télé)",
+            fov: "24mm (princ.), 70mm, 168mm",
+            iso: "NC",
+            obstacles: "Omnidirectionnel+LiDAR, vision nocturne",
+            vent: "NC",
+            altitude: "NC",
+            vitesse: "96km/h (60mph)",
+            transmission: "O4+ jusqu’à 20km",
+            stockage: "512GB SSD (Creator Combo)",
+            gnss: "NC",
+            temperature: "NC",
+            prix: "~2,099€",
+            autres: "Gimbal 360°, RAW stacking, HDR avancé"
+          },
+          {
+            nom: "Mavic 3 Pro",
+            image: "https://www-cdn.djiits.com/cms/uploads/051d8452c8211cff033f8c68b9050e07@640*640.png",
+            achat: "DJI%20Mavic.html",
+            poids: "958g",
+            dimensions: "231.1x98x95.4mm (plié)",
+            autonomie: "43min",
+            batterie: "5,000mAh+",
+            capteurs: '4/3" CMOS Hasselblad 20MP + 48MP (1/1.3") + 12MP (1/2")',
+            resolution_photo: "20MP/48MP/12MP",
+            resolution_video: "5.1K/50fps (Hasselblad), 4K/120fps",
+            ouverture: "f/2.8-f/11 (princ.), f/2.8, f/3.4 (télé)",
+            fov: "24mm, 70mm, 166mm",
+            iso: "100-6400 (photo)",
+            obstacles: "Omnidirectionnel (APAS 5.0)",
+            vent: "12m/s",
+            altitude: "6,000m",
+            vitesse: "75km/h (47mph)",
+            transmission: "O3+ jusqu’à 15km",
+            stockage: "8GB (Pro), 1TB (Cine)",
+            gnss: "GPS+Galileo+BeiDou",
+            temperature: "-10 à 40°C",
+            prix: "~2,099€",
+            autres: "Triple caméra, Apple ProRes, Cine version 1TB"
+          },
+          {
+            nom: "Air 3S",
+            image: "https://www-cdn.djiits.com/cms/uploads/d329577cc39caaa80410aca69027385e@640*640.png",
+            achat: "DJI%20AIR.html",
+            poids: "724g",
+            dimensions: "214.2x100.6x89.2mm (plié)",
+            autonomie: "45min",
+            batterie: "4,276mAh",
+            capteurs: '1" CMOS (50MP), 1/1.3" CMOS (48MP)',
+            resolution_photo: "50MP/48MP",
+            resolution_video: "4K/120fps, FHD/240fps",
+            ouverture: "f/1.8 (large), f/2.8 (télé)",
+            fov: "24mm (large), 70mm (télé)",
+            iso: "NC",
+            obstacles: "Omnidirectionnel+LiDAR",
+            vent: "12m/s",
+            altitude: "6,000m",
+            vitesse: "76km/h (47mph)",
+            transmission: "Jusqu’à 20km, O4",
+            stockage: "42GB",
+            gnss: "GPS+Galileo+BeiDou",
+            temperature: "-10 à 40°C",
+            prix: "~1,099€",
+            autres: "Double caméra 50MP/48MP, 14 stops dynamique, nombreux modes intelligents"
+          },
+          {
+            nom: "Mini 4 Pro",
+            image: "https://www-cdn.djiits.com/cms/uploads/34dc76b4d76a1338f5b54093a7c0d53f@640*640.png",
+            achat: "DJI%20Mini.html",
+            poids: "<249g",
+            dimensions: "148x94x64mm (plié)",
+            autonomie: "34min (std), 45min (Plus)",
+            batterie: "2,590mAh (std), 3,850mAh (Plus)",
+            capteurs: '1/1.3" CMOS 48MP',
+            resolution_photo: "48MP/12MP",
+            resolution_video: "4K/100fps HDR, FHD/200fps",
+            ouverture: "f/1.7",
+            fov: "24mm",
+            iso: "100-6400 (photo/vidéo)",
+            obstacles: "Omnidirectionnel, infrarouge 3D",
+            vent: "NC",
+            altitude: "4,000m",
+            vitesse: "57.6km/h",
+            transmission: "O4 jusqu’à 20km, 1080p/60fps",
+            stockage: "NC",
+            gnss: "GPS+Galileo+BeiDou",
+            temperature: "-10 à 40°C",
+            prix: "~799€",
+            autres: "Vrai mode vertical, D-Log M/HLG, évitement tous axes, ultra léger"
+          },
+          {
+            nom: "Mini 3",
+            image: "https://www-cdn.djiits.com/cms/uploads/93cbcdacdae368e927c3d1af4186e93b@640*640.png",
+            achat: "DJI%20Mini.html",
+            poids: "<249g",
+            dimensions: "148x90x62mm (plié)",
+            autonomie: "38min (std), 51min (Plus)",
+            batterie: "2,453mAh (std), 3,850mAh (Plus)",
+            capteurs: '1/1.3" CMOS 12MP',
+            resolution_photo: "12MP",
+            resolution_video: "4K/30fps",
+            ouverture: "f/1.7",
+            fov: "24mm",
+            iso: "100-3200",
+            obstacles: "Capteur vision bas",
+            vent: "NC",
+            altitude: "NC",
+            vitesse: "57.6km/h",
+            transmission: "O3, jusqu’à 10km",
+            stockage: "NC",
+            gnss: "GPS+Galileo+BeiDou",
+            temperature: "-10 à 40°C",
+            prix: "~579€",
+            autres: "Ultra-compact, photo RAW, mode vertical"
+          },
+          {
+            nom: "Mini 4K",
+            image: "https://www-cdn.djiits.com/cms/uploads/a41d15948167fe4b1769b80dde3c2f0d@640*640.png",
+            achat: "DJI%20Mini.html",
+            poids: "246g",
+            dimensions: "138x81x58mm (plié)",
+            autonomie: "31min",
+            batterie: "2,250mAh",
+            capteurs: '1/2.3" CMOS 12MP',
+            resolution_photo: "12MP",
+            resolution_video: "4K/30fps",
+            ouverture: "f/2.8",
+            fov: "24mm",
+            iso: "100-3200",
+            obstacles: "Capteur vision, infrarouge bas",
+            vent: "38km/h",
+            altitude: "NC",
+            vitesse: "57.6km/h",
+            transmission: "Jusqu’à 10km (FCC)",
+            stockage: "NC",
+            gnss: "GPS+Glonass",
+            temperature: "0 à 40°C",
+            prix: "~400€",
+            autres: "Ultra-abordable, simplicité maximale, QuickShots"
+          },
+          {
+            nom: "DJI Flip",
+            image: "https://www-cdn.djiits.com/cms/uploads/ba73d9e94832e99483b81d8a873180ae@640*640.png",
+            achat: "DJI%20Flip.html",
+            poids: "249g (C0)",
+            dimensions: "Compact, pliable, protections hélices intégrales",
+            autonomie: "31min (annoncée), ~25min (réelle)",
+            batterie: "NC",
+            capteurs: 'CMOS 1/1,3" 48MP, pixel binning, zoom x4, stabilisation 3 axes',
+            resolution_photo: "48MP (12MP binning)",
+            resolution_video: "4K HDR 60ips, 4K 100ips (slow-mo), FHD 4x zoom",
+            ouverture: "NC",
+            fov: "NC",
+            iso: "Haute sensibilité ISO, 10-bit D-Log M",
+            obstacles: "Infrarouge 3D avant (0,3-8m), vision/infrarouge bas, freinage auto",
+            vent: "Niveau 5 (38km/h)",
+            altitude: "NC",
+            vitesse: "16m/s (58km/h)",
+            transmission: "DJI O4, 8-13km, FHD 60fps",
+            stockage: "NC",
+            gnss: "NC",
+            temperature: "NC",
+            prix: "439€ (RC-N3), 639€ (RC-2), 779€ (Fly More)",
+            autres: "Protection hélices carbone, MasterShots, Hyperlapse, FocusTrack, vidéo verticale native, décollage palmaire, commande vocale, RTH, application DJI Fly, RC-N3/RC-2"
+          }
+        ];
+        const characteristics = [
+          { label: 'Poids', key: 'poids' },
+          { label: 'Dimensions', key: 'dimensions' },
+          { label: 'Autonomie max', key: 'autonomie' },
+          { label: 'Batterie', key: 'batterie' },
+          { label: 'Capteurs principaux', key: 'capteurs' },
+          { label: 'Résolution photo', key: 'resolution_photo' },
+          { label: 'Résolution vidéo', key: 'resolution_video' },
+          { label: 'Ouverture caméra', key: 'ouverture' },
+          { label: 'FOV équivalent', key: 'fov' },
+          { label: 'ISO photo/vidéo', key: 'iso' },
+          { label: 'Détection d\'obstacles', key: 'obstacles' },
+          { label: 'Résistance vent max', key: 'vent' },
+          { label: 'Altitude décollage max', key: 'altitude' },
+          { label: 'Vitesse max', key: 'vitesse' },
+          { label: 'Transmission vidéo', key: 'transmission' },
+          { label: 'Stockage interne', key: 'stockage' },
+          { label: 'GNSS', key: 'gnss' },
+          { label: 'Températures', key: 'temperature' },
+          { label: 'Prix indicatif', key: 'prix' },
+          { label: 'Autres points clés', key: 'autres' }
+        ];
+        let selectedDrones = [0, 1, 2];
+        const maxDrones = 3;
+        function renderCompareTable() {
+          const container = document.getElementById('compareTableContainer');
+          let html = '<table>';
+          html += '<thead><tr><th class="carac-label">Caractéristique</th>';
+          selectedDrones.forEach((idx, col) => {
+            html += `<th style="min-width:260px;max-width:260px;">
+              <div style="text-align:center;margin-bottom:2px;">
+                <select class="select-drone" onchange="changeDrone(${col}, this.value)" style="margin-bottom:6px;">
+                  ${drones.map((d, i) => {
+                    const already = selectedDrones.includes(i) && i !== idx;
+                    return `<option value="${i}"${i===idx?' selected':''}${already?' disabled':''}>${d.nom}</option>`;
+                  }).join('')}
+                </select>
+                <img src="${drones[idx].image}" style="width:50%;max-width:90px;height:auto;display:block;margin:0 auto 6px auto;object-fit:contain;" loading="lazy" />
+                <a href="${drones[idx].achat}" class="buy-btn" style="display:inline-block;margin-top:2px;padding:6px 18px;background:linear-gradient(90deg,#1e3c72 0%,#2a5298 100%);color:#fff;border-radius:20px;font-weight:600;text-decoration:none;font-size:0.98rem;box-shadow:0 2px 8px rgba(30,60,114,0.08);transition:background 0.2s;">Acheter</a>
+              </div>
+            </th>`;
+          });
+          html += '</tr></thead><tbody>';
+          characteristics.forEach(row => {
+            html += `<tr><td class="carac-label">${row.label}</td>` +
+              selectedDrones.map(i => `<td>${drones[i][row.key]}</td>`).join('') + '</tr>';
+          });
+          html += '</tbody></table>';
+          container.innerHTML = html;
+        }
+        window.changeDrone = function(col, idx) {
+          idx = parseInt(idx);
+          if (!selectedDrones.includes(idx)) {
+            selectedDrones[col] = idx;
+            renderCompareTable();
+          }
+        }
+        renderCompareTable();
+  </script>
+</body>
+</html>

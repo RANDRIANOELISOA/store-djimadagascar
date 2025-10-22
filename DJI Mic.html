@@ -559,7 +559,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -579,7 +579,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -599,7 +599,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -619,7 +619,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -639,7 +639,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -659,7 +659,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1071,112 +1071,110 @@
         <!-- CONTENEUR DYNAMIQUE -->
         <div id="contenuProduit"></div>
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const contenu = document.getElementById("contenuProduit");
-                const choixElements = document.querySelectorAll(".choix");
+document.addEventListener("DOMContentLoaded", function () {
+    const contenu = document.getElementById("contenuProduit");
+    const choixElements = document.querySelectorAll(".choix");
 
-                // Fonction principale d’affichage
-                function afficherVersion(version) {
-                    // Jeux d’images selon la version
-                    const images64 = [
-                        "fa476c02350fe31b42f9c9c30fc74bdd", // Image 1 version 64
-                        "a611cb3cbf7fa2818bc1abbe9d65d9ff", // Image 2 version 64
-                        "d7f9f76fb9fa479cb6935511f8d7bacd", // Image 3 version 64
-                        "96096d311249e0a90f5904da5077bcc3" // Image 4 version 64
-                    ];
+    // Fonction principale d’affichage
+    function afficherVersion(version) {
+        // Jeux d’images selon la version
+        const images64 = [
+            "fa476c02350fe31b42f9c9c30fc74bdd",
+            "a611cb3cbf7fa2818bc1abbe9d65d9ff",
+            "d7f9f76fb9fa479cb6935511f8d7bacd",
+            "96096d311249e0a90f5904da5077bcc3"
+        ];
 
-                    const images128 = [
-                        "87eae01d7f15d8040e8fc982221d5fc7", // Image 1 version 128
-                        "78a55fdda53c7ce3ec9350f8380b884f", // Image 2 version 128
-                        "d7f9f76fb9fa479cb6935511f8d7bacd", // Image 3 version 128
-                        "96096d311249e0a90f5904da5077bcc3" // Image 4 version 128
-                    ];
+        const images128 = [
+            "87eae01d7f15d8040e8fc982221d5fc7",
+            "78a55fdda53c7ce3ec9350f8380b884f",
+            "d7f9f76fb9fa479cb6935511f8d7bacd",
+            "96096d311249e0a90f5904da5077bcc3"
+        ];
 
-                    // Identifiants Google Sheet
-                    const ids =
-                        version === "64"
-                            ? ["djimicminipack1", "djimicminipack2", "djimicminipack5", "djimicminipack6"]
-                            : ["djimicminipack3", "djimicminipack4", "djimicminipack5", "djimicminipack6"];
+        // Identifiants Google Sheet
+        const ids =
+            version === "64"
+                ? ["djimicminipack1", "djimicminipack2", "djimicminipack5", "djimicminipack6"]
+                : ["djimicminipack3", "djimicminipack4", "djimicminipack5", "djimicminipack6"];
 
-                    const prefix = version === "64" ? "QQQQ" : "RRRR";
-                    const images = version === "64" ? images64 : images128;
+        const prefix = version === "64" ? "QQQQ" : "RRRR";
+        const images = version === "64" ? images64 : images128;
 
-                    // Construction du HTML
-                    contenu.innerHTML = `
-        <section class="trois-colonnes">
-            ${images
-                .map(
-                    (img, i) => `
-                <div class="colonneA">
-                    <div class="image-container">
-                        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${img}@ultra.webp" />
-                        <div id="prixContainer${prefix}${i + 1}">Chargement du prix...</div>
-                    </div>
-                    <h4 style="text-align:center">
-                        <a class="btn-reserver" href="https://forms.gle/tJjXHkeXc4FHoWgJ7" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
-                    </h4>
-                </div>
-            `
-                )
-                .join("")}
-        </section>
-        `;
+        contenu.innerHTML = `
+<section class="trois-colonnes">
+  ${images
+    .map(
+      (img, i) => `
+      <div class="colonneA">
+        <div class="image-container">
+          <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/${img}@ultra.webp" />
+          <div id="prixContainer${prefix}${i + 1}">Chargement du prix...</div>
+        </div>
+        <h4 style="text-align:center">
+          <a class="btn-reserver" href="https://forms.gle/RKGeZQfkGg3v2dHR6" style="font-family:'Cinzel Decorative',cursive">Réserver</a>
+        </h4>
+      </div>
+    `
+    )
+    .join("")}
+</section>
+`;
 
-                    chargerPrix(ids, prefix);
+        chargerPrix(ids, prefix);
+    }
+
+    // Fonction de chargement des prix
+    async function chargerPrix(ids, prefix) {
+        const sheetUrl =
+            "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+        try {
+            const response = await fetch(sheetUrl);
+            const text = await response.text();
+            const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+            if (!match) throw new Error("Réponse Google Sheet invalide");
+
+            const data = JSON.parse(match[1]);
+            const rows = data.table.rows;
+
+            ids.forEach((id, index) => {
+                const ligne = rows.find((r) => r.c[0]?.v === id);
+                const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
+                if (!container) return;
+
+                if (ligne && ligne.c[1]) {
+                    const prix = ligne.c[1].v;
+                    const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
+                    container.textContent = `${prixFormate} Ariary`;
+                } else {
+                    container.textContent = "Produit non trouvé";
+                    container.style.color = "red";
                 }
-
-                // Fonction de chargement des prix
-                async function chargerPrix(ids, prefix) {
-                    const sheetUrl =
-                        "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
-                    try {
-                        const response = await fetch(sheetUrl);
-                        const text = await response.text();
-                        const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
-                        if (!match) throw new Error("Réponse Google Sheet invalide");
-
-                        const data = JSON.parse(match[1]);
-                        const rows = data.table.rows;
-
-                        ids.forEach((id, index) => {
-                            const ligne = rows.find((r) => r.c[0]?.v === id);
-                            const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
-                            if (!container) return;
-
-                            if (ligne && ligne.c[1]) {
-                                const prix = ligne.c[1].v;
-                                const prixFormate = Number(prix).toLocaleString("fr-FR", {
-                                    minimumFractionDigits: 2
-                                });
-                                container.textContent = `${prixFormate} Ariary`;
-                            } else {
-                                container.textContent = "Produit non trouvé";
-                                container.style.color = "red";
-                            }
-                        });
-                    } catch (e) {
-                        console.error("Erreur :", e);
-                        ids.forEach((_, i) => {
-                            const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
-                            if (c) c.textContent = "Erreur réseau";
-                        });
-                    }
-                }
-
-                // Gestion de la sélection et de l’effet brillant
-                choixElements.forEach((choix) => {
-                    choix.addEventListener("click", () => {
-                        choixElements.forEach((c) => c.classList.remove("active"));
-                        choix.classList.add("active");
-                        afficherVersion(choix.dataset.version);
-                    });
-                });
-
-                // Par défaut : activer la version 64
-                choixElements[0].classList.add("active");
-                afficherVersion("64");
             });
-        </script>
+        } catch (e) {
+            console.error("Erreur :", e);
+            ids.forEach((_, i) => {
+                const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
+                if (c) c.textContent = "Erreur réseau";
+            });
+        }
+    }
+
+    // Gestion de la sélection et de l’effet brillant
+    choixElements.forEach((choix) => {
+        choix.addEventListener("click", () => {
+            choixElements.forEach((c) => c.classList.remove("active"));
+            choix.classList.add("active");
+            afficherVersion(choix.dataset.version);
+        });
+    });
+
+    // Par défaut : activer la version 64
+    choixElements[0].classList.add("active");
+    afficherVersion("64");
+});
+</script>
+
 
         <!------------------------------------------------------------------ DJI MIC 2------------------------------------------------------------------>
         <!------------------------------------------------------------------ DJI MIC 2------------------------------------------------------------------>
@@ -1274,7 +1272,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1294,7 +1292,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1314,7 +1312,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1334,7 +1332,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/1Dmx1f5yAwvjk9qA8"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1645,7 +1643,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/tJjXHkeXc4FHoWgJ7"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1665,7 +1663,7 @@
                 <h4 style="text-align: center">
                     <a
                         class="btn-reserver"
-                        href="https://forms.gle/w3ru1Zio169cvnN68"
+                        href="https://forms.gle/RKGeZQfkGg3v2dHR6"
                         style="font-family: &quot;Cinzel Decorative&quot;, cursive">
                         R&eacute;server
                     </a>
@@ -1781,14 +1779,14 @@
                 <div class="footer-nav">
                     <h3>Découvrir</h3>
                     <ul>
-                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/">Accueil</a></li>
-                        <li><a class="custom-link" href="https://djimadagascar-fr.weebly.com/blog.html">Blog</a></li>
+                        <li><a class="custom-link" href="djimadagsacar.html">A propos</a></li>
+                        <li><a class="custom-link" href="index.html">Acceuil</a></li>
                         <li>
-                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/adresse.html">Bureau</a>
+                            <a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a>
                         </li>
                         <li>
-                            <a class="custom-link" href="https://djimadagascar-fr.weebly.com/nosobjectifs.html"
-                                >A propos</a
+                            <a class="custom-link" href="Mentions%20l%C3%A9gales.html"
+                                >Mentions légales</a
                             >
                         </li>
                     </ul>
@@ -1798,6 +1796,7 @@
                     <br />
                     <p>DJI à Madagascar, propulsé par EMC Sarl</p>
                     <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                        <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84 </p>
                     <br />
                 </div>
             </div>

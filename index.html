@@ -1,637 +1,374 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DJI Madagascar - Catégories Produits</title>
-  <style>
-    /* ---------- RESET DE BASE ---------- */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DJI Madagascar - Catégories Produits</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin:0; padding:0; }
+body { font-family: Arial, sans-serif; background:#fff; color:#222; padding:20px; max-width:1200px; margin:auto; }
+h1 { text-align:center; margin-bottom:40px; font-size:2em; color:#111; letter-spacing:1px; font-family:'Cinzel', serif; }
+h4 { text-align:center; margin-top:10px; color:goldenrod; }
 
-    body {
-      font-family: Arial, sans-serif;
-      background: #fff;
-      color: #222;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
-    }
+/* CATÉGORIES */
+.categories-container { display:grid; gap:20px; }
+@media(min-width:601px){
+  .categories-container { display:flex; flex-wrap:wrap; gap:20px; }
+}
 
-    h1 {
+.category-item { background:#f8f8f8; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); overflow:hidden; cursor:pointer; position:relative; transition: transform 0.3s ease, box-shadow 0.3s ease;width: 100% }
+.category-item:hover { transform:scale(1.02); box-shadow:0 6px 16px rgba(0,0,0,0.15); }
+
+.category-title, .category-subtitle { text-align:center; padding:10px 15px; background:darkgrey; font-family:'Cinzel', serif; font-weight:bold; }
+.category-title { font-size:1.5em; } .category-subtitle { font-size:1em; }
+
+/* SOUS-CATÉGORIES MOBILE CARROUSEL */
+.sub-categories { display:none; padding:20px; background:#fafafa; text-align:center; position:relative; }
+.sub-categories img { width:180px; max-width:100%; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.sub-categories img:hover { transform:scale(1.05); box-shadow:0 0 20px rgba(0,153,255,0.8); }
+
+/* BOUTONS CARROUSEL */
+.btn { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; border-radius:50%; cursor:pointer; width:40px; height:40px; display:flex; align-items:center; justify-content:center; z-index:2; transition: background 0.3s ease; }
+.btn:hover { background:lightgoldenrodyellow; box-shadow:0 0 20px rgba(0,153,255,0.8); }
+.btn-left { left:10px; } .btn-right { right:10px; }
+.btn img { width:20px; height:20px; }
+
+/* GRILLE DES 4 DRONES/POCKETS/OSMOS POUR PC/TABLETTE */
+.drone-grid, .pocket-grid, .osmo-grid { display:none; gap:20px; }
+.drone-grid .colonne,.pocket-grid .colonne,.osmo-grid .colonne  { flex:1; text-align:center; }
+.drone-grid img,.pocket-grid img,.osmo-grid img { width:100%; height:auto; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.drone-grid img:hover,.pocket-grid img:hover,.osmo-grid img:hover { transform:scale(1.05); box-shadow:0 0 15px rgba(0,0,0,0.3); }
+
+/* DESKTOP HOVER */
+@media(min-width:601px){
+  .sub-categories, .btn { display:none !important; }
+  .category-item:hover .drone-grid,  .category-item:hover .pocket-grid,  .category-item:hover .osmo-grid { display:flex; }
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  body{padding:15px;}
+  h1{font-size:1.5em;}
+  .btn{width:36px;height:36px;}
+  .btn img{width:18px;height:18px;}
+  .category-item.active .sub-categories { display:block; }
+}
+
+
+    .custom-link {
+      display: block;
+      padding: 10px 15px;
+      margin: 10px;
+      color: black;
+      background-color: white;
+      border: 2px solid black;
+      text-decoration: none;
+      transition: all 0.3s ease;
       text-align: center;
-      margin-bottom: 40px;
+  }
+
+  .custom-link:hover {
+      background-color: black;
+      color: white;
+  }
+
+  .custom-link:active {
+      border-color: gold;
+  }
+
+  h3 {
+      text-align: center;
+      color: goldenrod;
       font-size: 2em;
-      color: #111;
-      letter-spacing: 1px;
-    }
+  }
 
-
-     @media (min-width: 1024px) {.categories-container{display: inline}}
-     @media (max-width: 1024px) {.categories-container{display: grid}}
-
-
-    /* ---------- BLOC CATÉGORIE ---------- */
-    .category-item {
-      background: #f8f8f8;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      position: relative;
-
-
-    }
-
-    .category-item:hover {
-      transform: scale(1.02);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-    }
-
-
-
-
-
-    .category-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .category-title {
-      font-size: 1.2em;
-      font-weight: bold;
-      padding: 16px;
-      text-align: center;
-      background: #fff;
-    }
-
-    /* ---------- SOUS-CATÉGORIES ---------- */
-    .sub-categories {
-      display: none;
-      padding: 20px;
-      background: #fafafa;
-      position: relative;
-    }
-
-    .category-item:hover .sub-categories {
-      display: block;
-    }
-
-      @media(min-width:600px){.category-item:hover .sub-categories{display: none}}
-
-     @media(max-width:600px){ .colonneA {display: none}}
-
-
-    .sub-category-item {
-      text-align: center;
-      margin-bottom: 20px;
-      position: relative;
-    }
-
-    .sub-category-item .title {
-      font-weight: bold;
+  .footer-nav a:hover {
+      color: goldenrod;
       font-size: 1.1em;
-      margin-top: 12px;
-    }
+  }
 
-    /* ---------- CARROUSEL ---------- */
-    .container {
+  .footer-content {
+      display: inline-block;
+      text-align: left;
+  }
+
+  .footer-nav ul {
       display: flex;
+      flex-direction: row; /* ✅ Par défaut : horizontal (PC) */
       align-items: center;
       justify-content: center;
-      position: relative;
-      height: 300px;
-    }
+      padding: 0;
+      list-style: none;
+      flex-wrap: wrap;
+  }
 
-@media(min-width:600px){.containerpc {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 300px;
+  .contact-info p {
+      margin: 5px 0;
+      line-height: 1.2;
+      text-align: center;
+  }
 
+  footer {
+      text-align: center;
+      margin-top: 30px;
+  }
 
-    }   }
-@media(max-width:600px){.containerpc {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 300px;
-    }   }
-    .btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(255,255,255,0.85);
-      border: none;
-      border-radius: 50%;
-      cursor: pointer;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.2s ease, background 0.3s ease;
-      z-index: 2;
-    }
-
-@media(min-width:600px){#droneTitle1   {  display: none   }   }
-
-    .btn:hover {
-      transform: scale(1.1);
-      background: rgba(255,255,255,1);
-    }
-
-    .btn-left {
-      left: 10px;
-    }
-
-    .btn-right {
-      right: 10px;
-    }
-
-    .btn img {
-      width: 20px;
-      height: 20px;
-    }
-
-    #droneImage1,#droneImage2,#droneImage3,#droneImage3 {
-      width: 180px;
-      max-width: 100%;
-      transition: opacity 0.5s ease;
-    }
-
-    /* ---------- MOBILE ---------- */
-    @media (max-width: 600px) {
-      body {
-        padding: 20px;
+  /* ✅ Mobile : vertical */
+  @media screen and (max-width: 600px) {
+      .footer-nav ul {
+          flex-direction: column;
       }
 
-      h1 {
-        font-size: 1.5em;
+      .custom-link {
+          margin: 6px 0;
       }
-
-      .container {
-        height: 220px;
-      }
-
-      .btn {
-        width: 36px;
-        height: 36px;
-      }
-
-      .btn img {
-        width: 18px;
-        height: 18px;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
-
 <body>
 
-  <h1>Nos Catégories de Produits</h1>
+<h1>Nos Catégories de Produits</h1>
 
-  <div class="categories-container">
-<section>
-    <!-- ==== CATÉGORIE DRONES ==== -->
-    <div class="category-item">
+<div class="categories-container">
 
-      <div class="category-title">Drones<p class="soustitre">Test</p></div>
-
-      <div class="sub-categories">
-        <div class="sub-category-item">
-          <div class="containerpc">
-            <button class="btn btn-left" onclick="prev()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche">
-            </button>
-
-            <img id="droneImage1" src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp" alt="DJI Mavic 3 Pro">
-
-            <button class="btn btn-right" onclick="next()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite">
-            </button>
-          </div>
-
-          <div class="title" id="droneTitle1">Chargement...</div>
-        </div>
+  <!-- DRONES -->
+  <div class="category-item" id="droneCategory">
+    <div class="category-title">Drones DJI</div>
+    <div class="category-subtitle">La technologie qui redéfinit les limites du ciel.</div>
+    <div class="sub-categories">
+      <button class="btn btn-left"><img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche"></button>
+      <img id="droneImage" class="carousel-img" src="" alt="Drone">
+      <button class="btn btn-right"><img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite"></button>
+      <div class="title" id="droneTitle">Chargement...</div>
+    </div>
+    <div class="drone-grid">
+      <div class="colonne" > <a href="DJI%20Mavic.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/858647e1e7597fc491cce56431be4af0.webp" alt="DJI Mavic">
+        <h4>DJI Mavic</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20AIR.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/3d7fc9018625e9e2113e3de3fd3cc8f5@origin.jpg" alt="DJI Air">
+        <h4>DJI Air</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Mini.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/31974855f987d565dfdf48b189acec78.webp" alt="DJI Mini">
+        <h4>DJI Mini</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Flip.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/4a7d267e74bb395b622d0591941649ce.webp" alt="DJI Flip">
+        <h4>DJI Flip</h4></a>
       </div>
     </div>
+  </div>
 
-
-
-  <div class="category-item">
-
-
-
-
-
- <section class="trois-colonnes" style="display: flex; gap :20px;width: 100%;justify-content: center;">
-            <!-- COLONNE AA -->
-
-            <div class="colonneA">
-<a href="https://www.youtube.com/" class="colonneA">
-    <div class="image-container">
-        <img
-            alt="Bundle Vlog Osmo Mobile 7P (Émetteur DJI Mic Mini)"
-            src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/325f1af29a9516eec89678e9ba117eec@ultra.webp" />
-      <h4 style="text-align: center">ssssss
-
-                </h4>
+  <!-- POCKETS -->
+  <div class="category-item" id="pocketCategory">
+    <div class="category-title">Caméra embarquée</div>
+    <div class="category-subtitle">La technologie qui redéfinit les limites du ciel.</div>
+    <div class="sub-categories">
+      <button class="btn btn-left"><img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche"></button>
+      <img id="pocketImage" class="carousel-img" src="" alt="Pocket">
+      <button class="btn btn-right"><img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite"></button>
+      <div class="title" id="pocketTitle">Chargement...</div>
     </div>
-</a>
-
-
-
-            </div>
-
-            <!-- COLONNE BB -->
-
-
-            <div class="colonneA">
-<a href="https://www.youtube.com/" class="colonneA">
-    <div class="image-container">
-        <img
-            alt="Bundle Vlog Osmo Mobile 7P (Émetteur DJI Mic Mini)"
-            src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/325f1af29a9516eec89678e9ba117eec@ultra.webp" />
-      <h4 style="text-align: center">ssssss
-
-                </h4>
+    <div class="pocket-grid">
+      <div class="colonne"> <a href="DJI%20Pocket.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/1a512ce2319f4309eb1c5bc4682273ed@ultra.webp" alt="DJI Mavic">
+        <h4>Osmo Pocket</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/76375f8db423ae9c7517303fabdf4df1@ultra.webp" alt="DJI Air">
+        <h4>Osmo 360</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/614e0069ed59294a6f46a198daf1d848@ultra.webp" alt="DJI Mini">
+        <h4>Osmo nano</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/2f3e608557f64b064bf68c07c1a234c8@ultra.webp" alt="DJI Flip">
+        <h4>Osmo action</h4></a>
+      </div>
     </div>
-</a>
+  </div>
 
+   <!-- OSMO -->
+  <div class="category-item" id="osmoCategory">
+    <div class="category-title">Gimbal pour smartphone</div>
+    <div class="category-subtitle">La technologie qui redéfinit les limites du ciel.</div>
 
-
-            </div>
-
-            <!-- COLONNE CC -->
-
-
-            <div class="colonneA">
-<a href="https://www.youtube.com/" class="colonneA">
-    <div class="image-container">
-        <img
-            alt="Bundle Vlog Osmo Mobile 7P (Émetteur DJI Mic Mini)"
-            src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/325f1af29a9516eec89678e9ba117eec@ultra.webp" />
-      <h4 style="text-align: center">ssssss
-
-                </h4>
-    </div>
-</a>
-
-
-
-            </div>
-
-
-        </section>
-
-
-
-
+    <!-- MOBILE CARROUSEL -->
+    <div class="sub-categories">
+      <button class="btn btn-left"><img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche"></button>
+      <img id="osmoImage" class="carousel-img" src="" alt="Osmo">
+      <button class="btn btn-right"><img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite"></button>
+      <div class="title" id="osmoTitle">Chargement...</div>
     </div>
 
-
-
-
-
-
-
-
-
- <script>
-    /* ---------- CARROUSEL JS ---------- */
-    const drones = [
-      {
-        title: "DJI Mavic 3 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp"
-      },
-      {
-        title: "DJI Air 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/9dbbb3e9d0d81c95a99e81deba255ec1@ultra.webp"
-      },
-      {
-        title: "DJI Mini 4 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/7c87563c22bb31c258a55a6907dc07c1@ultra.webp"
-      },
-      {
-        title: "DJI Inspire 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/2738b91eed7c870d58218efd2cb93541@ultra.webp"
-      }
-    ];
-
-    let currentIndex = 0;
-
-    function updateContent() {
-      const drone = drones[currentIndex];
-      const img = document.getElementById("droneImage1");
-      const title = document.getElementById("droneTitle1");
-
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = drone.img;
-        title.textContent = drone.title;
-        img.style.opacity = 1;
-      }, 150);
-    }
-
-    function prev() {
-      currentIndex = (currentIndex - 1 + drones.length) % drones.length;
-      updateContent();
-    }
-
-    function next() {
-      currentIndex = (currentIndex + 1) % drones.length;
-      updateContent();
-    }
-
-    document.addEventListener("DOMContentLoaded", updateContent);
-  </script>
-
-
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section>
-    <!-- ==== AUTRES CATÉGORIES ==== -->
-    <div class="category-item">
-
-      <div class="category-title">Drones</div><p class="soustitre">Test</p>
-      <div class="sub-categories">
-        <div class="sub-category-item">
-          <div class="containerpc">
-            <button class="btn btn-left" onclick="prev()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche">
-            </button>
-
-            <img id="droneImage2" src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp" alt="DJI Mavic 3 Pro">
-
-            <button class="btn btn-right" onclick="next()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite">
-            </button>
-          </div>
-
-          <div class="title" id="droneTitle2">Chargement...</div>
-        </div>
-      </div>  </div>
-
+    <!-- PC/TABLETTE GRID -->
+    <div class="osmo-grid">
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/f2d4dd9b58d99cc71339fb56e80a1d2c@ultra.webp" alt="DJI Mavic">
+        <h4>DJI Mavic</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+        <img src="https://www-cdn.djiits.com/dps/40d726c2b95ab21fdf08230a4a2aac9a.jpg?w=1386&h=924" alt="DJI Air">
+        <h4>DJI Air</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/7b718ab73be6949bdce63c5a1111197d@ultra.webp" alt="DJI Mini">
+        <h4>DJI Mini</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/cc63bd53af7522969d4d52d25fa5aea9@ultra.jpg" alt="DJI Flip">
+        <h4>DJI Flip</h4></a>
+      </div>
+    </div>
+  </div>
 <script>
-    /* ---------- CARROUSEL JS ---------- */
-    const drones = [
-      {
-        title: "DJI Mavic 3 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp"
-      },
-      {
-        title: "DJI Air 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/9dbbb3e9d0d81c95a99e81deba255ec1@ultra.webp"
-      },
-      {
-        title: "DJI Mini 4 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/7c87563c22bb31c258a55a6907dc07c1@ultra.webp"
-      },
-      {
-        title: "DJI Inspire 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/2738b91eed7c870d58218efd2cb93541@ultra.webp"
+// Fonction générique pour un carrousel (PC + Mobile)
+function setupCarousel(categoryId, items) {
+  const container = document.getElementById(categoryId);
+  const imgEl = container.querySelector(".carousel-img");
+  const titleEl = document.getElementById(categoryId.replace("Category","Title"));
+  const btnLeft = container.querySelector(".btn-left");
+  const btnRight = container.querySelector(".btn-right");
+  let index = 0;
+
+  // Met à jour l'image et le titre du carrousel
+  function update() {
+    const item = items[index];
+    imgEl.style.opacity = 0;
+    setTimeout(() => {
+      imgEl.src = item.img;
+      titleEl.textContent = item.title;
+      imgEl.style.opacity = 1;
+    }, 100);
+  }
+
+  // Navigation précédente
+  function prev(event) {
+    if(event) event.stopPropagation();
+    index = (index - 1 + items.length) % items.length;
+    update();
+  }
+
+  // Navigation suivante
+  function next(event) {
+    if(event) event.stopPropagation();
+    index = (index + 1) % items.length;
+    update();
+  }
+
+  // Événements sur les boutons
+  btnLeft.addEventListener("click", prev);
+  btnRight.addEventListener("click", next);
+
+  // Clic sur l'image pour ouvrir le lien du produit
+  imgEl.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const item = items[index];
+    if(item.url){
+      window.location.href = item.url; // <-- coller ton URL ici
+    }
+  });
+
+  // Mobile : clic sur la catégorie pour ouvrir/fermer
+  if(window.innerWidth <= 600){
+    container.addEventListener("click", (e) => {
+      e.stopPropagation();
+
+      // Fermer toutes les autres catégories
+      document.querySelectorAll(".category-item").forEach(cat => {
+        if(cat !== container) cat.classList.remove("active");
+      });
+
+      // Ouvrir/fermer la catégorie cliquée
+      container.classList.toggle("active");
+    });
+  }
+
+  update(); // initialisation
+}
+
+// --- DRONES ---
+setupCarousel("droneCategory", [
+  {title:"DJI Mavic", img:"https://se-cdn.djiits.com/tpc/uploads/spu/hover/858647e1e7597fc491cce56431be4af0.webp", url:"DJI%20Mavic.html"},
+  {title:"DJI Air", img:"https://se-cdn.djiits.com/tpc/uploads/spu/hover/3d7fc9018625e9e2113e3de3fd3cc8f5@origin.jpg", url:"DJI%20AIR.html"},
+  {title:"DJI Mini", img:"https://se-cdn.djiits.com/tpc/uploads/spu/hover/31974855f987d565dfdf48b189acec78.webp", url:"DJI%20Mini.html"},
+  {title:"DJI Flip", img:"https://se-cdn.djiits.com/tpc/uploads/spu/hover/4a7d267e74bb395b622d0591941649ce.webp", url:"DJI%20Flip.html"}
+]);
+
+// --- POCKETS ---
+setupCarousel("pocketCategory", [
+  {title:"Osmo Pocket 3", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/1a512ce2319f4309eb1c5bc4682273ed@ultra.webp", url:"DJI%20Pocket.html"},
+  {title:"Osmo 360", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/76375f8db423ae9c7517303fabdf4df1@ultra.webp", url:"DJI%20Pocket.html"},
+  {title:"Osmo Nano", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/614e0069ed59294a6f46a198daf1d848@ultra.webp", url:"DJI%20Pocket.html"},
+  {title:"Osmo Action", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/2f3e608557f64b064bf68c07c1a234c8@ultra.webp", url:"DJI%20Pocket.html"}
+]);
+
+// --- OSMO ---
+setupCarousel("osmoCategory", [
+  {title:"Osmo Mobile 7P", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/f2d4dd9b58d99cc71339fb56e80a1d2c@ultra.webp", url:"DJI%20Osmo%20Mobile.html"},
+  {title:"Osmo Mobile 7", img:"https://www-cdn.djiits.com/dps/40d726c2b95ab21fdf08230a4a2aac9a.jpg?w=1386&h=924", url:"DJI%20Osmo%20Mobile.html"},
+  {title:"Osmo Mobile 6", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/7b718ab73be6949bdce63c5a1111197d@ultra.webp", url:"DJI%20Osmo%20Mobile.html"},
+  {title:"Osmo Mobile SE", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/cc63bd53af7522969d4d52d25fa5aea9@ultra.jpg", url:"DJI%20Osmo%20Mobile.html"}
+]);
+
+// --- Fermeture auto sur mobile lorsqu'on clique en dehors ---
+if(window.innerWidth <= 600){
+  document.addEventListener("click", (e) => {
+    document.querySelectorAll(".category-item").forEach(cat => {
+      if(cat.classList.contains("active") && !cat.contains(e.target)){
+        cat.classList.remove("active");
       }
-    ];
+    });
+  });
+}
 
-    let currentIndex = 0;
+// Miniatures grid
+const gridImages = container.querySelectorAll(".pocket-grid .colonne img");
+gridImages.forEach((img, i) => {
+  img.addEventListener("click", () => {
+    const item = items[i]; // correspond à l'index du tableau items
+    if(item.url) window.location.href = item.url;
+  });
+});
 
-    function updateContent() {
-      const drone = drones[currentIndex];
-      const img = document.getElementById("droneImage2");
-      const title = document.getElementById("droneTitle2");
 
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = drone.img;
-        title.textContent = drone.title;
-        img.style.opacity = 1;
-      }, 150);
-    }
 
-    function prev() {
-      currentIndex = (currentIndex - 1 + drones.length) % drones.length;
-      updateContent();
-    }
 
-    function next() {
-      currentIndex = (currentIndex + 1) % drones.length;
-      updateContent();
-    }
+</script>
 
-    document.addEventListener("DOMContentLoaded", updateContent);
-  </script>
 
+<footer>
 
-      </section>
-
-      <section>
- <!-- ==== AUTRES CATÉGORIES ==== -->
-    <div class="category-item">
-
-      <div class="category-title">Drones</div><p class="soustitre">Test</p>
-      <div class="sub-categories">
-        <div class="sub-category-item">
-          <div class="containerpc">
-            <button class="btn btn-left" onclick="prev()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche">
-            </button>
-
-            <img id="droneImage3" src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp" alt="DJI Mavic 3 Pro">
-
-            <button class="btn btn-right" onclick="next()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite">
-            </button>
-          </div>
-
-          <div class="title" id="droneTitle3">Chargement...</div>
-        </div>
-      </div>  </div>
-
-<script>
-    /* ---------- CARROUSEL JS ---------- */
-    const drones = [
-      {
-        title: "DJI Mavic 3 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp"
-      },
-      {
-        title: "DJI Air 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/9dbbb3e9d0d81c95a99e81deba255ec1@ultra.webp"
-      },
-      {
-        title: "DJI Mini 4 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/7c87563c22bb31c258a55a6907dc07c1@ultra.webp"
-      },
-      {
-        title: "DJI Inspire 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/2738b91eed7c870d58218efd2cb93541@ultra.webp"
-      }
-    ];
-
-    let currentIndex = 0;
-
-    function updateContent() {
-      const drone = drones[currentIndex];
-      const img = document.getElementById("droneImage3");
-      const title = document.getElementById("droneTitle3");
-
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = drone.img;
-        title.textContent = drone.title;
-        img.style.opacity = 1;
-      }, 150);
-    }
-
-    function prev() {
-      currentIndex = (currentIndex - 1 + drones.length) % drones.length;
-      updateContent();
-    }
-
-    function next() {
-      currentIndex = (currentIndex + 1) % drones.length;
-      updateContent();
-    }
-
-    document.addEventListener("DOMContentLoaded", updateContent);
-  </script>
-
-
-
-
-      </section>
-
-
-
-
-
-
-
-      <section>
-<!-- ==== AUTRES CATÉGORIES ==== -->
-    <div class="category-item">
-
-      <div class="category-title">Drones</div><p class="soustitre">Test</p>
-      <div class="sub-categories">
-        <div class="sub-category-item">
-          <div class="container">
-            <button class="btn btn-left" onclick="prev()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche">
-            </button>
-
-            <img id="droneImage4" src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp" alt="DJI Mavic 3 Pro">
-
-            <button class="btn btn-right" onclick="next()">
-              <img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite">
-            </button>
-          </div>
-
-          <div class="title" id="droneTitle4">Chargement...</div>
-        </div>
-      </div>  </div>
-
-<script>
-    /* ---------- CARROUSEL JS ---------- */
-    const drones = [
-      {
-        title: "DJI Mavic 3 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/8fe1c5ccc0960e9a209cb33025d0c9a8@ultra.webp"
-      },
-      {
-        title: "DJI Air 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/9dbbb3e9d0d81c95a99e81deba255ec1@ultra.webp"
-      },
-      {
-        title: "DJI Mini 4 Pro",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/7c87563c22bb31c258a55a6907dc07c1@ultra.webp"
-      },
-      {
-        title: "DJI Inspire 3",
-        img: "https://se-cdn.djiits.com/tpc/uploads/carousel/image/2738b91eed7c870d58218efd2cb93541@ultra.webp"
-      }
-    ];
-
-    let currentIndex = 0;
-
-    function updateContent() {
-      const drone = drones[currentIndex];
-      const img = document.getElementById("droneImage4");
-      const title = document.getElementById("droneTitle4");
-
-      img.style.opacity = 0;
-      setTimeout(() => {
-        img.src = drone.img;
-        title.textContent = drone.title;
-        img.style.opacity = 1;
-      }, 150);
-    }
-
-    function prev() {
-      currentIndex = (currentIndex - 1 + drones.length) % drones.length;
-      updateContent();
-    }
-
-    function next() {
-      currentIndex = (currentIndex + 1) % drones.length;
-      updateContent();
-    }
-
-    document.addEventListener("DOMContentLoaded", updateContent);
-  </script>
-
-
-
-
-      </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="footer-content">
+        <hr>
+    <div class="footer-nav">
+      <h3>Découvrir</h3>
+      <ul>
+        <li><a class="custom-link" href="index.html">Boutique</a></li>
+        <li><a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a></li>
+        <li><a class="custom-link" href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
+        <li><a class="custom-link" href="https://madagascarconstruction.weebly.com/">EMC Sarl</a></li>
+      </ul>
     </div>
+    <hr>
+                <div class="contact-info">
+                    <br />
+                    <p>DJI à Madagascar, propulsé par EMC Sarl</p>
+                    <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
+                        <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84 </p>
+                    <br />
+                </div>
+  </div>
+  <div class="copyright">
+    <p>© 2024 DJI Madagascar. Tous droits réservés.</p>
+  </div>
+</footer>
 
 
+</div>
 </body>
 </html>
