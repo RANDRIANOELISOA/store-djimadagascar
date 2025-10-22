@@ -35,15 +35,15 @@ h4 { text-align:center; margin-top:10px; color:goldenrod; }
 .btn img { width:20px; height:20px; }
 
 /* GRILLE DES 4 DRONES/POCKETS/OSMOS POUR PC/TABLETTE */
-.drone-grid, .pocket-grid, .osmo-grid { display:none; gap:20px; }
-.drone-grid .colonne,.pocket-grid .colonne,.osmo-grid .colonne  { flex:1; text-align:center; }
-.drone-grid img,.pocket-grid img,.osmo-grid img { width:100%; height:auto; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
-.drone-grid img:hover,.pocket-grid img:hover,.osmo-grid img:hover { transform:scale(1.05); box-shadow:0 0 15px rgba(0,0,0,0.3); }
+.drone-grid, .pocket-grid, .osmo-grid, .mic-grid { display:none; gap:20px; }
+.drone-grid .colonne,.pocket-grid .colonne,.osmo-grid .colonne,.mic-grid colonne  { flex:1; text-align:center; }
+.drone-grid img,.pocket-grid img,.osmo-grid img, .mic-grid img { width:100%; height:auto; border-radius:10px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.drone-grid img:hover,.pocket-grid img:hover,.osmo-grid img:hover,.mic-grid img:hover { transform:scale(1.05); box-shadow:0 0 15px rgba(0,0,0,0.3); }
 
 /* DESKTOP HOVER */
 @media(min-width:601px){
   .sub-categories, .btn { display:none !important; }
-  .category-item:hover .drone-grid,  .category-item:hover .pocket-grid,  .category-item:hover .osmo-grid { display:flex; }
+  .category-item:hover .drone-grid,  .category-item:hover .pocket-grid,  .category-item:hover .osmo-grid,  .category-item:hover .mic-grid { display:flex; }
 }
 
 /* MOBILE */
@@ -160,19 +160,19 @@ h4 { text-align:center; margin-top:10px; color:goldenrod; }
       <div class="title" id="droneTitle">Chargement...</div>
     </div>
     <div class="drone-grid">
-      <div class="colonne" > <a href="DJI%20Mavic.html" target="_blank">
+      <div class="colonne" > <a href="DJI%20Mavic.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/858647e1e7597fc491cce56431be4af0.webp" alt="DJI Mavic">
         <h4>DJI Mavic</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20AIR.html" target="_blank">
+      <div class="colonne"><a href="DJI%20AIR.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/3d7fc9018625e9e2113e3de3fd3cc8f5@origin.jpg" alt="DJI Air">
         <h4>DJI Air</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Mini.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Mini.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/31974855f987d565dfdf48b189acec78.webp" alt="DJI Mini">
         <h4>DJI Mini</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Flip.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Flip.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/spu/hover/4a7d267e74bb395b622d0591941649ce.webp" alt="DJI Flip">
         <h4>DJI Flip</h4></a>
       </div>
@@ -190,19 +190,19 @@ h4 { text-align:center; margin-top:10px; color:goldenrod; }
       <div class="title" id="pocketTitle">Chargement...</div>
     </div>
     <div class="pocket-grid">
-      <div class="colonne"> <a href="DJI%20Pocket.html" target="_blank">
+      <div class="colonne"> <a href="DJI%20Pocket.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/1a512ce2319f4309eb1c5bc4682273ed@ultra.webp" alt="DJI Mavic">
         <h4>Osmo Pocket</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Pocket.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/76375f8db423ae9c7517303fabdf4df1@ultra.webp" alt="DJI Air">
         <h4>Osmo 360</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Pocket.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/614e0069ed59294a6f46a198daf1d848@ultra.webp" alt="DJI Mini">
         <h4>Osmo nano</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Pocket.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Pocket.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/2f3e608557f64b064bf68c07c1a234c8@ultra.webp" alt="DJI Flip">
         <h4>Osmo action</h4></a>
       </div>
@@ -224,24 +224,61 @@ h4 { text-align:center; margin-top:10px; color:goldenrod; }
 
     <!-- PC/TABLETTE GRID -->
     <div class="osmo-grid">
-      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/f2d4dd9b58d99cc71339fb56e80a1d2c@ultra.webp" alt="DJI Mavic">
         <h4>DJI Mavic</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
-        <img src="https://www-cdn.djiits.com/dps/40d726c2b95ab21fdf08230a4a2aac9a.jpg?w=1386&h=924" alt="DJI Air">
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" >
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/1fde272fa0c6065b410b9e2954d79453@ultra.webp" alt="DJI Air">
         <h4>DJI Air</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/7b718ab73be6949bdce63c5a1111197d@ultra.webp" alt="DJI Mini">
         <h4>DJI Mini</h4></a>
       </div>
-      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" target="_blank">
+      <div class="colonne"><a href="DJI%20Osmo%20Mobile.html" >
         <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/cc63bd53af7522969d4d52d25fa5aea9@ultra.jpg" alt="DJI Flip">
         <h4>DJI Flip</h4></a>
       </div>
     </div>
   </div>
+
+     <!-- MIC -->
+  <div class="category-item" id="micCategory">
+    <div class="category-title">Micro sans fil </div>
+    <div class="category-subtitle">La voix de la précision avec la gamme DJI Mic.</div>
+
+    <!-- MOBILE CARROUSEL -->
+    <div class="sub-categories">
+      <button class="btn btn-left"><img src="https://cdn-icons-png.flaticon.com/512/271/271220.png" alt="Gauche"></button>
+      <img id="osmoImage" class="carousel-img" src="" alt="Osmo">
+      <button class="btn btn-right"><img src="https://cdn-icons-png.flaticon.com/512/271/271228.png" alt="Droite"></button>
+      <div class="title" id="osmoTitle">Chargement...</div>
+    </div>
+
+    <!-- PC/TABLETTE GRID -->
+    <div class="mic-grid">
+      <div class="colonne"><a href="DJI%20Mic.html" >
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/78413e6323da1caaa3cc934a1e4b2d23@ultra.webp" alt="DJI Mic 3">
+        <h4>DJI Mavic</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Mic.html" >
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/c282bc420ede4cf826df04799daaa657@ultra.webp" alt="DJI Mic Mini">
+        <h4>DJI Air</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Mic.html" >
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/52da2f4e9669832c5a94a557396a8e08@ultra.jpg" alt="DJI Mic 2">
+        <h4>DJI Mini</h4></a>
+      </div>
+      <div class="colonne"><a href="DJI%20Mic.html" >
+        <img src="https://se-cdn.djiits.com/tpc/uploads/carousel/image/6dc0cfca2248107a627b78b7fd9c2b22@ultra.jpg" alt="DJI Mic">
+        <h4>DJI Flip</h4></a>
+      </div>
+    </div>
+  </div>
+
+
+
 <script>
 // Fonction générique pour un carrousel (PC + Mobile)
 function setupCarousel(categoryId, items) {
@@ -327,9 +364,15 @@ setupCarousel("pocketCategory", [
 // --- OSMO ---
 setupCarousel("osmoCategory", [
   {title:"Osmo Mobile 7P", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/f2d4dd9b58d99cc71339fb56e80a1d2c@ultra.webp", url:"DJI%20Osmo%20Mobile.html"},
-  {title:"Osmo Mobile 7", img:"https://www-cdn.djiits.com/dps/40d726c2b95ab21fdf08230a4a2aac9a.jpg?w=1386&h=924", url:"DJI%20Osmo%20Mobile.html"},
+  {title:"Osmo Mobile 7", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/1fde272fa0c6065b410b9e2954d79453@ultra.webp", url:"DJI%20Osmo%20Mobile.html"},
   {title:"Osmo Mobile 6", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/7b718ab73be6949bdce63c5a1111197d@ultra.webp", url:"DJI%20Osmo%20Mobile.html"},
   {title:"Osmo Mobile SE", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/cc63bd53af7522969d4d52d25fa5aea9@ultra.jpg", url:"DJI%20Osmo%20Mobile.html"}
+]);// --- MIC ---
+setupCarousel("micCategory", [
+  {title:"DJI Mic 3", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/78413e6323da1caaa3cc934a1e4b2d23@ultra.webp", url:"DJI%20Mic.html"},
+  {title:"DJI Mic Mini", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/c282bc420ede4cf826df04799daaa657@ultra.webp", url:"DJI%20Mic.html"},
+  {title:"DJI Mic 2", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/52da2f4e9669832c5a94a557396a8e08@ultra.jpg", url:"DJI%20Mic.html"},
+  {title:"DJI Mic", img:"https://se-cdn.djiits.com/tpc/uploads/carousel/image/6dc0cfca2248107a627b78b7fd9c2b22@ultra.jpg", url:"DJI%20Mic.html"}
 ]);
 
 // --- Fermeture auto sur mobile lorsqu'on clique en dehors ---
