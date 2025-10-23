@@ -6,6 +6,117 @@
         <title>Mon Nouveau Projet</title>
 
         <style>
+            /* === HEADER DJI === */
+.dji-header {
+  background: linear-gradient(135deg, #1c1c1c, #bfa145);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.dji-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
+
+/* === TOGGLE (Bouton Menu) === */
+.dji-nav-toggle {
+  font-size: 1.5em;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.dji-nav-toggle:hover {
+  background-color: #333;
+  color: #fff;
+  transform: rotate(90deg);
+}
+
+.dji-nav-toggle .dji-nav-icon {
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+/* === SIDE NAV === */
+.dji-side-nav {
+  position: fixed;
+  top: 30px; /* ✅ Corrigé pour démarrer sous le header */
+  left: -250px;
+  width: 230px;
+  height: 100%;
+  background: #111;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 70px;
+  z-index: 1000;
+}
+
+.dji-side-nav.active {
+  left: 0;
+}
+
+.dji-side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dji-side-nav li {
+  margin: 20px 0;
+}
+
+.dji-side-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
+
+.dji-side-nav a:hover {
+  background: #bfa145;
+}
+
+/* === OVERLAY === */
+.dji-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.dji-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+            
             /* CSS CORPS PRINCIPALE */
             /* CSS CORPS PRINCIPALE */
             /* CSS CORPS PRINCIPALE */
@@ -190,6 +301,52 @@
         </style>
     </head>
     <body>
+        
+        <header class="dji-header">
+  <div class="dji-logo">DJI MADAGASCAR</div>
+  <button class="dji-nav-toggle" id="djiNavToggle">
+    <span class="dji-nav-icon">☰</span>
+  </button>
+</header>
+
+<nav class="dji-side-nav" id="djiSideNav">
+  <ul>
+    <li><a href="mg.html">Accueil</a></li>
+    <li><a href="index.html">Boutique</a></li>
+    <li><a href="Conditions%20de%20ventes.html">CGV</a></li>
+  </ul>
+</nav>
+
+<div class="dji-overlay" id="djiOverlay"></div>
+
+<script>
+  const djiNavToggle = document.getElementById('djiNavToggle');
+  const djiSideNav = document.getElementById('djiSideNav');
+  const djiOverlay = document.getElementById('djiOverlay');
+
+  djiNavToggle.addEventListener('click', () => {
+    const icon = djiNavToggle.querySelector('.dji-nav-icon');
+    
+    if (djiSideNav.classList.contains('active')) {
+      icon.textContent = '☰';
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      icon.textContent = '✕';
+      icon.style.transform = 'rotate(0deg)';
+    }
+
+    djiSideNav.classList.toggle('active');
+    djiOverlay.classList.toggle('active');
+  });
+
+  djiOverlay.addEventListener('click', () => {
+    const icon = djiNavToggle.querySelector('.dji-nav-icon');
+    icon.textContent = '☰';
+    djiSideNav.classList.remove('active');
+    djiOverlay.classList.remove('active');
+  });
+</script>
+
         <div class="container">
             <!-- En-tête -->
             <div class="header">
@@ -205,84 +362,121 @@
                 <p>
                     Les présentes Conditions Générales de Vente (CGV) régissent l’ensemble des transactions effectuées
                     en ligne auprès de la société EMC – Entreprise Malagasy de Construction SARL, agissant en tant que
-                    revendeur non-officiel des produits DJI à Madagascar. Toute commande passée en ligne implique l’acceptation intégrale des présentes CGV.
+                    revendeur non-officiel des produits DJI à Madagascar. Toute commande passée en ligne implique
+                    l’acceptation intégrale des présentes CGV.
                 </p>
                 <br />
                 <h3>Article 2 – Commandes et modalités de paiement</h3>
-                <ul>
-                    <li>
-                        Caution d’achat : 25 % du montant total est exigé lors de la commande pour valider l’achat.
-                    </li>
-                    <li>
-                        Solde restant : le paiement du solde (75 %) doit être effectué dans un délai maximum de 30 jours à compter de la notification de disponibilité du produit.
-                    </li>
-                    <li>
-                        Non-paiement : en cas de non-règlement du solde dans le délai imparti, la caution d’achat et la marchandise seront définitivement confisquées, sans possibilité de remboursement.
-                    </li>
-                </ul>
+
+
+
+  <p>Le paiement s’effectue en deux étapes :</p>
+  <ul>
+    <li><strong>25 %</strong> à titre de <strong>caution d’achat</strong> lors de la commande</li>
+    <li><strong>75 %</strong> restants lors de la <strong>récupération et inspection finale</strong> du produit</li>
+  </ul>
+
+  <p>L’état du colis à récupérer est <strong>neuf et scellé</strong>.</p>
+
+  <h3>Modes de paiement disponibles :</h3>
+  <ul>
+    <li>En espèces à notre bureau</li>
+    <li>Par <strong>Mobile Money</strong> (<em>Mvola / Orange Money</em>)</li>
+    <li>Par <strong>virement bancaire</strong> (un délai supplémentaire de <strong>72 h</strong> est requis pour la confirmation de la réception du fonds)</li>
+    <li>Par <strong>chèque</strong> :
+      <ul>
+        <li>Frais de traitement de <strong>10 000 Ar</strong> si remis directement à notre bureau</li>
+        <li>Frais de traitement de <strong>20 000 Ar</strong> si le chèque est remis à votre domicile (offre valable uniquement pour les zones proches du centre-ville d’Antananarivo)</li>
+        <li><strong>Aucun délai d’attente</strong> pour les chèques <strong>endossables</strong></li>
+        <li><strong>72 h d’attente</strong> pour les chèques <strong>non endossables</strong></li>
+      </ul>
+    </li>
+  
+
+  <li>Après notification de la disponibilité du colis, vous disposez de <strong>30 jours</strong> pour régler le solde restant.  
+  Au-delà de ce délai, un <strong>frais de stockage de 3 000 Ar par jour</strong> sera appliqué.  
+  Après <strong>45 jours</strong> sans paiement du solde, la marchandise ainsi que la caution d’achat seront <strong>considérées comme confisquées</strong> à titre de dédommagement.</li></ul>
+
 
                 <h3>Article 3 – Livraison et retrait</h3>
                 <ul>
                     <li>
-                        Délais de livraison pour commande avec expédition aérienne : entre 10 et 21 jours ouvrables à compter de la validation de la commande.
-                        Délais de livraison pour commande avec expédition maritime : entre 60 et 90 jours ouvrables à compter de la validation de la commande.
+                        Délais de livraison pour commande avec expédition aérienne : entre 10 et 21 jours ouvrables à
+                        compter de la validation de la commande. Délais de livraison pour commande avec expédition
+                        maritime : entre 60 et 90 jours ouvrables à compter de la validation de la commande.
                     </li>
                     <li>
-                      Livraison gratuite : valable uniquement pour toute commande d’un montant supérieur à 1 000 000 Ariary, limitée au centre-ville d’Antananarivo
+                        Livraison gratuite : valable uniquement pour toute commande d’un montant supérieur à 1 000 000
+                        Ariary, limitée au centre-ville d’Antananarivo
                     </li>
                     <li>
-       Livraison en province ou région périphérique : les frais d’expédition via sociétés de transport tierces sont à la charge du client.
+                        Livraison en province ou région périphérique : les frais d’expédition via sociétés de transport
+                        tierces sont à la charge du client.
                     </li>
                     <li>
-       Retrait ou livraison : la remise du produit n’aura lieu qu’après règlement intégral du solde dû.
+                        Retrait ou livraison : la remise du produit n’aura lieu qu’après règlement intégral du solde dû.
                     </li>
                 </ul>
                 <h3>Article 4 – Réception, test et conformité</h3>
                 <ul>
                     <li>
-                       Lors de la réception, chaque produit fait l’objet d’un test complet et d’une inspection visuelle en présence du client (ou par vidéo avant expédition pour les livraisons à distance).       </li>
-                  <li>
-                       Une fois le test validé, la commande est considérée comme conforme et définitivement acceptée par le client.       </li>
+                        Lors de la réception, chaque produit fait l’objet d’un test complet et d’une inspection visuelle
+                        en présence du client (ou par vidéo avant expédition pour les livraisons à distance).
+                    </li>
+                    <li>
+                        Une fois le test validé, la commande est considérée comme conforme et définitivement acceptée
+                        par le client.
+                    </li>
 
-                               <li>
-                     Aucune réclamation ultérieure liée à un dommage, une défectuosité ou une non-conformité ne pourra être acceptée après validation du test.       </li>
-
-
+                    <li>
+                        Aucune réclamation ultérieure liée à un dommage, une défectuosité ou une non-conformité ne
+                        pourra être acceptée après validation du test.
+                    </li>
                 </ul>
                 <h3>Article 5 – Garantie et service après-vente</h3>
                 <ul>
+                    <li>La société EMC SARL assure uniquement une garantie de conformité au moment de la livraison.</li>
                     <li>
-                    La société EMC SARL assure uniquement une garantie de conformité au moment de la livraison.
+                        Au-delà de cette phase, toute prise en charge ou réclamation s’effectue directement auprès du
+                        fabricant DJI, selon les conditions du support officiel.
                     </li>
-                                        <li>
-                    Au-delà de cette phase, toute prise en charge ou réclamation s’effectue directement auprès du fabricant DJI, selon les conditions du support officiel.
-                    </li>
-   <li>
-                   EMC SARL propose un service d’assistance pour l’achat d’accessoires, de batteries ou pour faciliter la communication avec DJI en cas de problème technique ou de garantie constructeur. Nous soulignons que l'assistance pour acquérir le garantie constructeur est limité à certains modèles de la gamme DJI Enterprise seulement.
+                    <li>
+                        EMC SARL propose un service d’assistance pour l’achat d’accessoires, de batteries ou pour
+                        faciliter la communication avec DJI en cas de problème technique ou de garantie constructeur.
+                        Nous soulignons que l'assistance pour acquérir le garantie constructeur est limité à certains
+                        modèles de la gamme DJI Enterprise seulement.
                     </li>
                 </ul>
-                                                <h3>Article 6 – Responsabilité</h3>
+                <h3>Article 6 – Responsabilité</h3>
                 <ul>
                     <li>
-                    EMC SARL garantit que les produits DJI livrés sont neufs, originaux et conformes aux spécifications du fabricant.    </li><li>
-                     Le client est responsable de vérifier la légalité de l’usage, de l’enregistrement et de l’exploitation du drone conformément à la réglementation en vigueur à Madagascar.    </li>
+                        EMC SARL garantit que les produits DJI livrés sont neufs, originaux et conformes aux
+                        spécifications du fabricant.
+                    </li>
+                    <li>
+                        Le client est responsable de vérifier la légalité de l’usage, de l’enregistrement et de
+                        l’exploitation du drone conformément à la réglementation en vigueur à Madagascar.
+                    </li>
                 </ul>
-                                <h3>Article 7 – Données personnelles</h3>
+                <h3>Article 7 – Données personnelles</h3>
                 <ul>
                     <li>
-                     Les données collectées lors des commandes sont confidentielles et utilisées uniquement pour la gestion commerciale et le suivi des clients.     </li>
+                        Les données collectées lors des commandes sont confidentielles et utilisées uniquement pour la
+                        gestion commerciale et le suivi des clients.
+                    </li>
                     <li>
-                     EMC SARL s’engage à ne jamais partager ou revendre ces informations à des tiers sans consentement préalable.    </li>
+                        EMC SARL s’engage à ne jamais partager ou revendre ces informations à des tiers sans
+                        consentement préalable.
+                    </li>
                 </ul>
 
-                                                <h3>Article 8 – Litiges</h3>
+                <h3>Article 8 – Litiges</h3>
                 <ul>
                     <li>
-                En cas de litige, les parties conviennent de rechercher une solution amiable avant toute action judiciaire.
-À défaut d’accord, le Tribunal d’Antananarivo sera seul compétent.     </li>
-
+                        En cas de litige, les parties conviennent de rechercher une solution amiable avant toute action
+                        judiciaire. À défaut d’accord, le Tribunal d’Antananarivo sera seul compétent.
+                    </li>
                 </ul>
-
             </main>
 
             <footer>
@@ -298,14 +492,10 @@
                                 <a class="custom-link" href="index.html">Boutique</a>
                             </li>
                             <li class="li2">
-                                <a class="custom-link" href="Conditions%20de%20ventes.html"
-                                    >CGV</a
-                                >
+                                <a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a>
                             </li>
                             <li class="li2">
-                                <a class="custom-link" href="Mentions%20l%C3%A9gales.html"
-                                    >Mentions mégales</a
-                                >
+                                <a class="custom-link" href="Mentions%20l%C3%A9gales.html">Mentions mégales</a>
                             </li>
                         </ul>
                     </div>

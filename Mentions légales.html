@@ -1,194 +1,372 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions Légales - DJI à Madagascar</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset simple */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mentions Légales - DJI à Madagascar</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <style>
+            /* === HEADER DJI === */
+.dji-header {
+  background: linear-gradient(135deg, #1c1c1c, #bfa145);
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f7f8fa;
-            color: #333;
-            line-height: 1.6;
-        }
+.dji-logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+}
 
-        header {
-            background-color: #0c2d48;
-            color: #fff;
-            padding: 40px 20px;
-            text-align: center;
-        }
+/* === TOGGLE (Bouton Menu) === */
+.dji-nav-toggle {
+  font-size: 1.5em;
+  background-color: #fff;
+  color: #333;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+.dji-nav-toggle:hover {
+  background-color: #333;
+  color: #fff;
+  transform: rotate(90deg);
+}
 
-        header p {
-            font-size: 1rem;
-            color: #c0c0c0;
-        }
+.dji-nav-toggle .dji-nav-icon {
+  display: inline-block;
+  font-size: 1.5em;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
 
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+/* === SIDE NAV === */
+.dji-side-nav {
+  position: fixed;
+  top: 30px; /* ✅ Corrigé pour démarrer sous le header */
+  left: -250px;
+  width: 230px;
+  height: 100%;
+  background: #111;
+  color: white;
+  transition: left 0.3s ease;
+  padding-top: 70px;
+  z-index: 1000;
+}
 
-        .section {
-            background-color: #fff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            padding: 30px 25px;
-            margin-bottom: 25px;
-            transition: transform 0.3s ease;
-        }
+.dji-side-nav.active {
+  left: 0;
+}
 
-        .section:hover {
-            transform: translateY(-5px);
-        }
+.dji-side-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-        .section h2 {
-            color: #0c2d48;
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
+.dji-side-nav li {
+  margin: 20px 0;
+}
 
-        .section p, .section ul, .section li {
-            font-size: 1rem;
-            color: #555;
-        }
+.dji-side-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  display: block;
+  transition: background 0.3s;
+}
 
-        .section ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
+.dji-side-nav a:hover {
+  background: #bfa145;
+}
 
-        footer {
-            background-color: #0c2d48;
-            color: #fff;
-            text-align: center;
-            padding: 25px 20px;
-            margin-top: 40px;
-        }
+/* === OVERLAY === */
+.dji-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
 
-        footer a {
-            color: #ffd700;
-            text-decoration: none;
-        }
+.dji-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
-        footer a:hover {
-            text-decoration: underline;
-        }
+            /* Reset simple */
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        @media (max-width: 768px) {
+            body {
+                font-family: "Roboto", sans-serif;
+                background-color: #f7f8fa;
+                color: #333;
+                line-height: 1.6;
+            }
+
+            header {
+                background-color: #0c2d48;
+                color: #fff;
+                padding: 40px 20px;
+                text-align: center;
+            }
+
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
+
+            header p {
+                font-size: 1rem;
+                color: #c0c0c0;
+            }
+
+            main {
+                max-width: 1000px;
+                margin: 40px auto;
+                padding: 0 20px;
+            }
+
+            .section {
+                background-color: #fff;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                padding: 30px 25px;
+                margin-bottom: 25px;
+                transition: transform 0.3s ease;
+            }
+
+            .section:hover {
+                transform: translateY(-5px);
             }
 
             .section h2 {
-                font-size: 1.3rem;
+                color: #0c2d48;
+                margin-bottom: 15px;
+                font-size: 1.5rem;
             }
-        }
-    </style>
-</head>
-<body>
 
-<header>
-    <h1>Mentions Légales</h1>
-    <p>DJI à Madagascar par EMC SARL</p>
+            .section p,
+            .section ul,
+            .section li {
+                font-size: 1rem;
+                color: #555;
+            }
+
+            .section ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            footer {
+                background-color: #0c2d48;
+                color: #fff;
+                text-align: center;
+                padding: 25px 20px;
+                margin-top: 40px;
+            }
+
+            footer a {
+                color: #ffd700;
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            @media (max-width: 768px) {
+                header h1 {
+                    font-size: 2rem;
+                }
+
+                .section h2 {
+                    font-size: 1.3rem;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        
+        <header class="dji-header">
+  <div class="dji-logo">DJI MADAGASCAR</div>
+  <button class="dji-nav-toggle" id="djiNavToggle">
+    <span class="dji-nav-icon">☰</span>
+  </button>
 </header>
 
-<main>
+<nav class="dji-side-nav" id="djiSideNav">
+  <ul>
+    <li><a href="mg.html">Accueil</a></li>
+    <li><a href="index.html">Boutique</a></li>
+    <li><a href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
+  </ul>
+</nav>
 
-    <div class="section">
-        <h2>Éditeur du site</h2>
-        <p><strong>EMC / Entreprise Malagasy de Construction SARL</strong><br>
-        Siège social : LOT VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar<br>
-        Commune : Commune Urbaine d’Antananarivo<br>
-        District : Antananarivo II — Région : Analamanga<br>
-        WhatsApp : +261 34 26 696 84<br>
-        E-mail : directeur.emc@gmail.com<br>
-        Directeur de la publication : <strong>RANDRIANOELISOA Todisoa Xavier</strong></p>
-    </div>
+<div class="dji-overlay" id="djiOverlay"></div>
 
-    <div class="section">
-        <h2>Statut juridique</h2>
-        <p>Société à Responsabilité Limitée (SARL)<br>
-        RCS Antananarivo : 2023B00190 du 10 février 2023<br>
-        NIF : 3017722603 du 13 février 2023<br>
-        Carte statistique : 41002-11-2023-0-10190 du 10 février 2023<br>
-        Carte professionnelle : 0123731 / DGI-M du 26 mars 2025</p>
-    </div>
+<script>
+  const djiNavToggle = document.getElementById('djiNavToggle');
+  const djiSideNav = document.getElementById('djiSideNav');
+  const djiOverlay = document.getElementById('djiOverlay');
 
-    <div class="section">
-        <h2>Objet de l’activité</h2>
-        <p>La société EMC SARL exerce une activité de <strong>construction de batîment, vente de matériel informatique, électronique et de drones civils</strong>, notamment des produits de la marque DJI.  
-        Tous les produits proposés sont authentiques et conformes aux normes, garantissant leur qualité et leur fiabilité.</p>
-    </div>
+  djiNavToggle.addEventListener('click', () => {
+    const icon = djiNavToggle.querySelector('.dji-nav-icon');
+    
+    if (djiSideNav.classList.contains('active')) {
+      icon.textContent = '☰';
+      icon.style.transform = 'rotate(0deg)';
+    } else {
+      icon.textContent = '✕';
+      icon.style.transform = 'rotate(0deg)';
+    }
 
-    <div class="section">
-        <h2>Service après-vente</h2>
-        <ul>
-            <li>Achat d’accessoires et de batteries supplémentaires.</li>
-          
-        </ul>
-       
-    </div>
+    djiSideNav.classList.toggle('active');
+    djiOverlay.classList.toggle('active');
+  });
 
-<div class="section">
-    <h2>Responsabilité</h2>
-    <p>EMC SARL veille à fournir uniquement des produits <strong>neufs et conformes</strong> à leur description.  
-    Chaque produit est testé au moment de sa récupération par le client, qui accepte sa conformité.  
-    Après cette validation, <strong>aucune garantie supplémentaire</strong> n’est accordée par EMC SARL.  
-    La société n’est pas responsable des défaillances dues à une mauvaise utilisation ou à des interventions non autorisées.  
-    Les réparations et remplacements sous garantie sont assurés exclusivement par le <strong>service officiel DJI</strong>.</p>
-</div>
+  djiOverlay.addEventListener('click', () => {
+    const icon = djiNavToggle.querySelector('.dji-nav-icon');
+    icon.textContent = '☰';
+    djiSideNav.classList.remove('active');
+    djiOverlay.classList.remove('active');
+  });
+</script>
 
-    <div class="section">
-        <h2>Propriété intellectuelle</h2>
-        <p>DJI, Osmo, Mavic, Mini, Avata, Inspire et autres marques citées sont la propriété exclusive de <strong>SZ DJI Technology Co., Ltd.</strong>  
-        Le présent site <strong>DJI Madagascar</strong> n’est pas le site officiel de DJI et n’entretient aucun lien juridique ou commercial direct avec SZ DJI Technology Co., Ltd.</p>
-    </div>
+        <header>
+            <h1>Mentions Légales</h1>
+            <p>DJI à Madagascar par EMC SARL</p>
+        </header>
 
-    <div class="section">
-        <h2>Hébergement du site</h2>
-        <p>GitHub Pages<br>
-        Adresse : San Francisco, Californie, États-Unis<br>
-        Domaine associé : <a href="https://djimadagascar.store" target="_blank">https://djimadagascar.store</a></p>
-    </div>
+        <main>
+            <div class="section">
+                <h2>Éditeur du site</h2>
+                <p>
+                    <strong>EMC / Entreprise Malagasy de Construction SARL</strong><br />
+                    Siège social : LOT VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar<br />
+                    Commune : Commune Urbaine d’Antananarivo<br />
+                    District : Antananarivo II — Région : Analamanga<br />
+                    WhatsApp : +261 34 26 696 84<br />
+                    E-mail : directeur.emc@gmail.com<br />
+                    Directeur de la publication : <strong>RANDRIANOELISOA Todisoa Xavier</strong>
+                </p>
+            </div>
 
-    <div class="section">
-        <h2>Données personnelles</h2>
-        <p>Aucune donnée personnelle n’est collectée sans consentement explicite.  
-        Les informations transmises via le formulaire de contact ou par e-mail sont utilisées uniquement pour le traitement des demandes clients.</p>
-    </div>
+            <div class="section">
+                <h2>Statut juridique</h2>
+                <p>
+                    Société à Responsabilité Limitée (SARL)<br />
+                    RCS Antananarivo : 2023B00190 du 10 février 2023<br />
+                    NIF : 3017722603 du 13 février 2023<br />
+                    Carte statistique : 41002-11-2023-0-10190 du 10 février 2023<br />
+                    Carte professionnelle : 0123731 / DGI-M du 26 mars 2025
+                </p>
+            </div>
 
-    <div class="section">
-        <h2>Contact</h2>
-        <p>Pour toute question, demande d’information ou réclamation :<br>
-        📧 <strong>djimadagascar@gmail.com</strong><br>
-        📞 <strong>+261 34 26 696 84</strong> (WhatsApp disponible)</p>
-    </div>
+            <div class="section">
+                <h2>Objet de l’activité</h2>
+                <p>
+                    La société EMC SARL exerce une activité de
+                    <strong
+                        >construction de batîment, vente de matériel informatique, électronique et de drones
+                        civils</strong
+                    >, notamment des produits de la marque DJI. Tous les produits proposés sont authentiques et
+                    conformes aux normes, garantissant leur qualité et leur fiabilité.
+                </p>
+            </div>
 
-    <div class="section">
-        <h2>Dernière mise à jour</h2>
-        <p>13 mai 2025</p>
-    </div>
+            <div class="section">
+                <h2>Service après-vente</h2>
+                <ul>
+                    <li>Achat d’accessoires et de batteries supplémentaires.</li>
+                </ul>
+            </div>
 
-</main>
+            <div class="section">
+                <h2>Responsabilité</h2>
+                <p>
+                    EMC SARL veille à fournir uniquement des produits <strong>neufs et conformes</strong> à leur
+                    description. Chaque produit est testé au moment de sa récupération par le client, qui accepte sa
+                    conformité. Après cette validation, <strong>aucune garantie supplémentaire</strong> n’est accordée
+                    par EMC SARL. La société n’est pas responsable des défaillances dues à une mauvaise utilisation ou à
+                    des interventions non autorisées. Les réparations et remplacements sous garantie sont assurés
+                    exclusivement par le <strong>service officiel DJI</strong>.
+                </p>
+            </div>
 
-<footer>
-    &copy; 2025 EMC SARL – DJI à Madagascar | Site officiel : <a href="https://djimadagascar.store" target="_blank">djimadagascar.store</a>
-</footer>
+            <div class="section">
+                <h2>Propriété intellectuelle</h2>
+                <p>
+                    DJI, Osmo, Mavic, Mini, Avata, Inspire et autres marques citées sont la propriété exclusive de
+                    <strong>SZ DJI Technology Co., Ltd.</strong> Le présent site <strong>DJI Madagascar</strong> n’est
+                    pas le site officiel de DJI et n’entretient aucun lien juridique ou commercial direct avec SZ DJI
+                    Technology Co., Ltd.
+                </p>
+            </div>
 
-</body>
+            <div class="section">
+                <h2>Hébergement du site</h2>
+                <p>
+                    GitHub Pages<br />
+                    Adresse : San Francisco, Californie, États-Unis<br />
+                    Domaine associé :
+                    <a href="https://djimadagascar.store" target="_blank">https://djimadagascar.store</a>
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Données personnelles</h2>
+                <p>
+                    Aucune donnée personnelle n’est collectée sans consentement explicite. Les informations transmises
+                    via le formulaire de contact ou par e-mail sont utilisées uniquement pour le traitement des demandes
+                    clients.
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Contact</h2>
+                <p>
+                    Pour toute question, demande d’information ou réclamation :<br />
+                    📧 <strong>djimadagascar@gmail.com</strong><br />
+                    📞 <strong>+261 34 26 696 84</strong> (WhatsApp disponible)
+                </p>
+            </div>
+
+            <div class="section">
+                <h2>Dernière mise à jour</h2>
+                <p>13 mai 2025</p>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2025 EMC SARL – DJI à Madagascar | Site officiel :
+            <a href="https://djimadagascar.store" target="_blank">djimadagascar.store</a>
+        </footer>
+    </body>
 </html>

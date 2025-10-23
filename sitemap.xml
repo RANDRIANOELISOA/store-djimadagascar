@@ -1,72 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-
-<url>
-  <loc>https://djimadagascar.store/</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20Mavic.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20AIR.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20Mini.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20Flip.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20Pocket.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/DJI%20Osmo%20Mobile.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/index.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/Conditions%20de%20ventes.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/Mentions%20l%C3%A9gales.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/djimadagsacar.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://djimadagascar.store/comparatif%20drone%20dji.html</loc>
-  <lastmod>2025-10-22T01:07:11+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
-
+  <url>
+    <loc>https://djimadagascar.store/</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20Mavic.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20AIR.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20Mini.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20Flip.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20Pocket.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/DJI%20Osmo%20Mobile.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/index.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/Conditions%20de%20ventes.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/Mentions%20l%C3%A9gales.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/djimadagsacar.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.64</priority>
+  </url>
+  <url>
+    <loc>https://djimadagascar.store/comparatif%20drone%20dji.html</loc>
+    <lastmod>2025-10-22T01:07:11+00:00</lastmod>
+    <priority>0.51</priority>
+  </url>
 </urlset>

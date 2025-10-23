@@ -10,118 +10,116 @@
         <title>DJI Madagascar – Drones Mavic, Batteries et Accessoires</title>
 
         <style>
-         /* === HEADER DJI === */
-.dji-header {
-  background: linear-gradient(135deg, #1c1c1c, #bfa145);
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1001;
-}
+            /* === HEADER DJI === */
+            .dji-header {
+                background: linear-gradient(135deg, #1c1c1c, #bfa145);
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                position: sticky;
+                top: 0;
+                z-index: 1001;
+            }
 
-.dji-logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
+            .dji-logo {
+                font-size: 1.4rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #fff;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            }
 
-/* === TOGGLE === */
-.dji-nav-toggle {
-  font-size: 1.5em;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
+            /* === TOGGLE === */
+            .dji-nav-toggle {
+                font-size: 1.5em;
+                background-color: #fff;
+                color: #333;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
 
-.dji-nav-toggle:hover {
-  background-color: #333;
-  color: #fff;
-  transform: rotate(90deg);
-}
+            .dji-nav-toggle:hover {
+                background-color: #333;
+                color: #fff;
+                transform: rotate(90deg);
+            }
 
-.dji-nav-toggle .dji-nav-icon {
-  display: inline-block;
-  font-size: 1.5em;
-  line-height: 1;
-  transition: transform 0.3s ease;
-}
+            .dji-nav-toggle .dji-nav-icon {
+                display: inline-block;
+                font-size: 1.5em;
+                line-height: 1;
+                transition: transform 0.3s ease;
+            }
 
-/* === SIDE NAV === */
-.dji-side-nav {
-  position: fixed;
-  top: 30px;
-  left: -250px;
-  width: 230px;
-  height: 100%;
-  background: #111;
-  color: white;
-  transition: left 0.3s ease;
-  padding-top: 70px;
-  z-index: 1000;
-}
+            /* === SIDE NAV === */
+            .dji-side-nav {
+                position: fixed;
+                top: 30px;
+                left: -250px;
+                width: 230px;
+                height: 100%;
+                background: #111;
+                color: white;
+                transition: left 0.3s ease;
+                padding-top: 70px;
+                z-index: 1000;
+            }
 
-.dji-side-nav.active {
-  left: 0;
-}
+            .dji-side-nav.active {
+                left: 0;
+            }
 
-.dji-side-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+            .dji-side-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-.dji-side-nav li {
-  margin: 20px 0;
-}
+            .dji-side-nav li {
+                margin: 20px 0;
+            }
 
-.dji-side-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s;
-}
+            .dji-side-nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 10px 20px;
+                display: block;
+                transition: background 0.3s;
+            }
 
-.dji-side-nav a:hover {
-  background: #bfa145;
-}
+            .dji-side-nav a:hover {
+                background: #bfa145;
+            }
 
-/* === OVERLAY === */
-.dji-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 999;
-}
+            /* === OVERLAY === */
+            .dji-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                z-index: 999;
+            }
 
-.dji-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-   
-            
-            
+            .dji-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
             /* ——— STYLES GÉNÉRAUX ——— */
             body {
                 font-family: Arial, sans-serif;
@@ -421,14 +419,14 @@
 
             /* ——— MEDIA QUERIES ——— */
             @media (max-width: 1024px) {
-            .deux-colonnesA1,
-            .deux-colonnesA2,
-            .deux-colonnesB1,
-            .deux-colonnesB2,
-            .deux-colonnesC1,
-            .deux-colonnesC2,
-            .deux-colonnesD1,
-            .deux-colonnesD2 {
+                .deux-colonnesA1,
+                .deux-colonnesA2,
+                .deux-colonnesB1,
+                .deux-colonnesB2,
+                .deux-colonnesC1,
+                .deux-colonnesC2,
+                .deux-colonnesD1,
+                .deux-colonnesD2 {
                     flex-direction: column;
                     text-align: center;
                     padding: 20px;
@@ -651,38 +649,38 @@
 
     <body>
         <header class="dji-header">
-  <div class="dji-logo">DJI MADAGASCAR</div>
-  <button class="dji-nav-toggle" id="djiNavToggle"><span class="dji-nav-icon">☰</span></button>
-</header>
+            <div class="dji-logo">DJI MADAGASCAR</div>
+            <button class="dji-nav-toggle" id="djiNavToggle"><span class="dji-nav-icon">☰</span></button>
+        </header>
 
-<nav class="dji-side-nav" id="djiSideNav">
-  <ul>
-    <li><a href="index.html">Boutique</a></li>
-    <li><a href="Conditions%20de%20ventes.html">CGV</a></li>
-    <li><a href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
-  </ul>
-</nav>
+        <nav class="dji-side-nav" id="djiSideNav">
+            <ul>
+                <li><a href="index.html">Boutique</a></li>
+                <li><a href="Conditions%20de%20ventes.html">CGV</a></li>
+                <li><a href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
+            </ul>
+        </nav>
 
-<div class="dji-overlay" id="djiOverlay"></div>
+        <div class="dji-overlay" id="djiOverlay"></div>
 
-<script>
-  const djiNavToggle = document.getElementById('djiNavToggle');
-  const djiSideNav = document.getElementById('djiSideNav');
-  const djiOverlay = document.getElementById('djiOverlay');
+        <script>
+            const djiNavToggle = document.getElementById("djiNavToggle");
+            const djiSideNav = document.getElementById("djiSideNav");
+            const djiOverlay = document.getElementById("djiOverlay");
 
-  djiNavToggle.addEventListener('click', () => {
-    const icon = djiNavToggle.querySelector('.dji-nav-icon');
-    if (djiSideNav.classList.contains('active')) {
-      icon.textContent = '☰';
-      icon.style.transform = 'rotate(0deg)';
-    } else {
-      icon.textContent = 'X';
-      icon.style.transform = 'rotate(0deg)';
-    }
-    djiSideNav.classList.toggle('active');
-    djiOverlay.classList.toggle('active');
-  });
-</script>
+            djiNavToggle.addEventListener("click", () => {
+                const icon = djiNavToggle.querySelector(".dji-nav-icon");
+                if (djiSideNav.classList.contains("active")) {
+                    icon.textContent = "☰";
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    icon.textContent = "X";
+                    icon.style.transform = "rotate(0deg)";
+                }
+                djiSideNav.classList.toggle("active");
+                djiOverlay.classList.toggle("active");
+            });
+        </script>
 
         <header style="text-align: center; padding: 20px; background-color: #222; color: white">
             <h1>Les caméras embarqués DJI à Madagascar</h1>
@@ -1596,27 +1594,32 @@
         <div id="contenuProduit"></div>
 
         <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const contenu = document.getElementById("contenuProduit");
-    const choixElements = document.querySelectorAll(".choix");
+            document.addEventListener("DOMContentLoaded", function () {
+                const contenu = document.getElementById("contenuProduit");
+                const choixElements = document.querySelectorAll(".choix");
 
-    // Fonction principale d’affichage
-    function afficherVersion(version) {
-        let prefix = version === "64" ? "LLLL" : "MMMM";
-        let ids =
-            version === "64"
-                ? ["djiosmonano64pack1", "djiosmonano64pack2", "djiosmonano64pack3", "djiosmonano64pack4"]
-                : ["djiosmonano128pack1", "djiosmonano128pack2", "djiosmonano128pack3", "djiosmonano128pack4"];
+                // Fonction principale d’affichage
+                function afficherVersion(version) {
+                    let prefix = version === "64" ? "LLLL" : "MMMM";
+                    let ids =
+                        version === "64"
+                            ? ["djiosmonano64pack1", "djiosmonano64pack2", "djiosmonano64pack3", "djiosmonano64pack4"]
+                            : [
+                                  "djiosmonano128pack1",
+                                  "djiosmonano128pack2",
+                                  "djiosmonano128pack3",
+                                  "djiosmonano128pack4"
+                              ];
 
-        // Images
-        const images = [
-            "fdc94588da9fe89241f05af056361988",
-            "b83eed7eba714a9f2413e8090c769bc1",
-            "33f0d43e5e676b9200c783daf182bd30",
-            "635e548072de4f138041004610f961a3"
-        ];
+                    // Images
+                    const images = [
+                        "fdc94588da9fe89241f05af056361988",
+                        "b83eed7eba714a9f2413e8090c769bc1",
+                        "33f0d43e5e676b9200c783daf182bd30",
+                        "635e548072de4f138041004610f961a3"
+                    ];
 
-        contenu.innerHTML = `
+                    contenu.innerHTML = `
       <section class="trois-colonnes">
         ${ids
             .map(
@@ -1636,64 +1639,62 @@ document.addEventListener("DOMContentLoaded", function () {
       </section>
     `;
 
-        chargerPrix(ids, prefix);
-    }
-
-    // Fonction de chargement des prix
-    async function chargerPrix(ids, prefix) {
-        const sheetUrl =
-            "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
-        try {
-            const response = await fetch(sheetUrl);
-            const text = await response.text();
-            const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
-            if (!match) throw new Error("Réponse Google Sheet invalide");
-
-            const data = JSON.parse(match[1]);
-            const rows = data.table.rows;
-
-            ids.forEach((id, index) => {
-                const ligne = rows.find((r) => r.c[0]?.v === id);
-                const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
-                if (!container) return;
-
-                if (ligne && ligne.c[1]) {
-                    const prix = ligne.c[1].v;
-                    const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
-                    container.textContent = `${prixFormate} Ariary`;
-                } else {
-                    container.textContent = "Produit non trouvé";
-                    container.style.color = "red";
+                    chargerPrix(ids, prefix);
                 }
+
+                // Fonction de chargement des prix
+                async function chargerPrix(ids, prefix) {
+                    const sheetUrl =
+                        "https://docs.google.com/spreadsheets/d/1UJQfCXwIL5VtvE8o_pyQnjasSvAmwDshfHwWNl8D6v0/gviz/tq?tqx=out:json";
+                    try {
+                        const response = await fetch(sheetUrl);
+                        const text = await response.text();
+                        const match = text.match(/google\.visualization\.Query\.setResponse\(([\s\S]*)\);/);
+                        if (!match) throw new Error("Réponse Google Sheet invalide");
+
+                        const data = JSON.parse(match[1]);
+                        const rows = data.table.rows;
+
+                        ids.forEach((id, index) => {
+                            const ligne = rows.find((r) => r.c[0]?.v === id);
+                            const container = document.getElementById(`prixContainer${prefix}${index + 1}`);
+                            if (!container) return;
+
+                            if (ligne && ligne.c[1]) {
+                                const prix = ligne.c[1].v;
+                                const prixFormate = Number(prix).toLocaleString("fr-FR", { minimumFractionDigits: 2 });
+                                container.textContent = `${prixFormate} Ariary`;
+                            } else {
+                                container.textContent = "Produit non trouvé";
+                                container.style.color = "red";
+                            }
+                        });
+                    } catch (e) {
+                        console.error("Erreur :", e);
+                        ids.forEach((_, i) => {
+                            const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
+                            if (c) c.textContent = "Erreur réseau";
+                        });
+                    }
+                }
+
+                // Gestion de la sélection et de l’effet brillant
+                choixElements.forEach((choix) => {
+                    choix.addEventListener("click", () => {
+                        // Retirer l’effet de tous les choix
+                        choixElements.forEach((c) => c.classList.remove("active"));
+                        // Appliquer l’effet au choix sélectionné
+                        choix.classList.add("active");
+                        // Charger la version correspondante
+                        afficherVersion(choix.dataset.version);
+                    });
+                });
+
+                // Par défaut : activer la version 64
+                choixElements[0].classList.add("active");
+                afficherVersion("64");
             });
-        } catch (e) {
-            console.error("Erreur :", e);
-            ids.forEach((_, i) => {
-                const c = document.getElementById(`prixContainer${prefix}${i + 1}`);
-                if (c) c.textContent = "Erreur réseau";
-            });
-        }
-    }
-
-    // Gestion de la sélection et de l’effet brillant
-    choixElements.forEach((choix) => {
-        choix.addEventListener("click", () => {
-            // Retirer l’effet de tous les choix
-            choixElements.forEach((c) => c.classList.remove("active"));
-            // Appliquer l’effet au choix sélectionné
-            choix.classList.add("active");
-            // Charger la version correspondante
-            afficherVersion(choix.dataset.version);
-        });
-    });
-
-    // Par défaut : activer la version 64
-    choixElements[0].classList.add("active");
-    afficherVersion("64");
-});
-</script>
-
-
+        </script>
 
         <!-- Section dji action 5-->
         <!-- Section dji action 5-->
@@ -2075,9 +2076,7 @@ document.addEventListener("DOMContentLoaded", function () {
                             <a class="custom-link" href="Conditions%20de%20ventes.html">CGV</a>
                         </li>
                         <li>
-                            <a class="custom-link" href="Mentions%20l%C3%A9gales.html"
-                                >Mentions légales</a
-                            >
+                            <a class="custom-link" href="Mentions%20l%C3%A9gales.html">Mentions légales</a>
                         </li>
                     </ul>
                 </div>
@@ -2086,7 +2085,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <br />
                     <p>DJI à Madagascar, propulsé par EMC Sarl</p>
                     <p>Lot VT 3 ACD Andohaniato, Fokontany Ambohipo, Antananarivo 101, Madagascar</p>
-                        <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84 </p>
+                    <p>Email : djimadagascar@gmail.com / Tél : +261 34 26 696 84</p>
                     <br />
                 </div>
             </div>
