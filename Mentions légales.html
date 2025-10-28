@@ -7,114 +7,114 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
         <style>
             /* === HEADER DJI === */
-.dji-header {
-  background: linear-gradient(135deg, #1c1c1c, #bfa145);
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1001;
-}
+            .dji-header {
+                background: linear-gradient(135deg, #1c1c1c, #bfa145);
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                position: sticky;
+                top: 0;
+                z-index: 1001;
+            }
 
-.dji-logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
+            .dji-logo {
+                font-size: 1.4rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #fff;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            }
 
-/* === TOGGLE (Bouton Menu) === */
-.dji-nav-toggle {
-  font-size: 1.5em;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
+            /* === TOGGLE (Bouton Menu) === */
+            .dji-nav-toggle {
+                font-size: 1.5em;
+                background-color: #fff;
+                color: #333;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
 
-.dji-nav-toggle:hover {
-  background-color: #333;
-  color: #fff;
-  transform: rotate(90deg);
-}
+            .dji-nav-toggle:hover {
+                background-color: #333;
+                color: #fff;
+                transform: rotate(90deg);
+            }
 
-.dji-nav-toggle .dji-nav-icon {
-  display: inline-block;
-  font-size: 1.5em;
-  line-height: 1;
-  transition: transform 0.3s ease;
-}
+            .dji-nav-toggle .dji-nav-icon {
+                display: inline-block;
+                font-size: 1.5em;
+                line-height: 1;
+                transition: transform 0.3s ease;
+            }
 
-/* === SIDE NAV === */
-.dji-side-nav {
-  position: fixed;
-  top: 30px; /* ✅ Corrigé pour démarrer sous le header */
-  left: -250px;
-  width: 230px;
-  height: 100%;
-  background: #111;
-  color: white;
-  transition: left 0.3s ease;
-  padding-top: 70px;
-  z-index: 1000;
-}
+            /* === SIDE NAV === */
+            .dji-side-nav {
+                position: fixed;
+                top: 30px; /* ✅ Corrigé pour démarrer sous le header */
+                left: -250px;
+                width: 230px;
+                height: 100%;
+                background: #111;
+                color: white;
+                transition: left 0.3s ease;
+                padding-top: 70px;
+                z-index: 1000;
+            }
 
-.dji-side-nav.active {
-  left: 0;
-}
+            .dji-side-nav.active {
+                left: 0;
+            }
 
-.dji-side-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+            .dji-side-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-.dji-side-nav li {
-  margin: 20px 0;
-}
+            .dji-side-nav li {
+                margin: 20px 0;
+            }
 
-.dji-side-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s;
-}
+            .dji-side-nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 10px 20px;
+                display: block;
+                transition: background 0.3s;
+            }
 
-.dji-side-nav a:hover {
-  background: #bfa145;
-}
+            .dji-side-nav a:hover {
+                background: #bfa145;
+            }
 
-/* === OVERLAY === */
-.dji-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 999;
-}
+            /* === OVERLAY === */
+            .dji-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                z-index: 999;
+            }
 
-.dji-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+            .dji-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
 
             /* Reset simple */
             * {
@@ -213,51 +213,50 @@
         </style>
     </head>
     <body>
-        
         <header class="dji-header">
-  <div class="dji-logo">DJI MADAGASCAR</div>
-  <button class="dji-nav-toggle" id="djiNavToggle">
-    <span class="dji-nav-icon">☰</span>
-  </button>
-</header>
+            <div class="dji-logo">DJI MADAGASCAR</div>
+            <button class="dji-nav-toggle" id="djiNavToggle">
+                <span class="dji-nav-icon">☰</span>
+            </button>
+        </header>
 
-<nav class="dji-side-nav" id="djiSideNav">
-  <ul>
-    <li><a href="mg.html">Accueil</a></li>
-    <li><a href="index.html">Boutique</a></li>
-    <li><a href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
-  </ul>
-</nav>
+        <nav class="dji-side-nav" id="djiSideNav">
+            <ul>
+                <li><a href="mg.html">Accueil</a></li>
+                <li><a href="index.html">Boutique</a></li>
+                <li><a href="Mentions%20l%C3%A9gales.html">Mentions légales</a></li>
+            </ul>
+        </nav>
 
-<div class="dji-overlay" id="djiOverlay"></div>
+        <div class="dji-overlay" id="djiOverlay"></div>
 
-<script>
-  const djiNavToggle = document.getElementById('djiNavToggle');
-  const djiSideNav = document.getElementById('djiSideNav');
-  const djiOverlay = document.getElementById('djiOverlay');
+        <script>
+            const djiNavToggle = document.getElementById("djiNavToggle");
+            const djiSideNav = document.getElementById("djiSideNav");
+            const djiOverlay = document.getElementById("djiOverlay");
 
-  djiNavToggle.addEventListener('click', () => {
-    const icon = djiNavToggle.querySelector('.dji-nav-icon');
-    
-    if (djiSideNav.classList.contains('active')) {
-      icon.textContent = '☰';
-      icon.style.transform = 'rotate(0deg)';
-    } else {
-      icon.textContent = '✕';
-      icon.style.transform = 'rotate(0deg)';
-    }
+            djiNavToggle.addEventListener("click", () => {
+                const icon = djiNavToggle.querySelector(".dji-nav-icon");
 
-    djiSideNav.classList.toggle('active');
-    djiOverlay.classList.toggle('active');
-  });
+                if (djiSideNav.classList.contains("active")) {
+                    icon.textContent = "☰";
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    icon.textContent = "✕";
+                    icon.style.transform = "rotate(0deg)";
+                }
 
-  djiOverlay.addEventListener('click', () => {
-    const icon = djiNavToggle.querySelector('.dji-nav-icon');
-    icon.textContent = '☰';
-    djiSideNav.classList.remove('active');
-    djiOverlay.classList.remove('active');
-  });
-</script>
+                djiSideNav.classList.toggle("active");
+                djiOverlay.classList.toggle("active");
+            });
+
+            djiOverlay.addEventListener("click", () => {
+                const icon = djiNavToggle.querySelector(".dji-nav-icon");
+                icon.textContent = "☰";
+                djiSideNav.classList.remove("active");
+                djiOverlay.classList.remove("active");
+            });
+        </script>
 
         <header>
             <h1>Mentions Légales</h1>

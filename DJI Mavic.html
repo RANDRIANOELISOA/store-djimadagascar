@@ -31,6 +31,15 @@
                 text-transform: uppercase;
                 color: #fff;
                 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+                transition: all 0.3s ease;
+            }
+
+            .dji-logo:hover {
+                color: #ffd700;
+                text-shadow:
+                    0 0 10px #ffd700,
+                    0 0 20px #ffa500;
+                transform: scale(1.1);
             }
 
             /* === TOGGLE (Bouton Menu) === */
@@ -483,7 +492,8 @@
 
     <body>
         <header class="dji-header">
-            <div class="dji-logo">DJI MADAGASCAR</div>
+            <a href="index.html" class="dji-logo">DJI MADAGASCAR</a>
+
             <button class="dji-nav-toggle" id="djiNavToggle">
                 <span class="dji-nav-icon">☰</span>
             </button>

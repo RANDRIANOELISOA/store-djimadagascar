@@ -7,116 +7,115 @@
 
         <style>
             /* === HEADER DJI === */
-.dji-header {
-  background: linear-gradient(135deg, #1c1c1c, #bfa145);
-  color: white;
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  position: sticky;
-  top: 0;
-  z-index: 1001;
-}
+            .dji-header {
+                background: linear-gradient(135deg, #1c1c1c, #bfa145);
+                color: white;
+                padding: 15px 30px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+                position: sticky;
+                top: 0;
+                z-index: 1001;
+            }
 
-.dji-logo {
-  font-size: 1.4rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
+            .dji-logo {
+                font-size: 1.4rem;
+                font-weight: 700;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: #fff;
+                text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+            }
 
-/* === TOGGLE (Bouton Menu) === */
-.dji-nav-toggle {
-  font-size: 1.5em;
-  background-color: #fff;
-  color: #333;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-}
+            /* === TOGGLE (Bouton Menu) === */
+            .dji-nav-toggle {
+                font-size: 1.5em;
+                background-color: #fff;
+                color: #333;
+                border: none;
+                padding: 10px 15px;
+                border-radius: 50%;
+                cursor: pointer;
+                font-weight: bold;
+                transition: all 0.3s ease;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            }
 
-.dji-nav-toggle:hover {
-  background-color: #333;
-  color: #fff;
-  transform: rotate(90deg);
-}
+            .dji-nav-toggle:hover {
+                background-color: #333;
+                color: #fff;
+                transform: rotate(90deg);
+            }
 
-.dji-nav-toggle .dji-nav-icon {
-  display: inline-block;
-  font-size: 1.5em;
-  line-height: 1;
-  transition: transform 0.3s ease;
-}
+            .dji-nav-toggle .dji-nav-icon {
+                display: inline-block;
+                font-size: 1.5em;
+                line-height: 1;
+                transition: transform 0.3s ease;
+            }
 
-/* === SIDE NAV === */
-.dji-side-nav {
-  position: fixed;
-  top: 30px; /* ✅ Corrigé pour démarrer sous le header */
-  left: -250px;
-  width: 230px;
-  height: 100%;
-  background: #111;
-  color: white;
-  transition: left 0.3s ease;
-  padding-top: 70px;
-  z-index: 1000;
-}
+            /* === SIDE NAV === */
+            .dji-side-nav {
+                position: fixed;
+                top: 30px; /* ✅ Corrigé pour démarrer sous le header */
+                left: -250px;
+                width: 230px;
+                height: 100%;
+                background: #111;
+                color: white;
+                transition: left 0.3s ease;
+                padding-top: 70px;
+                z-index: 1000;
+            }
 
-.dji-side-nav.active {
-  left: 0;
-}
+            .dji-side-nav.active {
+                left: 0;
+            }
 
-.dji-side-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+            .dji-side-nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
 
-.dji-side-nav li {
-  margin: 20px 0;
-}
+            .dji-side-nav li {
+                margin: 20px 0;
+            }
 
-.dji-side-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 20px;
-  display: block;
-  transition: background 0.3s;
-}
+            .dji-side-nav a {
+                color: white;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 10px 20px;
+                display: block;
+                transition: background 0.3s;
+            }
 
-.dji-side-nav a:hover {
-  background: #bfa145;
-}
+            .dji-side-nav a:hover {
+                background: #bfa145;
+            }
 
-/* === OVERLAY === */
-.dji-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 999;
-}
+            /* === OVERLAY === */
+            .dji-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease;
+                z-index: 999;
+            }
 
-.dji-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
+            .dji-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
 
-            
             /* CSS CORPS PRINCIPALE */
             /* CSS CORPS PRINCIPALE */
             /* CSS CORPS PRINCIPALE */
@@ -301,51 +300,50 @@
         </style>
     </head>
     <body>
-        
         <header class="dji-header">
-  <div class="dji-logo">DJI MADAGASCAR</div>
-  <button class="dji-nav-toggle" id="djiNavToggle">
-    <span class="dji-nav-icon">☰</span>
-  </button>
-</header>
+            <div class="dji-logo">DJI MADAGASCAR</div>
+            <button class="dji-nav-toggle" id="djiNavToggle">
+                <span class="dji-nav-icon">☰</span>
+            </button>
+        </header>
 
-<nav class="dji-side-nav" id="djiSideNav">
-  <ul>
-    <li><a href="mg.html">Accueil</a></li>
-    <li><a href="index.html">Boutique</a></li>
-    <li><a href="Conditions%20de%20ventes.html">CGV</a></li>
-  </ul>
-</nav>
+        <nav class="dji-side-nav" id="djiSideNav">
+            <ul>
+                <li><a href="mg.html">Accueil</a></li>
+                <li><a href="index.html">Boutique</a></li>
+                <li><a href="Conditions%20de%20ventes.html">CGV</a></li>
+            </ul>
+        </nav>
 
-<div class="dji-overlay" id="djiOverlay"></div>
+        <div class="dji-overlay" id="djiOverlay"></div>
 
-<script>
-  const djiNavToggle = document.getElementById('djiNavToggle');
-  const djiSideNav = document.getElementById('djiSideNav');
-  const djiOverlay = document.getElementById('djiOverlay');
+        <script>
+            const djiNavToggle = document.getElementById("djiNavToggle");
+            const djiSideNav = document.getElementById("djiSideNav");
+            const djiOverlay = document.getElementById("djiOverlay");
 
-  djiNavToggle.addEventListener('click', () => {
-    const icon = djiNavToggle.querySelector('.dji-nav-icon');
-    
-    if (djiSideNav.classList.contains('active')) {
-      icon.textContent = '☰';
-      icon.style.transform = 'rotate(0deg)';
-    } else {
-      icon.textContent = '✕';
-      icon.style.transform = 'rotate(0deg)';
-    }
+            djiNavToggle.addEventListener("click", () => {
+                const icon = djiNavToggle.querySelector(".dji-nav-icon");
 
-    djiSideNav.classList.toggle('active');
-    djiOverlay.classList.toggle('active');
-  });
+                if (djiSideNav.classList.contains("active")) {
+                    icon.textContent = "☰";
+                    icon.style.transform = "rotate(0deg)";
+                } else {
+                    icon.textContent = "✕";
+                    icon.style.transform = "rotate(0deg)";
+                }
 
-  djiOverlay.addEventListener('click', () => {
-    const icon = djiNavToggle.querySelector('.dji-nav-icon');
-    icon.textContent = '☰';
-    djiSideNav.classList.remove('active');
-    djiOverlay.classList.remove('active');
-  });
-</script>
+                djiSideNav.classList.toggle("active");
+                djiOverlay.classList.toggle("active");
+            });
+
+            djiOverlay.addEventListener("click", () => {
+                const icon = djiNavToggle.querySelector(".dji-nav-icon");
+                icon.textContent = "☰";
+                djiSideNav.classList.remove("active");
+                djiOverlay.classList.remove("active");
+            });
+        </script>
 
         <div class="container">
             <!-- En-tête -->
@@ -368,35 +366,51 @@
                 <br />
                 <h3>Article 2 – Commandes et modalités de paiement</h3>
 
+                <p>Le paiement s’effectue en deux étapes :</p>
+                <ul>
+                    <li><strong>25 %</strong> à titre de <strong>caution d’achat</strong> lors de la commande</li>
+                    <li>
+                        <strong>75 %</strong> restants lors de la <strong>récupération et inspection finale</strong> du
+                        produit
+                    </li>
+                </ul>
 
+                <p>L’état du colis à récupérer est <strong>neuf et scellé</strong>.</p>
 
-  <p>Le paiement s’effectue en deux étapes :</p>
-  <ul>
-    <li><strong>25 %</strong> à titre de <strong>caution d’achat</strong> lors de la commande</li>
-    <li><strong>75 %</strong> restants lors de la <strong>récupération et inspection finale</strong> du produit</li>
-  </ul>
+                <h3>Modes de paiement disponibles :</h3>
+                <ul>
+                    <li>En espèces à notre bureau</li>
+                    <li>Par <strong>Mobile Money</strong> (<em>Mvola / Orange Money</em>)</li>
+                    <li>
+                        Par <strong>virement bancaire</strong> (un délai supplémentaire de <strong>72 h</strong> est
+                        requis pour la confirmation de la réception du fonds)
+                    </li>
+                    <li>
+                        Par <strong>chèque</strong> :
+                        <ul>
+                            <li>
+                                Frais de traitement de <strong>10 000 Ar</strong> si remis directement à notre bureau
+                            </li>
+                            <li>
+                                Frais de traitement de <strong>20 000 Ar</strong> si le chèque est remis à votre
+                                domicile (offre valable uniquement pour les zones proches du centre-ville
+                                d’Antananarivo)
+                            </li>
+                            <li>
+                                <strong>Aucun délai d’attente</strong> pour les chèques <strong>endossables</strong>
+                            </li>
+                            <li><strong>72 h d’attente</strong> pour les chèques <strong>non endossables</strong></li>
+                        </ul>
+                    </li>
 
-  <p>L’état du colis à récupérer est <strong>neuf et scellé</strong>.</p>
-
-  <h3>Modes de paiement disponibles :</h3>
-  <ul>
-    <li>En espèces à notre bureau</li>
-    <li>Par <strong>Mobile Money</strong> (<em>Mvola / Orange Money</em>)</li>
-    <li>Par <strong>virement bancaire</strong> (un délai supplémentaire de <strong>72 h</strong> est requis pour la confirmation de la réception du fonds)</li>
-    <li>Par <strong>chèque</strong> :
-      <ul>
-        <li>Frais de traitement de <strong>10 000 Ar</strong> si remis directement à notre bureau</li>
-        <li>Frais de traitement de <strong>20 000 Ar</strong> si le chèque est remis à votre domicile (offre valable uniquement pour les zones proches du centre-ville d’Antananarivo)</li>
-        <li><strong>Aucun délai d’attente</strong> pour les chèques <strong>endossables</strong></li>
-        <li><strong>72 h d’attente</strong> pour les chèques <strong>non endossables</strong></li>
-      </ul>
-    </li>
-  
-
-  <li>Après notification de la disponibilité du colis, vous disposez de <strong>30 jours</strong> pour régler le solde restant.  
-  Au-delà de ce délai, un <strong>frais de stockage de 3 000 Ar par jour</strong> sera appliqué.  
-  Après <strong>45 jours</strong> sans paiement du solde, la marchandise ainsi que la caution d’achat seront <strong>considérées comme confisquées</strong> à titre de dédommagement.</li></ul>
-
+                    <li>
+                        Après notification de la disponibilité du colis, vous disposez de <strong>30 jours</strong> pour
+                        régler le solde restant. Au-delà de ce délai, un
+                        <strong>frais de stockage de 3 000 Ar par jour</strong> sera appliqué. Après
+                        <strong>45 jours</strong> sans paiement du solde, la marchandise ainsi que la caution d’achat
+                        seront <strong>considérées comme confisquées</strong> à titre de dédommagement.
+                    </li>
+                </ul>
 
                 <h3>Article 3 – Livraison et retrait</h3>
                 <ul>
